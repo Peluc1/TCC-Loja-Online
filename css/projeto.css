@@ -1,0 +1,539 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-image: url("imagens/3459071.jpg");
+}
+
+ul, li, p{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Aqui começa o Header */
+
+header{    
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10% ;
+    align-items: center;
+    background-color: black;
+}
+
+.logo{
+    font-size: 30px;
+}
+ 
+.nav_links{
+    font-size: 20px;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav_links a:hover{
+    color: darkgray;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.nav_links a{
+    transition: all 0.3s ease 0s;
+}
+
+
+/* Aqui termina o Header */
+
+/* Aqui começa a parte de bem vindos */
+
+.bemvindo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 250px;
+}
+
+.text{
+    text-align: center;
+    font-size: 85px;
+    flex-basis: 100%;
+    word-break: break-all;
+}
+
+.text2{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+/* Aqui termina a parte de bem vindos */
+
+/* Aqui começa a parte de destaques */
+
+.destaquesprincipal{
+    background-color: black;
+}
+
+fieldset {
+    border-top: 1px solid white;
+     border-bottom: none;
+     border-left: none;
+     border-right: none;
+     display: block;
+     text-align: center;
+ }
+ 
+fieldset legend {
+     padding: 5px 10px;
+ }
+
+.destaquestitulo{
+    padding: 10px;
+    font-size: 42px;
+    color: white;
+}
+
+.destaques{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.orgdestaque{
+    margin: 20px 40px 20px 40px;
+    text-align: center;
+    width: 300px;
+}
+
+.produtodestaques{
+    width: 240px;
+    height: 255px;
+}
+
+.text3{
+    color: white;
+    font-size: 20px;
+}
+
+/* Aqui termina a parte de destaques */
+
+/* Aqui começa a parte do catálogo */
+
+.catalogoprincipal{
+    background-color: black;
+}
+
+.catalogotitulo{
+    background-color: black;
+}
+
+.textcatalogotitulo{
+    padding-top: 130px;
+    padding-bottom: 20px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+
+.textcatalogotitulo2{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    padding-bottom: 110px;
+}
+
+.catalogo1{
+    background-color: #181818;
+    column-count: 2;
+}
+
+.textcatalogo1{
+    color: white;
+    text-align: justify;
+    padding: 90px 100px 50px 100px ;
+}
+
+.textcatalogo1titulo{
+    font-size: 30px;
+    margin-bottom: 45px;
+}
+
+.textcatalogo1corpo1{
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.imagecatalogo1{
+   width: 100%;
+   height: 480px;
+}
+
+.catalogo2{
+    background-color: #181818;
+    column-count: 2;
+}
+
+.textcatalogo2{
+    color: white;
+    text-align: justify;
+    padding: 90px 100px 50px 100px ;
+}
+
+.textcatalogo2titulo{
+    font-size: 30px;
+    margin-bottom: 45px;
+}
+
+.textcatalogo2corpo1{
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.imagecatalogo2{
+   width: 100%;
+   height: 480px;
+}
+
+/* Aqui termina a parte do catálogo */
+
+/* Aqui começa a parte das marcas */
+
+.melhoresmarcas{
+    background-color: black;
+}
+
+.titulomarcas{
+    padding-top: 130px;
+    padding-bottom: 20px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+
+.subtitulomarcas{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    padding-bottom: 110px;
+}
+
+.marcas{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: black;
+    padding-bottom: 50px;
+
+}
+
+.orgmarcas{
+    margin: 20px 40px 20px 40px;
+    text-align: center;
+    width: 300px;
+}
+
+.imagemarcas{
+    width: 220px;
+    height: 235px;
+}
+
+/* Aqui termina a parte das marcas */
+
+/* Aqui começa a parte do rodape */
+
+footer{
+    padding-bottom: 20px;
+}
+
+.ftfooter{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+}
+
+.elementfooter{
+    display: flex;
+    justify-content: center;
+}
+
+.textfooter{
+    color: black;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.creditos{
+    display: flex;
+    justify-content: center;
+    
+}
+
+/* Aqui termina a parte do rodape */
+
+
+/* Aqui começa o arquivo login */
+
+input, label{
+    display: block;
+    width: 100%;
+}
+
+input:focus, label:focus{
+    outline: none;
+}
+
+/* Aqui a estlização do formulário */
+
+.login{
+    margin-top: 10vh;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.login h1{
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.fullbox{
+    flex: 1 1 100%;
+    position: relative;
+    margin-top: 10px;
+}
+
+.space{
+    margin-right: 2.5%;
+}
+
+.label{
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+input{
+    border: none;
+    border-bottom: 2px solid;
+    padding: 10px;
+    font-size: .9rem;
+}
+
+.btn-submit{
+    background-color: dimgray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0;
+    transition: ease-out 0.3s;
+    margin-top: 20px;
+}
+
+.btn-submit:hover{
+    box-shadow: inset 500px 0px 0 0 black;
+}
+
+.agreement{
+    margin-right: 5px;
+}
+
+.agreement, .agreement-label{
+    display: inline-block;
+    width: auto;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.caminhocadastro{
+    padding-top: 20px;
+}
+
+.error-validation{
+    color: red;
+    position: absolute;
+    top: 57px;
+    font-size: .8rem;
+}
+
+.template{
+    display: none;
+
+}
+
+/* Aqui termina a estlizaçao do formulario */
+
+
+/* Aqui começa a parta de cadastro */
+
+.cadastro{
+    margin-top: 10vh;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.cadastro h1{
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.fullbox{
+    flex: 1 1 100%;
+    position: relative;
+    margin-top: 10px;
+}
+
+.half-box{
+    margin-top: 10px;
+}
+
+.space{
+    margin-right: 2.5%;
+}
+
+.label{
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+input{
+    border: none;
+    border-bottom: 2px solid;
+    padding: 10px;
+    font-size: .9rem;
+}
+
+.btn-submit{
+    background-color: dimgray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0;
+    transition: ease-out 0.3s;
+    margin-top: 20px;
+}
+
+.btn-submit:hover{
+    box-shadow: inset 500px 0px 0 0 black;
+}
+
+.agreement{
+    margin-right: 5px;
+}
+
+.agreement, .agreement-label{
+    display: inline-block;
+    width: auto;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.caminhocadastro{
+    padding-top: 20px;
+}
+
+.error-validation{
+    color: red;
+    position: absolute;
+    top: 57px;
+    font-size: 100px;
+}
+
+.template{
+    display: none;
+
+}
+
+/* Aqui termina a parta de cadastro */
+
+
+/* Aqui a começa a parte do Perfil */
+.dados{
+    border-radius: 7px ;
+    border-style: solid;
+    border-color: white white black;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    margin: 5px;
+    max-width: 50%;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+
+}
+
+.titulodados{
+    font-size: 35px;
+    padding-bottom:30px ;
+}
+
+/* Aqui termina a parte do Perfil */
+
