@@ -1,19 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 body{
     margin: 0px;
     padding: 0px;
     list-style: none;
-    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    /*font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;*/
     box-sizing: border-box;
-    background-image: url("imagens/3459071.jpg");
+    /*background-image: url("imagens/3459071.jpg");*/
+    background-color: #20006b;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 ul, li, p{
     margin: 0px;
     padding: 0px;
     list-style: none;
+    text-align: center;
+    vertical-align: middle;
 }
 
 a{
@@ -26,9 +31,9 @@ a{
 header{    
     display: flex;
     justify-content: space-between;
-    padding: 30px 10% ;
+    padding: 20px 4%;
     align-items: center;
-    background-color: black;
+    background-color: #140026;
 }
 
 .logo{
@@ -36,12 +41,20 @@ header{
 }
  
 .nav_links{
+    display:flex;
+    align-items: center;
+    flex-wrap: nowrap;
     font-size: 20px;
+}
+
+.nav_links img {
+    vertical-align: middle;
 }
 
 .nav_links li{
     display: inline-block;
     padding: 0 20px;
+    vertical-align: middle;
 }
 
 .nav_links a:hover{
@@ -51,6 +64,7 @@ header{
 .dropdown {
     position: relative;
     display: inline-block;
+
 }
 
 .dropdown-content {
@@ -60,6 +74,12 @@ header{
     min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    transition: height 1s;
+    margin: 5px;
+}
+
+.isright {
+    right:0;
 }
 
 .dropdown-content a{
@@ -79,6 +99,16 @@ header{
     transition: all 0.3s ease 0s;
 }
 
+.submenu {
+    background-color: #090033;
+    color: white;
+    padding:10px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
 
 /* Aqui termina o Header */
 
@@ -90,13 +120,36 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 100px;
-    padding-bottom: 250px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
 }
+
+.pesquisar {
+    color: white;
+    text-align: center;
+    align-content: center;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.pesquisar input {
+    max-width: 50%;
+    margin: 0 auto;
+    border: none;
+    border-bottom: 2px solid;
+    padding:10px;
+    font-size: .9rem;
+    background-color: transparent;
+    color:white;
+    min-width: 130px;
+}
+
 
 .text{
     text-align: center;
-    font-size: 85px;
+    font-size: 75px;
     flex-basis: 100%;
     word-break: break-all;
 }
@@ -111,26 +164,17 @@ header{
 /* Aqui começa a parte de destaques */
 
 .destaquesprincipal{
-    background-color: black;
+    background-color: #140026;
+    border-top:solid #090033 30px;
 }
 
-fieldset {
-    border-top: 1px solid white;
-     border-bottom: none;
-     border-left: none;
-     border-right: none;
-     display: block;
-     text-align: center;
- }
- 
-fieldset legend {
-     padding: 5px 10px;
- }
 
 .destaquestitulo{
     padding: 10px;
     font-size: 42px;
     color: white;
+    text-align: center;
+    align-content: center;
 }
 
 .destaques{
@@ -160,11 +204,11 @@ fieldset legend {
 /* Aqui começa a parte do catálogo */
 
 .catalogoprincipal{
-    background-color: black;
+    background-color: #140026;
 }
 
 .catalogotitulo{
-    background-color: black;
+    background-color: #140026;
 }
 
 .textcatalogotitulo{
@@ -239,7 +283,7 @@ fieldset legend {
 /* Aqui começa a parte das marcas */
 
 .melhoresmarcas{
-    background-color: black;
+    background-color: #140026;
 }
 
 .titulomarcas{
@@ -515,6 +559,17 @@ input{
 
 
 /* Aqui a começa a parte do Perfil */
+.perfil {
+
+    display:flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+
+    background-color: #2C2C2C;
+    border-radius:10px;
+    padding:50px;
+}
+
 .dados{
     border-radius: 7px ;
     border-style: solid;
@@ -523,16 +578,56 @@ input{
     color: black;
     padding: 5px;
     margin: 5px;
-    max-width: 50%;
+    max-width: 30%;
+    
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
 
 }
 
+.perfil span {
+    flex:100%;
+    flex-shrink: 4;
+}
+
+.perfil a {
+    flex: 100%;
+    flex-shrink: 4;
+}
+
 .titulodados{
     font-size: 35px;
     padding-bottom:30px ;
+    flex:100%;
+    color:black;
+    
+}
+
+.lista {
+    width:30%;
+}
+
+.lista ul {
+
+    border-radius:10px;
+    padding:10px;
+    margin-bottom:10px;
+    width: 100%;
+    background-color: #2C2C2C;
+}
+
+.perfil-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    margin: 60px;
+    color: white; 
+    font-size: x-large;
+    max-width: fit-content;
+    border-radius: 10px;;
+    justify-content: space-around;
 }
 
 /* Aqui termina a parte do Perfil */

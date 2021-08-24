@@ -12,33 +12,55 @@
         
         <header>
             <a href="produtos.html" class="logo">MyTeams</a>
+            <nav class="pesquisar">
+                <input type="text" placeholder="O que procura?">
+            </nav>
             <nav class="nav_links">
-                <li><a href="projeto.html">Início</a></li>
-                <li><a href="perfil.php">Perfil</a></li>
-                <div class="dropdown">
-                    <li><a href="produtos.html">Produtos</a></li>
-                     <div class="dropdown-content">
-                         <a><ul>League Of Legends</ul></a>
-                         <a><ul>CS:GO</ul></a>
-                         <a><ul>World of Warcraft</ul></a>
-                         <a><ul>Assinaturas</ul></a>
+            <li><a href="login.php"><img src="imagens/carrinho.png" height="40" width="40"></a></li>
+            <div class="dropdown" float="right">
+                    <li><a href="login.php"><img src="imagens/user.png" height="40" width="40"></a></li>
+                     <div class="dropdown-content isright">
+                         <a><ul>Login</ul></a>
+                         <a><ul>Perfil</ul></a>
+                         <a><ul>Salvos</ul></a>
                      </div>  
-                 </div>         
-                <li><a href="login.php">Cadastro/Login</a></li>
+                 </div>
             </nav>
         </header>
 
+        <nav class="submenu">
+            <nav class="nav_links">
+                <li><a>Assinaturas</a></li>
+                <div class="dropdown">
+                    <li><a href="produtos.html">Skins e itens</a></li>
+                     <div class="dropdown-content">
+                         <a><ul>CS:GO</ul></a>
+                     </div>  
+                 </div>
+                 <div class="dropdown">
+                    <li><a href="produtos.html">Contas</a></li>
+                     <div class="dropdown-content">
+                         <a><ul>League Of Legends</ul></a>
+                         <a><ul>Steam</ul></a>
+                         <a><ul>World of Warcraft</ul></a>
+                     </div>  
+                 </div>
+                 <li><a>Jogos</a></li>
+                 
+            </nav>
+
+        </nav>
+
         <nav class="bemvindo">
-            <div class="text">BEM-VINDO</div>
-            <div class="text">AO</div>
+            <img src="imagens/logo_fundo.png" height="300" width="300">
             <div class="text">MYTEAMS</div>
-            <div class="text2">Loja de produtos online</div>
+            <div class="text2">Encontre o que precisar para seu lazer digital</div>
         </nav>
         
         <nav class="destaquesprincipal">
-           <fieldset class="destaquestitulo">
-                <legend>Destaques</legend>
-           </fieldset>
+ 
+        <h1 class="destaquestitulo">Destaques</h1>
+
            <div class="destaques">
                <div class="orgdestaque">
                     <a href="#"><img src="imagens/netflix.png" class="produtodestaques"></a>

@@ -36,29 +36,48 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
           <li><a href="login.php">Cadastro/Login</a></li>
     </nav>
 </header>
-  <div style="margin: 120px 200px 0 200px; background-color: #2C2C2C; color: white; font-size: x-large; padding: 60px; border-radius:8px;">
-      <p class="titulodados">Dados Pessoais</p>
-      <span class="p-perfil">Nome:</span> 
-      <label class="dados"> <?php echo $user["nome"]; ?></label>
-      <span class="p-perfil">Sobrenome:</span>
-      <label  class="dados"> <?php echo $user["sobrenome"]; ?></label>
-      <span class="p-perfil">Email:</span>
-      <label  class="dados"> <?php echo $user["email"]; ?></label>
-      <span class="p-perfil">CPF:</span>
-      <label  class="dados">  <?php echo $user["cpf"]; ?></label>
-      <span class="p-perfil">Telefone:</span>
-      <label  class="dados">  <?php echo $user["telefone"]; ?></label>
-      <span class="p-perfil">Data de nascimento:</span>
-      <label  class="dados">  <?php echo $user["dtnascimento"]; ?></label>
-      <a href="logout.php">Sair</a>
-    <div>
-      <h2>Endereço</h2>
-    </div>
-  <div>
-    <a href="cadastrarprodutos.php">Cadastrar produtos</a>
-  </div>
+
+<div class="perfil-wrapper">
+
+  <div class="lista">
+    <ul>Dados</ul>
+    <ul>Endereços</ul>
+    <ul>Compras</ul>
+    <ul>Sair</ul>
+
+
+
+
+
+
   </div>
 
+  <div class="perfil">
+      
+
+      <span class="p-perfil">Nome:</span> 
+      <label class="dados"> <?php echo $user["nome"]; ?></label>
+
+      <span class="p-perfil">Sobrenome:</span>
+      <label  class="dados"> <?php echo $user["sobrenome"]; ?></label>
+
+      <span class="p-perfil">Email:</span>
+      <label  class="dados"> <?php echo $user["email"]; ?></label>
+
+      <span class="p-perfil">CPF:</span>
+      <label  class="dados">  <?php echo $user["cpf"]; ?></label>
+
+      <span class="p-perfil">Telefone:</span>
+      <label  class="dados">  <?php echo $user["telefone"]; ?></label>
+
+      <span class="p-perfil">Data de nascimento:</span>
+      <label  class="dados">  <?php echo $user["dtnascimento"]; ?></label>
+      
+      <a href="logout.php">Sair</a>
+
+  </div>
+
+</div>
 <footer>
             <div class="social">
               <a href="a" class="ftfooter"><img src="imagens/facebook.png" width="50" height="50"></a>

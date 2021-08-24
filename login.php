@@ -28,7 +28,7 @@ if(isset($_SESSION['email'])){
                         <a><ul>Assinaturas</ul></a>
                     </div>  
                 </div>               
-                <li><a href="login.html">Cadastro/Login</a></li>
+                <li><a href="login.php">Cadastro/Login</a></li>
             </nav>
         </header>
 
