@@ -15,7 +15,7 @@
     display:flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 200px;
+    margin-top: 00px;
 }
 .frame {
     background-color: black;
@@ -23,7 +23,7 @@
     padding:10px;
     width:min-content;
     text-align: center;
-    margin:10px;
+    margin-right:10px;
     transition: 0.5s;
 }
 .produto {

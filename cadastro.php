@@ -17,23 +17,46 @@ header('Location: perfil.php');
     </head>
     <body>
 
-        <header>
-            <a href="projeto.php" class="logo">MyTeams</a>
+    <header>
+            <a href="produtos.html" class="logo">MyTeams</a>
+            <nav class="pesquisar">
+                <input type="text" placeholder="O que procura?">
+            </nav>
             <nav class="nav_links">
-                <li><a href="projeto.php">Início</a></li>
-                <li><a href="perfil.php">Perfil</a></li>
-                <div class="dropdown">
-                   <li><a href="produtos.php">Produtos</a></li>
-                    <div class="dropdown-content">
-                        <a><ul>League Of Legends</ul></a>
-                        <a><ul>CS:GO</ul></a>
-                        <a><ul>World of Warcraft</ul></a>
-                        <a><ul>Assinaturas</ul></a>
-                    </div>  
-                </div>               
-                <li><a href="login.html">Cadastro/Login</a></li>
+            <li><a href="login.php"><img src="imagens/carrinho.png" height="40" width="40"></a></li>
+            <div class="dropdown" float="right">
+                    <li><a href="login.php"><img src="imagens/user.png" height="40" width="40"></a></li>
+                     <div class="dropdown-content isright">
+                         <a><ul>Login</ul></a>
+                         <a><ul>Perfil</ul></a>
+                         <a><ul>Salvos</ul></a>
+                     </div>  
+                 </div>
             </nav>
         </header>
+
+        <nav class="submenu">
+            <nav class="nav_links">
+                <li><a>Assinaturas</a></li>
+                <div class="dropdown">
+                    <li><a href="produtos.html">Skins e itens</a></li>
+                     <div class="dropdown-content">
+                         <a><ul>CS:GO</ul></a>
+                     </div>  
+                 </div>
+                 <div class="dropdown">
+                    <li><a href="produtos.html">Contas</a></li>
+                     <div class="dropdown-content">
+                         <a><ul>League Of Legends</ul></a>
+                         <a><ul>Steam</ul></a>
+                         <a><ul>World of Warcraft</ul></a>
+                     </div>  
+                 </div>
+                 <li><a>Jogos</a></li>
+                 
+            </nav>
+
+        </nav>
 
         <nav class="cadastro">
             <h1>Insira os seus dados para se cadastrar</h1>

@@ -2,6 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
+.noselect {
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+}
 body{
     margin: 0px;
     padding: 0px;
@@ -166,8 +174,8 @@ header{
 .destaquesprincipal{
     background-color: #140026;
     border-top:solid #090033 30px;
+    padding-bottom: 100px;
 }
-
 
 .destaquestitulo{
     padding: 10px;
@@ -178,25 +186,56 @@ header{
 }
 
 .destaques{
+    width: 100%;
+    height: 100%;
     display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.box{
+    width: 280px;
+    height: min-content;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 2px 10px 12px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin: 0 20px 10px 30px;
 }
 
-.orgdestaque{
-    margin: 20px 40px 20px 40px;
-    text-align: center;
-    width: 300px;
+.box:hover{
+    background-color: black;
+    transform: scale(1.02);
+    transition: all ease 0.2s;
 }
 
-.produtodestaques{
-    width: 240px;
-    height: 255px;
-}
-
-.text3{
+.model{
+    height: 200px;
+    max-width: 100%;
+    max-height: 100%;
+    outline-style: solid;
+    outline-width: 1px ;
+    outline-offset: 7px;
     color: white;
-    font-size: 20px;
+    margin: 10px;
+
+}
+
+.detalhes{
+    width: 100%;
+}
+
+.detalhes p{
+    color: white;
+    margin: 5px;
+}
+
+.detalhes hr{
+    width: 80%;
 }
 
 /* Aqui termina a parte de destaques */
@@ -204,78 +243,89 @@ header{
 /* Aqui começa a parte do catálogo */
 
 .catalogoprincipal{
-    background-color: #140026;
-}
-
-.catalogotitulo{
-    background-color: #140026;
+    border-top:solid #090033 30px;
+    background-color: #20006b;
 }
 
 .textcatalogotitulo{
-    padding-top: 130px;
-    padding-bottom: 20px;
+    margin-top: 50px;
     font-size: 50px;
     text-align: center;
     color: white;
 }
 
 .textcatalogotitulo2{
+    margin: 50px;
     text-align: center;
     font-size: 20px;
     color: white;
-    padding-bottom: 110px;
 }
 
+
 .catalogo1{
-    background-color: #181818;
     column-count: 2;
+    display: flex;
 }
 
 .textcatalogo1{
     color: white;
-    text-align: justify;
-    padding: 90px 100px 50px 100px ;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+
 }
 
 .textcatalogo1titulo{
     font-size: 30px;
-    margin-bottom: 45px;
 }
 
 .textcatalogo1corpo1{
     font-size: 20px;
-    margin-top: 30px;
+    margin:20px 10px 10px 10px;
 }
 
 .imagecatalogo1{
-   width: 100%;
-   height: 480px;
+   width: 50%;
+   height: 450px;
+   margin: 10px 0px 0px 13.5px;
+   outline-style: solid;
+   outline-width: 1px ;
+   outline-color: #5800FF;
 }
 
+
 .catalogo2{
-    background-color: #181818;
+    display: flex;
+    margin-right: 13.5px;
     column-count: 2;
 }
 
 .textcatalogo2{
     color: white;
-    text-align: justify;
-    padding: 90px 100px 50px 100px ;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .textcatalogo2titulo{
     font-size: 30px;
-    margin-bottom: 45px;
 }
 
 .textcatalogo2corpo1{
     font-size: 20px;
-    margin-top: 30px;
+    margin:20px 10px 10px 10px;
 }
 
 .imagecatalogo2{
-   width: 100%;
-   height: 480px;
+   width: 50%;
+   height: 450px;
+   margin: 0px 0px 30px 0px;
+   outline-style: solid;
+   outline-width: 1px ;
+   outline-color: #5800FF;
+   
 }
 
 /* Aqui termina a parte do catálogo */
@@ -283,12 +333,12 @@ header{
 /* Aqui começa a parte das marcas */
 
 .melhoresmarcas{
+    border-top:solid #090033 30px;
     background-color: #140026;
 }
 
 .titulomarcas{
-    padding-top: 130px;
-    padding-bottom: 20px;
+    margin: 80px 0 30px 0;
     font-size: 50px;
     text-align: center;
     color: white;
@@ -298,22 +348,25 @@ header{
     text-align: center;
     font-size: 20px;
     color: white;
-    padding-bottom: 110px;
+    margin-bottom: 70px;
 }
 
 .marcas{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: black;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
+    color: white;
+    margin: 0 45px 0 45px;
 
 }
 
 .orgmarcas{
-    margin: 20px 40px 20px 40px;
     text-align: center;
-    width: 300px;
+    /*border:solid 2px #00184E;
+    border-radius: 10px;
+    background-color:#00184E;
+    padding: 5px;*/
 }
 
 .imagemarcas{
@@ -345,7 +398,7 @@ footer{
 }
 
 .textfooter{
-    color: black;
+    color: white;
     margin-left: 20px;
     margin-top: 15px;
 }
@@ -377,12 +430,13 @@ input:focus, label:focus{
     width: 500px;
     margin-left: auto;
     margin-right: auto;
-    background-color: white;
+    background-color:#090033;
     border-radius: 10px;
     padding: 25px;
 }
 
 .login h1{
+    color: white;
     text-align: center;
     margin-bottom: 25px;
     font-size: 1.6rem;
@@ -395,6 +449,7 @@ form{
 }
 
 .fullbox{
+    color: white;
     flex: 1 1 100%;
     position: relative;
     margin-top: 10px;
@@ -404,9 +459,9 @@ form{
     margin-right: 2.5%;
 }
 
-.label{
-    font-weight: bold;
-    font-size: 0.8rem;
+label{
+    font-size: 1.1rem;
+    margin-bottom: 0px ;
 }
 
 input{
@@ -414,10 +469,12 @@ input{
     border-bottom: 2px solid;
     padding: 10px;
     font-size: .9rem;
+    background-color: transparent;
+    color:white;
+    min-width: 130px;
 }
 
 .btn-submit{
-    background-color: dimgray;
     color: white;
     border: none;
     border-radius: 5px;
@@ -429,7 +486,7 @@ input{
 }
 
 .btn-submit:hover{
-    box-shadow: inset 500px 0px 0 0 black;
+    box-shadow: inset 500px 0px 0 0 #3E096B;
 }
 
 .agreement{
@@ -469,12 +526,13 @@ input{
     width: 500px;
     margin-left: auto;
     margin-right: auto;
-    background-color: white;
+    background-color: #090033;
     border-radius: 10px;
     padding: 25px;
 }
 
 .cadastro h1{
+    color: white;
     text-align: center;
     margin-bottom: 25px;
     font-size: 1.6rem;
@@ -513,7 +571,7 @@ input{
 }
 
 .btn-submit{
-    background-color: dimgray;
+    background-color: #382D97;
     color: white;
     border: none;
     border-radius: 5px;
@@ -525,7 +583,7 @@ input{
 }
 
 .btn-submit:hover{
-    box-shadow: inset 500px 0px 0 0 black;
+    box-shadow: inset 500px 0px 0 0 #3E096B
 }
 
 .agreement{

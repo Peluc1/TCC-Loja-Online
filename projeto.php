@@ -7,6 +7,10 @@
         <link rel="sortcut icon" href="imagens/logo.jpeg" type="image/x-icon" />
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="css/projeto.css">
+        <link rel="stylesheet" type="text/css" href="css/lightslider.css">
+        <script type="text/javascript" src="js/JQuery3.3.1.js"></script>
+        <script type="text/javascript" src="js/lightslider.js"></script>
+        <script type="text/javascript" src="js/productslide.js"></script>
     </head>
     <body>
         
@@ -59,53 +63,116 @@
         
         <nav class="destaquesprincipal">
  
-        <h1 class="destaquestitulo">Destaques</h1>
-
-           <div class="destaques">
-               <div class="orgdestaque">
-                    <a href="#"><img src="imagens/netflix.png" class="produtodestaques"></a>
-                    <a href="#"><p class="text3">Netflix Premium</p></a>
-                    <a href="#"><p class="text3">R$ 40,00</p></a>
-                </div>
-                <div class="orgdestaque"> 
-                    <a href="#"><img src="imagens/spotify.png" class="produtodestaques"></a>
-                    <a href="#"><p class="text3">Spotify premium individual</p></a>
-                    <a href="#"><p class="text3">R$ 18,00</p></a>
-                </div>
-                <div class="orgdestaque">
-                    <a href="#"><img src="imagens/Ak-47 Piloto Neon FT.png" class="produtodestaques"></a>
-                    <a href="#"><p class="text3">AK-47 Piloto Neon FT</p></a>
-                    <a href="#"><p class="text3">R$ 161,00</p></a>
-                </div>
-                <div class="orgdestaque">
-                    <a href="#"><img src="imagens/AWP Fogo Selvagem FT.png" class="produtodestaques"></a>
-                    <a href="#"><p class="text3">AWP Fogo Selvagem FT</p></a>
-                    <a href="#"><p class="text3">R$ 255,00</p></a>
-                </div>
-            </div>
+            <h1 class="destaquestitulo">Destaques</h1>
+            <div class="destaques">
+                <ul id="autoWidth" class="cs-hidden">
+                    <li class="item-a">
+                        <div class="box">
+                            <p class="tituloproduto">Skin</p>
+                            <img src="imagens/Ak-47 Piloto Neon FT.png"  class="model">
+                            <div class="detalhes">
+                                <p>Nome</p>
+                                <hr>
+                                <p>Preço</p>
+                                <img src="imagens/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="box">
+                            <p class="tituloproduto">Skin</p>
+                            <img src="imagens/Ak-47 Piloto Neon FT.png"  class="model">
+                            <div class="detalhes">
+                                <p>Nome</p>
+                                <hr>
+                                <p>Preço</p>
+                                <img src="imagens/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="box">
+                            <p class="tituloproduto">Skin</p>
+                            <img src="imagens/Ak-47 Piloto Neon FT.png"  class="model">
+                            <div class="detalhes">
+                                <p>Nome</p>
+                                <hr>
+                                <p>Preço</p>
+                                <img src="imagens/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="box">
+                            <p class="tituloproduto">Skin</p>
+                            <img src="imagens/Ak-47 Piloto Neon FT.png"  class="model">
+                            <div class="detalhes">
+                                <p>Nome</p>
+                                <hr>
+                                <p>Preço</p>
+                                <img src="imagens/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="box">
+                            <p class="tituloproduto">Skin</p>
+                            <img src="imagens/Ak-47 Piloto Neon FT.png"  class="model">
+                            <div class="detalhes">
+                                <p>Nome</p>
+                                <hr>
+                                <p>Preço</p>
+                                <img src="imagens/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="box">
+                            <p class="tituloproduto">Skin</p>
+                            <img src="imagens/Ak-47 Piloto Neon FT.png"  class="model">
+                            <div class="detalhes">
+                                <p>Nome</p>
+                                <hr>
+                                <p>Preço</p>
+                                <img src="imagens/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="box">
+                            <p class="tituloproduto">Skin</p>
+                            <img src="imagens/Ak-47 Piloto Neon FT.png"  class="model">
+                            <div class="detalhes">
+                                <p>Nome</p>
+                                <hr>
+                                <p>Preço</p>
+                                <img src="imagens/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
+                            </div>
+                        </div>
+                    </li>
+                </ul>    
+            </div>           
         </nav>
 
         <nav class="catalogoprincipal">
-            <div class="catalogotitulo">
-                <p class="textcatalogotitulo">NOSSO CATÁLOGO</p>
-                <p class="textcatalogotitulo2">Comece suas compras online</p>
-            </div>
+                <p class="textcatalogotitulo noselect">NOSSO CATÁLOGO</p>
+                <p class="textcatalogotitulo2 noselect">Comece suas compras online</p>
+            <nav class="catalogo1">
+                <img src="imagens/assinatura.jpg" class="imagecatalogo1">
+                <div class="textcatalogo1">
+                    <li class="textcatalogo1titulo noselect">Assinaturas</li>
+                    <li class="textcatalogo1corpo1 noselect">O MyTeams tem a mais ampla seleção de assinatura onlines. Não importa o que você está procurando, garantimos que encontrará o que precisa.</li>
+                </div>
+            </nav>
+            <nav class="catalogo2">
+                <div class="textcatalogo2">
+                    <li class="textcatalogo2titulo noselect">Skins de jogos</li>
+                    <li class="textcatalogo2corpo1 noselect">Com qualquer uma de nossas skins você vai ser motivo de inveja entre todos os seus amigos. Oferecemos uma vasta seleção de skins de diversos jogos online.</li>
+                </div>
+                <img src="imagens/skinsdestaques.jpg" class="imagecatalogo2">
+            </nav>
         </nav>
 
-        <nav class="catalogo1">
-            <img src="imagens/assinatura.jpg" class="imagecatalogo1">
-            <div class="textcatalogo1">
-                <li class="textcatalogo1titulo">Assinaturas</li>
-                <li class="textcatalogo1corpo1">O MyTeams tem a mais ampla seleção de assinatura onlines. Não importa o que você está procurando, garantimos que encontrará o que precisa.</li>
-            </div>
-        </nav>
-        <nav class="catalogo2">
-            <div class="textcatalogo2">
-                <li class="textcatalogo2titulo">Skins de jogos</li>
-                <li class="textcatalogo2corpo1">Com qualquer uma de nossas skins você vai ser motivo de inveja entre todos os seus amigos. Oferecemos uma vasta seleção de skins de diversos jogos online.</li>
-            </div>
-            <img src="imagens/skinsdestaques.jpg" class="imagecatalogo2">
-        </nav>
 
         <nav class="melhoresmarcas">
             <div>
@@ -131,7 +198,7 @@
                 </div>
             </div>
         </nav>
-        <footer>
+        <footer style="border-top:solid #090033 30px;">
            <div class="social">
              <a href="a" class="ftfooter"><img src="imagens/facebook.png" width="50" height="50"></a>
              <a href="a" class="ftfooter"><img src="imagens/instagram.png" width="50" height="52"></a>

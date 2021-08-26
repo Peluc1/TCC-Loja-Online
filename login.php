@@ -14,23 +14,46 @@ if(isset($_SESSION['email'])){
     </head>
     <body>
 
+    <body>
+        
         <header>
-            <a href="projeto.php" class="logo">MyTeams</a>
+            <a href="produtos.html" class="logo">MyTeams</a>
+            <nav class="pesquisar">
+                <input type="text" placeholder="O que procura?">
+            </nav>
             <nav class="nav_links">
-                <li><a href="projeto.php">Início</a></li>
-                <li><a href="perfil.php">Perfil</a></li>
-                <div class="dropdown">
-                   <li><a href="produtos.php">Produtos</a></li>
-                    <div class="dropdown-content">
-                        <a><ul>League Of Legends</ul></a>
-                        <a><ul>CS:GO</ul></a>
-                        <a><ul>World of Warcraft</ul></a>
-                        <a><ul>Assinaturas</ul></a>
-                    </div>  
-                </div>               
-                <li><a href="login.php">Cadastro/Login</a></li>
+            <li><a href="login.php"><img src="imagens/carrinho.png" height="40" width="40"></a></li>
+            <div class="dropdown" float="right">
+                    <li><a href="login.php"><img src="imagens/user.png" height="40" width="40"></a></li>
+                     <div class="dropdown-content isright">
+                         <a><ul>Login</ul></a>
+                         <a><ul>Perfil</ul></a>
+                         <a><ul>Salvos</ul></a>
+                     </div>  
+                 </div>
             </nav>
         </header>
+
+        <nav class="submenu">
+            <nav class="nav_links">
+                <li><a>Assinaturas</a></li>
+                <div class="dropdown">
+                    <li><a href="produtos.html">Skins e itens</a></li>
+                     <div class="dropdown-content">
+                         <a><ul>CS:GO</ul></a>
+                     </div>  
+                </div>
+                <div class="dropdown">
+                    <li><a href="produtos.html">Contas</a></li>
+                     <div class="dropdown-content">
+                         <a><ul>League Of Legends</ul></a>
+                         <a><ul>Steam</ul></a>
+                         <a><ul>World of Warcraft</ul></a>
+                     </div>  
+                </div>
+                <li><a>Jogos</a></li>   
+            </nav>
+        </nav>
 
         <nav class="login">
             <h1>Insira os seus dados cadastrados</h1>
@@ -47,14 +70,14 @@ if(isset($_SESSION['email'])){
                     <input type="submit" class="btn-submit " value="Realize o login">
                 </div>
                 <p class="erro-validation template"></p>
-                <a href="cadastro.php" style="color: #9F0080;"> <p class="caminhocadastro">Clique aqui caso queira realizar o cadastro</p></a>
-                <a href="#" style="color: #9F0080;"><p class="caminhocadastro">Esqueceu a senha?</p></a>
+                <a href="cadastro.php" style="color:#B181FC;"> <p class="caminhocadastro">Clique aqui caso queira realizar o cadastro</p></a>
+                <a href="#" style="color: #B181FC;"><p class="caminhocadastro">Esqueceu a senha?</p></a>
             </form>
         </nav>
 
         <script src="js/scriptcadastro.js"></script>
 
-        <footer>
+        <footer style="margin-top:60px;">
             <div class="social">
               <a href="a" class="ftfooter"><img src="imagens/facebook.png" width="50" height="50"></a>
               <a href="a" class="ftfooter"><img src="imagens/instagram.png" width="50" height="52"></a>
