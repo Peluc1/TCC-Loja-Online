@@ -11,50 +11,81 @@ if(isset($_SESSION['email'])){
         <title>MyTeams / Login</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="css/projeto.css">
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
 
     <body>
         
-        <header>
-            <a href="produtos.html" class="logo">MyTeams</a>
-            <nav class="pesquisar">
-                <input type="text" placeholder="O que procura?">
-            </nav>
-            <nav class="nav_links">
-            <li><a href="login.php"><img src="imagens/carrinho.png" height="40" width="40"></a></li>
-            <div class="dropdown" float="right">
-                    <li><a href="login.php"><img src="imagens/user.png" height="40" width="40"></a></li>
-                     <div class="dropdown-content isright">
-                         <a><ul>Login</ul></a>
-                         <a><ul>Perfil</ul></a>
-                         <a><ul>Salvos</ul></a>
-                     </div>  
-                 </div>
-            </nav>
-        </header>
-
-        <nav class="submenu">
-            <nav class="nav_links">
-                <li><a>Assinaturas</a></li>
-                <div class="dropdown">
-                    <li><a href="produtos.html">Skins e itens</a></li>
-                     <div class="dropdown-content">
-                         <a><ul>CS:GO</ul></a>
-                     </div>  
-                </div>
-                <div class="dropdown">
-                    <li><a href="produtos.html">Contas</a></li>
-                     <div class="dropdown-content">
-                         <a><ul>League Of Legends</ul></a>
-                         <a><ul>Steam</ul></a>
-                         <a><ul>World of Warcraft</ul></a>
-                     </div>  
-                </div>
-                <li><a>Jogos</a></li>   
-            </nav>
-        </nav>
-
+    <header>
+    <nav class="menuprincipal">
+      <div class="navbar" id="navbar">
+        <div class="logo"><a href="projeto.php">MyTeams</a></div>
+        <div class="nav-links">
+          <ul class="links">
+            <li><a href="#" class="home2">Home</a></li>
+            <li><a href="#" class="home2">Sobre Nós</a></li>
+            <li>
+              <i class='bx bx-user-circle'></i>
+              <ul class="perfilsubmenu submenuprincipal">
+                <li><a href="#">Login</li></a>
+                <li><a href="#">Perfil</li></a>
+              </ul>
+            </li>
+            <li>
+              <i class='bx bx-cart' ></i>
+            </li>
+          </ul>
+        </div>
+        <div class="search-box">
+          <i class='bx bx-search' ></i>
+          <div class="input-box">
+            <input type="text" placeholder="O que procura?">
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <nav class="submenu" id="submenu">
+    <div class="navbar">
+      <div class="nav-links">
+        <ul class="links">
+          <li>
+            <a href="#" class="home2">Assinaturas</a>
+            <i class='bx bx-up-arrow-alt arrow assinaturasarrow' ></i>
+            <ul class="perfilsubmenu submenuprincipal">
+                <li><a href="#">Netflix</li></a>
+                <li><a href="#">Disney+</li></a>
+              </ul>
+          </li>
+          <li>
+            <a href="#" class="home2">Skins e itens</a>
+            <i class='bx bx-up-arrow-alt arrow skinsitensarrow' ></i>
+            <ul class="perfilsubmenu submenuprincipal">
+                <li><a href="#">Netflix</li></a>
+                <li><a href="#">Disney+</li></a>
+              </ul>
+          </li>
+          <li>
+            <a href="#" class="home2">Contas</a>
+            <i class='bx bx-up-arrow-alt arrow contasarrow' ></i>
+            <ul class="perfilsubmenu submenuprincipal">
+                <li><a href="#">Netflix</li></a>
+                <li><a href="#">Disney+</li></a>
+              </ul>
+          </li>
+          <li>
+            <a href="#" class="home2">Jogos</a>
+            <i class='bx bx-up-arrow-alt arrow jogosarrow' ></i>
+            <ul class="perfilsubmenu submenuprincipal">
+                <li><a href="#">Netflix</li></a>
+                <li><a href="#">Disney+</li></a>
+              </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
         <nav class="login">
             <h1>Insira os seus dados cadastrados</h1>
             <form class="loginform" action="logar.php" method="POST">

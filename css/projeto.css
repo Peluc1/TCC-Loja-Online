@@ -26,7 +26,6 @@ ul, li, p{
     padding: 0px;
     list-style: none;
     text-align: center;
-    vertical-align: middle;
 }
 
 a{
@@ -37,86 +36,212 @@ a{
 /* Aqui começa o Header */
 
 header{    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #3e8da8;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+nav .navbar{
+    height: 100%;
+    max-width: 1250px;
+    margin: auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 20px 4%;
-    align-items: center;
-    background-color: #140026;
+    padding: 0 50px;
 }
-
-.logo{
-    font-size: 30px;
-}
- 
-.nav_links{
-    display:flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    font-size: 20px;
-}
-
-.nav_links img {
-    vertical-align: middle;
-}
-
-.nav_links li{
-    display: inline-block;
-    padding: 0 20px;
-    vertical-align: middle;
-}
-
-.nav_links a:hover{
-    color: darkgray;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    transition: height 1s;
-    margin: 5px;
-}
-
-.isright {
-    right:0;
-}
-
-.dropdown-content a{
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    cursor: pointer;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-
-.nav_links a{
-    transition: all 0.3s ease 0s;
-}
-
-.submenu {
-    background-color: #090033;
+nav .navbar .logo a{
     color: white;
-    padding:10px;
-
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
 }
 
+nav .navbar .nav-links{
+    height: 100%;
+    line-height: 70px;
+}
+
+nav .navbar .nav-links .links{
+    display: flex;
+
+}
+
+nav .navbar .nav-links .home2{
+   font-size: 20px;
+}
+
+nav .navbar .nav-links .links li{
+   position: relative; 
+   display: flex;
+   align-items: center;
+   padding: 0 14px;
+   list-style: none;
+    
+}
+nav .navbar .nav-links .links li a{
+    color: white;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.navbar .nav-links .links .submenuprincipal{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: #3e8da8;
+    line-height: 40px;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    display: none;
+}
+
+.navbar .nav-links .links .submenuprincipal li{
+    padding: 0 22px;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+.navbar .nav-links .links .perfilsubmenu li a{
+    color: white;
+    cursor:pointer;
+    font-size: 15px;
+    font: 500;
+}
+
+.navbar .nav-links .links li:hover .perfilsubmenu{
+    display: block;
+    z-index: 50;
+}
+
+.bx-cart{
+    font-weight: 50;
+    color: white;
+    font-size: 45px;
+}
+.bx-user-circle{
+    color: white;
+    font-size: 45px;
+}
+
+.navbar .search-box{
+    position: relative;
+    height: 40px;
+    width: 40px;
+}
+
+.navbar .search-box .bx-search{
+    color: white;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    line-height: 45px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+
+}
+
+.navbar .search-box .input-box{
+    height: 60px;
+    width: 300px;
+    background-color: #3E8da8;
+    position: absolute;
+    top: 65px;
+    right: calc(100% - 45px);
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.navbar  .input-box.showInput{
+    opacity: 1;
+    pointer-events: auto;
+    top: 65px;
+}
+
+.navbar .search-box .input-box::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    background-color: #3E8da8;
+    width: 20px;
+    right: 10px;
+    top: -6px;
+    transform: rotate(45deg); 
+}
+
+.navbar .search-box .input-box input{
+    position: absolute;
+    width: 250px;
+    height: 35px;
+    z-index: 98;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    border-radius: 4px;
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+
+.submenu{
+    top: 70px;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    background-color: royalblue;
+}
+.submenu .nav-links .links .submenuprincipal{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: royalblue;
+    line-height: 40px;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    display: none;
+}
+
+.submenu .nav-links .links .submenuprincipal li{
+    padding: 0 22px;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+.submenu .nav-links .links .perfilsubmenu li a{
+    color: white;
+    cursor:pointer;
+    font-size: 15px;
+    font: 500;
+}
+
+.submenu .nav-links .links li:hover .perfilsubmenu{
+    display: block;
+    z-index: 50;
+}
+
+.submenu .nav-links{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.bx-up-arrow-alt{
+    color: white;
+}
+
+.submenu .navbar .nav-links .links li:hover .assinaturasarrow,
+.submenu .navbar .nav-links .links li:hover .skinsitensarrow,
+.submenu .navbar .nav-links .links li:hover .contasarrow,
+.submenu .navbar .nav-links .links li:hover .jogosarrow{
+    transform: rotate(180deg);
+}
 
 /* Aqui termina o Header */
 
@@ -414,12 +539,12 @@ footer{
 
 /* Aqui começa o arquivo login */
 
-input, label{
+.login input, label{
     display: block;
     width: 100%;
 }
 
-input:focus, label:focus{
+login input:focus, label:focus{
     outline: none;
 }
 
@@ -464,7 +589,7 @@ label{
     margin-bottom: 0px ;
 }
 
-input{
+.login input{
     border: none;
     border-bottom: 2px solid;
     padding: 10px;
@@ -522,6 +647,7 @@ input{
 /* Aqui começa a parta de cadastro */
 
 .cadastro{
+    color: white;
     margin-top: 10vh;
     width: 500px;
     margin-left: auto;
@@ -563,7 +689,7 @@ form{
     font-size: 0.8rem;
 }
 
-input{
+.cadastro input{
     border: none;
     border-bottom: 2px solid;
     padding: 10px;
@@ -587,14 +713,12 @@ input{
 }
 
 .agreement{
-    margin-right: 5px;
+    margin-right: 0px;
 }
 
 .agreement, .agreement-label{
     display: inline-block;
     width: auto;
-    margin-top: 25px;
-    margin-bottom: 15px;
 }
 
 .caminhocadastro{
@@ -615,77 +739,146 @@ input{
 
 /* Aqui termina a parta de cadastro */
 
-
 /* Aqui a começa a parte do Perfil */
-.perfil {
 
-    display:flex;
-    justify-content:space-between;
+.sidebar{
+    position: fixed;
+    height: 100%;
+    width: 70px;
+    background: #11101d;
+    padding: 6px 14px;
+    transition:all 0.5s ease ;
+}
+
+.o{
+    width: 160px;
+}
+
+.sidebar #btn{
+    color: #fff;
+    position: absolute;
+    left: 62%;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transition:all 0.5s ease ;
+    transform: translateX(-80%);
+}
+
+.o #btn{
+    left: 90%;
+}
+
+.sidebar ul{
+    margin-top: 50px;
+
+}
+
+.sidebar ul li{
+    list-style: none;
+    height: 50px;
+    width: 100%;
+    margin: 0 6px;
+    position: relative;
+    line-height: 50px
+}
+
+.sidebar ul li .tooltip{
+    position: absolute;
+    left: 122px;
+    top: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    height: 35px;
+    width: 122px;
+    background: #fff;
+    line-height: 35px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+}
+
+.o ul li .tooltip{
+    display: none;
+
+}
+
+.sidebar ul li:hover .tooltip{
+    transition: all 0.5s ease;
+    opacity: 1;
+    top: 50%;
+}
+
+.sidebar ul li a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    transition:all 0.4s ease ;
+    text-decoration: none;
+    border-radius: 12px ;
+    white-space: nowrap;
+}
+
+.sidebar ul li a:hover{
+    background: #fff;
+    color: #11101d;
+}
+
+.sidebar ul li a i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.sidebar .links-name{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.o .links-name{
+    opacity:1;
+    pointer-events: auto;
+}
+
+
+
+.perfil{
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    margin-left: 20px;
+    margin-top: 50px ;
+    color: white;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 25px;
+}
 
-    background-color: #2C2C2C;
-    border-radius:10px;
-    padding:50px;
+.perfil hr{
+    width: 100%;
+}
+
+.perfil label{
+    padding: 6px;
 }
 
 .dados{
     border-radius: 7px ;
-    border-style: solid;
-    border-color: white white black;
     background-color: white;
     color: black;
-    padding: 5px;
-    margin: 5px;
-    max-width: 30%;
-    
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
-
+    margin: 10px 0px 10px 0px;
+    font-size: 23px;
 }
 
-.perfil span {
-    flex:100%;
-    flex-shrink: 4;
-}
-
-.perfil a {
-    flex: 100%;
-    flex-shrink: 4;
-}
-
-.titulodados{
-    font-size: 35px;
-    padding-bottom:30px ;
-    flex:100%;
-    color:black;
-    
-}
-
-.lista {
-    width:30%;
-}
-
-.lista ul {
-
-    border-radius:10px;
-    padding:10px;
-    margin-bottom:10px;
-    width: 100%;
-    background-color: #2C2C2C;
-}
-
-.perfil-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-
-    margin: 60px;
-    color: white; 
-    font-size: x-large;
-    max-width: fit-content;
-    border-radius: 10px;;
-    justify-content: space-around;
+.endereco{
+    margin-left: 150px;
 }
 
 /* Aqui termina a parte do Perfil */
