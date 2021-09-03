@@ -75,6 +75,7 @@ fieldset {
     display: inline-block;
     
 }
+
 .ender {
     display: flex;
     flex-wrap: nowrap;
