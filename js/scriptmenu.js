@@ -1,6 +1,6 @@
-let navbar = document.querySelector(".navbar");
+let inputbox = document.querySelector(".input-box");
 let searchBox = document.querySelector(".search-box .bx-search");
 
 searchBox.addEventListener("click", ()=>{
-    navbar.classList.toggle("showInput");
+    inputbox.classList.toggle("showInput");
 })

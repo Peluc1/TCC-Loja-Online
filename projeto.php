@@ -18,27 +18,35 @@
     <nav class="menuprincipal">
       <div class="navbar" id="navbar">
         <div class="logo"><a href="projeto.php">MyTeams</a></div>
-        <div class="nav-links">
+        <div class="nav-links pre-ender">
           <ul class="links">
             <li><a href="#" class="home2">Home</a></li>
             <li><a href="#" class="home2">Sobre Nós</a></li>
-            <li>
-              <i class='bx bx-user-circle'></i>
-              <ul class="perfilsubmenu submenuprincipal">
-                <li><a href="#">Login</li></a>
-                <li><a href="#">Perfil</li></a>
-              </ul>
-            </li>
-            <li>
-              <i class='bx bx-cart' ></i>
-            </li>
           </ul>
         </div>
-        <div class="search-box">
-          <i class='bx bx-search' ></i>
-          <div class="input-box">
-            <input type="text" placeholder="O que procura?">
-          </div>
+
+        <div class="nav-links ender">
+
+            <ul class="links">
+                <li>
+                    <i class='bx bx-user-circle'></i>
+                    <ul class="perfilsubmenu submenuprincipal">
+                        <li><a href="#">Login</li></a>
+                        <li><a href="#">Perfil</li></a>
+                    </ul>
+                </li>
+                <li>
+                    <i class='bx bx-cart' ></i>
+                </li>
+            </ul>
+        
+
+            <div class="search-box">
+                <i class='bx bx-search' ></i>
+                <div class="input-box pesquisar">
+                    <input type="text" placeholder="O que procura?">
+                </div>
+            </div>
         </div>
       </div>
     </nav>
@@ -90,8 +98,8 @@
         </nav>
         
         <nav class="destaquesprincipal">
- 
-            <h1 class="destaquestitulo">Destaques</h1>
+           <h1 class="destaquestitulo">Destaques</h1>
+            
             <div class="destaques">
                 <ul id="autoWidth" class="cs-hidden">
                     <li class="item-a">
@@ -179,10 +187,11 @@
                         </div>
                     </li>
                 </ul>    
-            </div>           
+            </div>      
         </nav>
 
         <nav class="catalogoprincipal">
+            <hr style="width: 90%">
                 <p class="textcatalogotitulo noselect">NOSSO CATÁLOGO</p>
                 <p class="textcatalogotitulo2 noselect">Comece suas compras online</p>
             <nav class="catalogo1">
@@ -226,7 +235,7 @@
                 </div>
             </div>
         </nav>
-        <footer style="border-top:solid #090033 30px;">
+        <footer style="border-top:solid #004395 30px;">
            <div class="social">
              <a href="a" class="ftfooter"><img src="imagens/facebook.png" width="50" height="50"></a>
              <a href="a" class="ftfooter"><img src="imagens/instagram.png" width="50" height="52"></a>
@@ -242,5 +251,6 @@
                 <p class="textfooter">© Desenvolvido por Matheus, Pedro e Rafael</p>
             </div>
         </footer>
+        <script src="js/scriptmenu.js"></script>
     </body>
 </html>

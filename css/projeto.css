@@ -16,8 +16,7 @@ body{
     list-style: none;
     /*font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;*/
     box-sizing: border-box;
-    /*background-image: url("imagens/3459071.jpg");*/
-    background-color: #20006b;
+    background-image: linear-gradient(to right, #022150 ,#5e00b5);
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -40,7 +39,7 @@ header{
     left: 0;
     width: 100%;
     height: 80px;
-    background: #3e8da8;
+    background: #160b38;
     box-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
@@ -50,9 +49,15 @@ nav .navbar{
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    align-content:stretch;
     padding: 0 50px;
 }
+
+nav .navbar .logo {
+    display: flex;
+    flex:30%;
+}
+
 nav .navbar .logo a{
     color: white;
     font-size: 30px;
@@ -63,6 +68,26 @@ nav .navbar .logo a{
 nav .navbar .nav-links{
     height: 100%;
     line-height: 70px;
+}
+
+fieldset {
+    width:min-content;
+    display: inline-block;
+    
+}
+.ender {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    flex:30%;
+
+
+}
+
+.pre-ender {
+    display: flex;
+    flex:100%;
+    justify-content: center;
 }
 
 nav .navbar .nav-links .links{
@@ -88,11 +113,18 @@ nav .navbar .nav-links .links li a{
     text-decoration: none;
 }
 
+.aa {
+    display: flex;
+    flex-wrap: wrap;
+   position: relative;
+   float: right;
+}
+
 .navbar .nav-links .links .submenuprincipal{
     position: absolute;
     top: 70px;
     left: 0;
-    background: #3e8da8;
+    background: #004395;
     line-height: 40px;
     border-radius: 0 0 4px 4px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.2);
@@ -141,13 +173,18 @@ nav .navbar .nav-links .links li a{
     text-align: center;
     font-size: 30px;
     font-weight: 600;
+    padding: 0 14px;
 
 }
 
 .navbar .search-box .input-box{
+    border-color: rgba(0,0,0,0.3);
+    border-width:medium;
+    border-style: solid;
+    box-shadow: 5px 5px 5px black;
     height: 60px;
     width: 300px;
-    background-color: #3E8da8;
+    background-color: #004395;
     position: absolute;
     top: 65px;
     right: calc(100% - 45px);
@@ -161,13 +198,14 @@ nav .navbar .nav-links .links li a{
     opacity: 1;
     pointer-events: auto;
     top: 65px;
+    z-index: 1000;
 }
 
 .navbar .search-box .input-box::before{
     content: '';
     position: absolute;
     height: 20px;
-    background-color: #3E8da8;
+    background-color: #004395;
     width: 20px;
     right: 10px;
     top: -6px;
@@ -193,14 +231,14 @@ nav .navbar .nav-links .links li a{
     top: 70px;
     width: 100%;
     height: 50px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-    background-color: royalblue;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+    background-color: rgba(39, 91, 214, 0.3);
 }
 .submenu .nav-links .links .submenuprincipal{
     position: absolute;
     top: 50px;
     left: 0;
-    background-color: royalblue;
+    background-color: #004395;
     line-height: 40px;
     border-radius: 0 0 4px 4px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.2);
@@ -262,13 +300,11 @@ nav .navbar .nav-links .links li a{
     color: white;
     text-align: center;
     align-content: center;
-    width: 50%;
     margin: 0 auto;
     font-size: 20px;
 }
 
 .pesquisar input {
-    max-width: 50%;
     margin: 0 auto;
     border: none;
     border-bottom: 2px solid;
@@ -277,6 +313,10 @@ nav .navbar .nav-links .links li a{
     background-color: transparent;
     color:white;
     min-width: 130px;
+}
+
+.pesquisar input::placeholder {
+    color:rgba(255,255,255,0.4);
 }
 
 
@@ -297,9 +337,11 @@ nav .navbar .nav-links .links li a{
 /* Aqui começa a parte de destaques */
 
 .destaquesprincipal{
-    background-color: #140026;
-    border-top:solid #090033 30px;
-    padding-bottom: 100px;
+    box-sizing: border-box;
+    background-color: rgba(255,255,255,0.2);
+    margin:20px;
+    border-radius:5px;
+    padding: 10px 10px 80px 10px;
 }
 
 .destaquestitulo{
@@ -368,8 +410,8 @@ nav .navbar .nav-links .links li a{
 /* Aqui começa a parte do catálogo */
 
 .catalogoprincipal{
-    border-top:solid #090033 30px;
-    background-color: #20006b;
+    border-top:solid rgba(255, 255, 255, 0) 30px;
+    background-color: rgba(41, 90, 207,0.2);
 }
 
 .textcatalogotitulo{
@@ -416,7 +458,7 @@ nav .navbar .nav-links .links li a{
    margin: 10px 0px 0px 13.5px;
    outline-style: solid;
    outline-width: 1px ;
-   outline-color: #5800FF;
+   outline-color: #004395;
 }
 
 
@@ -449,7 +491,7 @@ nav .navbar .nav-links .links li a{
    margin: 0px 0px 30px 0px;
    outline-style: solid;
    outline-width: 1px ;
-   outline-color: #5800FF;
+   outline-color: #004395;
    
 }
 
@@ -458,8 +500,8 @@ nav .navbar .nav-links .links li a{
 /* Aqui começa a parte das marcas */
 
 .melhoresmarcas{
-    border-top:solid #090033 30px;
-    background-color: #140026;
+    border-top:solid rgba(255, 255, 255, 0) 30px;
+    background-color: #030a25;
 }
 
 .titulomarcas{

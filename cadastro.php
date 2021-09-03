@@ -22,27 +22,35 @@ header('Location: perfil.php');
     <nav class="menuprincipal">
       <div class="navbar" id="navbar">
         <div class="logo"><a href="projeto.php">MyTeams</a></div>
-        <div class="nav-links">
+        <div class="nav-links pre-ender">
           <ul class="links">
             <li><a href="#" class="home2">Home</a></li>
             <li><a href="#" class="home2">Sobre Nós</a></li>
-            <li>
-              <i class='bx bx-user-circle'></i>
-              <ul class="perfilsubmenu submenuprincipal">
-                <li><a href="#">Login</li></a>
-                <li><a href="#">Perfil</li></a>
-              </ul>
-            </li>
-            <li>
-              <i class='bx bx-cart' ></i>
-            </li>
           </ul>
         </div>
-        <div class="search-box">
-          <i class='bx bx-search' ></i>
-          <div class="input-box">
-            <input type="text" placeholder="O que procura?">
-          </div>
+
+        <div class="nav-links ender">
+
+            <ul class="links">
+                <li>
+                    <i class='bx bx-user-circle'></i>
+                    <ul class="perfilsubmenu submenuprincipal">
+                        <li><a href="#">Login</li></a>
+                        <li><a href="#">Perfil</li></a>
+                    </ul>
+                </li>
+                <li>
+                    <i class='bx bx-cart' ></i>
+                </li>
+            </ul>
+        
+
+            <div class="search-box">
+                <i class='bx bx-search' ></i>
+                <div class="input-box pesquisar">
+                    <input type="text" placeholder="O que procura?">
+                </div>
+            </div>
         </div>
       </div>
     </nav>
@@ -149,5 +157,6 @@ header('Location: perfil.php');
                  <p class="textfooter">© Desenvolvido por Matheus, Pedro e Rafael</p>
              </div>
          </footer>
+         <script src="js/scriptmenu.js"></script>
     </body>
 </html>

@@ -21,31 +21,39 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
   </head>
 <body>
-  <header>
+<header>
     <nav class="menuprincipal">
       <div class="navbar" id="navbar">
         <div class="logo"><a href="projeto.php">MyTeams</a></div>
-        <div class="nav-links">
+        <div class="nav-links pre-ender">
           <ul class="links">
             <li><a href="#" class="home2">Home</a></li>
             <li><a href="#" class="home2">Sobre Nós</a></li>
-            <li>
-              <i class='bx bx-user-circle'></i>
-              <ul class="perfilsubmenu submenuprincipal">
-                <li><a href="#">Login</li></a>
-                <li><a href="#">Perfil</li></a>
-              </ul>
-            </li>
-            <li>
-              <i class='bx bx-cart' ></i>
-            </li>
           </ul>
         </div>
-        <div class="search-box">
-          <i class='bx bx-search' ></i>
-          <div class="input-box">
-            <input type="text" placeholder="O que procura?">
-          </div>
+
+        <div class="nav-links ender">
+
+            <ul class="links">
+                <li>
+                    <i class='bx bx-user-circle'></i>
+                    <ul class="perfilsubmenu submenuprincipal">
+                        <li><a href="#">Login</li></a>
+                        <li><a href="#">Perfil</li></a>
+                    </ul>
+                </li>
+                <li>
+                    <i class='bx bx-cart' ></i>
+                </li>
+            </ul>
+        
+
+            <div class="search-box">
+                <i class='bx bx-search' ></i>
+                <div class="input-box pesquisar">
+                    <input type="text" placeholder="O que procura?">
+                </div>
+            </div>
         </div>
       </div>
     </nav>
@@ -178,14 +186,6 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
 
     })
 
-
-    let inputbox = document.querySelector(".input-box");
-    let searchBox = document.querySelector(".search-box .bx-search");
-
-    searchBox.addEventListener("click", ()=>{
-    inputbox.classList.toggle("showInput");
-    })
-
     let btn = document.querySelector("#btn");
     let sidebar = document.querySelector(".sidebar");
 
@@ -193,5 +193,6 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
       sidebar.classList.toggle("o")
     }
   </script>
+  <script src="js/scriptmenu.js"></script>
 </body>
 </html>
