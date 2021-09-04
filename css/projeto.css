@@ -940,12 +940,12 @@ form{
     padding-right: 15px;
 }
 
-form .user-detalhes .textinput{
+.textinput{
     margin-bottom: 15px;
     width: calc(100% / 2 - 20px);
 }
 
-.user-detalhes .textinput .detalhe{
+.detalhe{
     font-weight: 500;
     margin-bottom: 5px;
     font-size: 20px;
@@ -1160,5 +1160,40 @@ form .user-detalhes .textinput{
     font-weight: 600;
 }
 
+.anuncios {
+    
+    display:flex;
+    justify-content: center;
+}
+
+.anuncios .anuncios-box {
+    max-width: 700px;
+    min-width: 700px;
+    background-color: white;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    padding: 25px 30px;
+}
+
+.anuncios .anuncios-box select {
+    border-style: solid;
+    border-radius: 2px;
+    padding: 1px 2px;
+
+}
+
+.anuncios .anuncios-box input, select {
+    height: 45px;
+    width: 100%;
+    padding-left: 15px;
+    line-height: 45px;
+    outline: none;
+    border: solid 2px black;
+    border-bottom-width: 3px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
 /* Aqui termina a parte do Perfil */
 
