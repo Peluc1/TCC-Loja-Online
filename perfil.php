@@ -340,33 +340,35 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
 
       <nav class="anuncios">
         <div class="anuncios-box">
+          <div class="tituloanucio">Anucie Aqui</div>
           <form>
             <div class="textinput">
               <span class="detalhe">Título do anúncio</span>
-              <label class="dados"><input type="text"> </label>
+              <input type="text" class="dados">
             </div>
             <div class="textinput">
               <span class="detalhe">Tipo</span>
               <label  class="dados">
                 <select id="tipo" name="tipo" form="">
+                  <option value="conta">Tipo</option>
                   <option value="conta">Conta</option>
                   <option value="assinatura">Assinatura</option>
                   <option value="skin">Skin</option>
+                  <option value="conta">Itens</option>
                 </select> 
               </label>
             </div>
             <div class="textinput">
-              <span class="detalhe">Descrição</span>
-              <label class="dados"><input type="text">  </label>
-            </div>
-            
-            <div class="textinput">
               <span class="detalhe">Preço</span>
-              <label  class="dados"><input type="text">  </label>
+              <input type="text" class="dados">
             </div>
             <div class="textinput">
               <span class="detalhe">Foto</span>
-              <label  class="dados"><input type="text">   </label>
+              <input type="text" class="dados">
+            </div>
+            <div class="textinput">
+              <span class="detalhe">Descrição</span>
+              <textarea class="dados" name="w3review"></textarea>
             </div>
           </form>
         </div>

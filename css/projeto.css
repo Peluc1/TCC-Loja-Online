@@ -1160,15 +1160,15 @@ form{
     font-weight: 600;
 }
 
+
+
 .anuncios {
-    
     display:flex;
     justify-content: center;
 }
 
 .anuncios .anuncios-box {
     max-width: 700px;
-    min-width: 700px;
     background-color: white;
     display:flex;
     justify-content: space-between;
@@ -1195,5 +1195,11 @@ form{
     border-radius: 5px;
     transition: all 0.3s ease;
 }
+ .anuncios-box form textarea{
+    height: 150px;
+    width: 690px;
+    resize: none
+ }
+
 /* Aqui termina a parte do Perfil */
 
