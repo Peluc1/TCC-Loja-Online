@@ -889,39 +889,275 @@ form{
     pointer-events: auto;
 }
 
-
-
-.perfil{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: auto;
-    margin-left: 20px;
-    margin-top: 50px ;
-    color: white;
-    border-radius: 10px;
-    padding: 6px;
+.bxs-user,
+.bxs-basket,
+.bxs-shopping-bag,
+.bxs-store-alt,
+.bxs-door-open{
     font-size: 25px;
 }
 
-.perfil hr{
+.dadospessoais{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    max-width: 700px;
     width: 100%;
-}
-
-.perfil label{
-    padding: 6px;
-}
-
-.dados{
-    border-radius: 7px ;
     background-color: white;
-    color: black;
-    margin: 10px 0px 10px 0px;
-    font-size: 23px;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.container .titulodados{
+    font-size: 25px;
+    width: 100%;
+    position: relative;
+    font-weight: 500;
+}
+
+.container .titulodados::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 30px;
+    background: #9b56b6;
+}
+
+.container form .user-detalhes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+.container form{
+    padding-right: 15px;
+}
+
+form .user-detalhes .textinput{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-detalhes .textinput .detalhe{
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 20px;
+    display: block;
+}
+
+.user-detalhes .textinput label{
+    height: 45px;
+    width: 100%;
+    padding-left: 15px;
+    line-height: 45px;
+    outline: none;
+    border: solid 2px black;
+    border-bottom-width: 3px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.user-detalhes .textinput label:hover{
+    border-color: #9b56b6;
 }
 
 .endereco{
-    margin-left: 150px;
+    background:rgba(39, 91, 214, 0.4);
+    margin: 20px 0 12px 0;
+    border-radius:5px;
+    border-left:solid 5px black; 
+    padding: 10px;
+} 
+
+.subtituloendereco{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.dadospessoais .edit div{
+    margin: 20px 10px 10px 0px;
+}
+
+.dadospessoais .edit a{
+    color: rgba(0,0,0,0.5);
+}
+
+.dadospessoais .edit span{
+    font-size: 17px;
+}
+
+
+.compras{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap:wrap;
+}
+
+.compras .titulo-compras{
+    font-size: 25px;
+    color: white;
+    max-width: 800px;
+    min-width: 800px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.compras .titulo-compras .bxs-basket{
+    margin-right: 10px;
+}
+
+.compras .compras-section{
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    min-width: 800px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+.compras-section .numero-pedido span{
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.compras-section .status span{
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.compras-section .data span{
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.compras-section .pagamento span{
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.compras-section .nf-e span{
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.compras-section .nf-e .bxs-notepad{
+    font-size: 30px;
+}
+
+.compras-section .status .status-aprov{
+    color: green;
+    font-weight: 600;
+}
+
+.compras-section .status .status-recused{
+    color: red;
+    font-weight: 600;
+}
+
+
+.vendas{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap:wrap;
+}
+
+.vendas .titulo-vendas{
+    font-size: 25px;
+    color: white;
+    max-width: 800px;
+    min-width: 800px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.vendas .titulo-vendas .bxs-shopping-bag{
+    margin-right: 10px;
+}
+
+.vendas .vendas-section{
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    min-width: 800px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+.vendas .vendas-section .bxs-user{
+    font-size: 30px;
+}
+
+.vendas-section .numero-venda span{
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.vendas-section .status span{
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.vendas-section .data span{
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.vendas-section .pagamento span{
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.vendas-section .comprador span{
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+
+.status .status-aprov{
+    color: green;
+    font-weight: 600;
+}
+
+.status .status-recused{
+    color: red;
+    font-weight: 600;
+}
+
+.status .status-pendente{
+    color: #BEB329;
+    font-weight: 600;
 }
 
 /* Aqui termina a parte do Perfil */

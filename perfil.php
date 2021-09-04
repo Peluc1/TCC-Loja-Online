@@ -19,6 +19,7 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <script src="js/scriptdiv.js" defer></script>
   </head>
 <body>
 <header>
@@ -106,8 +107,8 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
             <hr>
             <li>
               <a>
-              <i class='bx bxs-user'></i>
-              <span class="links-name">Dados</span>
+              <i class='bx bxs-user' id="action-dados"></i>
+              <span class="links-name" id="action-dados">Dados</span>
               </a>
               <span class="tooltip">Dados</span>
             </li>
@@ -128,9 +129,9 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
             <li>
               <a>
               <i class='bx bxs-store-alt' ></i>
-              <span class="links-name">Anuncios</span>
+              <span class="links-name">Anuncie aqui</span>
               </a>
-              <span class="tooltip">Anuncios</span>
+              <span class="tooltip">Anuncie aqui</span>
             </li>
             <li>
               <a href="logout.php">
@@ -141,7 +142,205 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
             </li>
           </ul>
       </div>
-  <footer style="margin-top: 10000px;">
+
+      <nav class="dadospessoais" id="dadospessoais">
+        <div class="container">
+          <div class="titulodados">Dados</div>
+            <form>
+              <div class="user-detalhes">
+                <div class="textinput">
+                  <span class="detalhe">Nome</span>
+                  <label class="dados"> <?php echo $user["nome"]; ?></label>
+                </div>
+                <div class="textinput">
+                  <span class="detalhe">Sobrenome</span>
+                  <label class="dados"> <?php echo $user["sobrenome"]; ?></label>
+                </div>
+                <div class="textinput">
+                  <span class="detalhe">Email:</span>
+                  <label  class="dados"> <?php echo $user["email"]; ?></label>
+                </div>
+                <div class="textinput">
+                  <span class="detalhe">CPF:</span>
+                  <label  class="dados">  <?php echo $user["cpf"]; ?></label>
+                </div>
+                <div class="textinput">
+                  <span class="detalhe">Telefone:</span>
+                  <label  class="dados">  <?php echo $user["telefone"]; ?></label>
+                </div>
+                <div class="textinput">
+                  <span class="detalhe">Data de nascimento:</span>
+                  <label  class="dados">  <?php echo $user["dtnascimento"]; ?></label>
+                </div>
+              </div>
+            </form>
+            <div class="titulodados">Endereço</div>
+              <div class="endereco">
+                <div class="subtituloendereco">Endereço Principal</div>
+                <div>
+                    <label>Bauru, SP</label>
+                </div>
+                <div>
+                    <label>Rua: Alfredo Ruiz</label>
+                </div>
+                <div>
+                    <label>Numero: 10-70</label>
+                </div>
+                <div>
+                    <label>CEP: 17014-350</label>
+                </div>
+                <div>
+                    <label>Bairro: Vila Mesquita</label>
+                </div>
+                <div class="edit">
+                  <a href="#"><div>EDITAR</div></a>
+                </div>
+              </div>
+        </div>
+      </nav>
+      <nav class="compras">
+        <div class="titulo-compras"><i class='bx bxs-basket' ></i>Minhas compras</div>
+        <div class="compras-section">
+          <div class="numero-pedido">
+            <span>Número do pedido</span>
+            <span>#355387</span>
+          </div>
+          <div class="status">
+            <span>Status</span>
+            <span class="status-aprov">Aprovado</span>
+          </div>
+          <div class="data">
+            <span>Data</span>
+            <span>12/01/2021</span>
+          </div>
+          <div class="pagamento">
+            <span>Pagamento</span>
+            <span>Boleto</span>
+          </div>
+          <div class="nf-e">
+            <span>NF-E</span>
+            <span><i class='bx bxs-notepad' ></i></span>
+          </div>
+        </div>
+        <div class="compras-section">
+          <div class="numero-pedido">
+            <span>Número do pedido</span>
+            <span>#355387</span>
+          </div>
+          <div class="status">
+            <span>Status</span>
+            <span class="status-aprov">Aprovado</span>
+          </div>
+          <div class="data">
+            <span>Data</span>
+            <span>12/01/2021</span>
+          </div>
+          <div class="pagamento">
+            <span>Pagamento</span>
+            <span>Boleto</span>
+          </div>
+          <div class="nf-e">
+            <span>NF-E</span>
+            <span><i class='bx bxs-notepad' ></i></span>
+          </div>
+        </div>
+        <div class="compras-section">
+          <div class="numero-pedido">
+            <span>Número do pedido</span>
+            <span>#355387</span>
+          </div>
+          <div class="status">
+            <span>Status</span>
+            <span class="status-aprov">Aprovado</span>
+          </div>
+          <div class="data">
+            <span>Data</span>
+            <span>12/01/2021</span>
+          </div>
+          <div class="pagamento">
+            <span>Pagamento</span>
+            <span>Boleto</span>
+          </div>
+          <div class="nf-e">
+            <span>NF-E</span>
+            <span><i class='bx bxs-notepad' ></i></span>
+          </div>
+        </div>
+        <div class="compras-section">
+          <div class="numero-pedido">
+            <span>Número do pedido</span>
+            <span>#355387</span>
+          </div>
+          <div class="status">
+            <span>Status</span>
+            <span class="status-recused">Recusado</span>
+          </div>
+          <div class="data">
+            <span>Data</span>
+            <span>12/01/2021</span>
+          </div>
+          <div class="pagamento">
+            <span>Pagamento</span>
+            <span>Boleto</span>
+          </div>
+          <div class="nf-e">
+            <span>NF-E</span>
+            <span><i class='bx bxs-notepad' ></i></span>
+          </div>
+        </div>
+      </nav>
+      <nav class="vendas">
+        <div class="titulo-vendas"><i class='bx bxs-shopping-bag' ></i>Minha vendas</div>
+        <div class="vendas-section">
+          <div class="numero-venda">
+              <span>Número da venda</span>
+              <span>#355387</span>
+            </div>
+            <div class="status">
+              <span>Status</span>
+              <span class="status-pendente">Pendente</span>
+            </div>
+            <div class="data">
+              <span>Data</span>
+              <span>12/01/2021</span>
+            </div>
+            <div class="pagamento">
+              <span>Pagamento</span>
+              <span>Boleto</span>
+            </div>
+            <div class="comprador">
+              <span>Comprador</span>
+              <span><i class='bx bxs-user'></i></span>
+            </div>
+          </div>
+          <div class="vendas-section">
+          <div class="numero-venda">
+              <span>Número da venda</span>
+              <span>#355387</span>
+            </div>
+            <div class="status">
+              <span>Status</span>
+              <span class="status-pendente">Pendente</span>
+            </div>
+            <div class="data">
+              <span>Data</span>
+              <span>12/01/2021</span>
+            </div>
+            <div class="pagamento">
+              <span>Pagamento</span>
+              <span>Boleto</span>
+            </div>
+            <div class="comprador">
+              <span>Comprador</span>
+              <span><i class='bx bxs-user'></i></span>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <nav class="anuncios">
+        
+      </nav>
+  <footer style="margin-top: 45px;">
     <div class="social">
       <a href="a" class="ftfooter"><img src="imagens/facebook.png" width="50" height="50"></a>
       <a href="a" class="ftfooter"><img src="imagens/instagram.png" width="50" height="52"></a>
