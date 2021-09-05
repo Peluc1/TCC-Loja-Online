@@ -9,6 +9,8 @@ $sql->bindParam(1, $_SESSION['email']);
 
 $result = $sql->execute();
 $user  = $sql->fetch(PDO::FETCH_ASSOC);
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,7 +19,8 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="css/projeto.css?v=<?php echo time(); ?>">
     <link rel="sortcut icon" href="imagens/logo.jpeg" type="image/x-icon" />
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/JQuery3.3.1.js"></script>
+   
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <script src="js/scriptdiv.js" defer></script>
@@ -342,14 +345,14 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
       <nav class="anuncios" id="anuncios">
         <div class="anuncios-box">
           <div class="tituloanucio">Anucie Aqui</div>
-          <form>
+          <form id="anunciar" name="anunciar" enctype="multipart/form-data">
             <div>
               <span>Título do anúncio</span>
-              <input type="text">
+              <input type="text" id="nome" name="nome">
             </div>
             <div>
               <span>Tipo</span>
-                <select id="tipo" name="tipo" form="">
+                <select id="tipo" name="tipo" form="anunciar">
                   <option value="conta">Tipo</option>
                   <option value="conta">Conta</option>
                   <option value="assinatura">Assinatura</option>
@@ -359,7 +362,7 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
             </div>
             <div>
               <span >Preço</span>
-              <input type="text">
+              <input type="text" id="preco" name="preco">
             </div>
             <div>
             <input type="file" name="arquivo" id="arquivo" class="arquivo">
@@ -368,10 +371,12 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
             </div>
             <div>
               <span>Descrição</span>
-              <textarea name="w3review"></textarea>
+              <textarea name="descricao"></textarea>
             </div>
+            <input type="submit" value="Anunciar">
           </form>
         </div>
+        <div id="mensagem"></div>
       </nav>
   <footer style="margin-top: 45px;">
     <div class="social">
@@ -425,6 +430,7 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
       sidebar.classList.toggle("o")
     }
   </script>
+   <script src="js/scriptajax.js"></script>
   <script src="js/scriptmenu.js"></script>
 </body>
 </html>
