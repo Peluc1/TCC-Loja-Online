@@ -897,6 +897,7 @@ form{
     font-size: 25px;
 }
 
+
 .dadospessoais{
     display: flex;
     height: 100vh;
@@ -1000,6 +1001,7 @@ form{
     justify-content: center;
     align-content: center;
     flex-wrap:wrap;
+    margin-top: 100px;
 }
 
 .compras .titulo-compras{
@@ -1080,6 +1082,7 @@ form{
     justify-content: center;
     align-content: center;
     flex-wrap:wrap;
+    margin-top: 100px;
 }
 
 .vendas .titulo-vendas{
@@ -1165,6 +1168,7 @@ form{
 .anuncios {
     display:flex;
     justify-content: center;
+    margin-top: 100px;
 }
 
 .anuncios .anuncios-box {
@@ -1201,5 +1205,28 @@ form{
     resize: none
  }
 
+.anuncios-box .arquivo {
+    display: none;
+  }
+.anuncios-box .file {
+    line-height: 30px;
+    height: 30px;
+    border: 1px solid #A7A7A7;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 15px;
+    vertical-align: middle;
+    width: 300px;
+  }
+.anuncios-box .btn {
+    border: none;
+    box-sizing: border-box;
+    padding: 2px 10px;
+    background-color: #4493c7;
+    color: #FFF;
+    height: 32px;
+    font-size: 15px;
+    vertical-align: middle;
+  }
 /* Aqui termina a parte do Perfil */
 

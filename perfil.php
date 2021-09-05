@@ -17,6 +17,7 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="css/projeto.css?v=<?php echo time(); ?>">
     <link rel="sortcut icon" href="imagens/logo.jpeg" type="image/x-icon" />
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <script src="js/scriptdiv.js" defer></script>
@@ -105,30 +106,30 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
         </div>
           <ul>
             <hr>
-            <li>
+            <li id="action-dados" style="cursor:pointer">
               <a>
-              <i class='bx bxs-user' id="action-dados"></i>
-              <span class="links-name" id="action-dados">Dados</span>
+              <i class='bx bxs-user'></i>
+              <span class="links-name">Dados</span>
               </a>
-              <span class="tooltip">Dados</span>
+              <span class="tooltip" >Dados</span>
             </li>
-            <li>
+            <li id="action-compras" style="cursor:pointer">
               <a>
               <i class='bx bxs-basket'></i>
               <span class="links-name">Compras</span>
               </a>
               <span class="tooltip">Compras</span>
             </li>
-            <li>
+            <li  id="action-vendas" style="cursor:pointer">
               <a>
-              <i class='bx bxs-shopping-bag' ></i>
+              <i class='bx bxs-shopping-bag'></i>
               <span class="links-name">Vendas</span>
               </a>
               <span class="tooltip">Vendas</span>
             </li>
-            <li>
+            <li id="action-anuncios" style="cursor:pointer">
               <a>
-              <i class='bx bxs-store-alt' ></i>
+              <i class='bx bxs-store-alt'></i>
               <span class="links-name">Anuncie aqui</span>
               </a>
               <span class="tooltip">Anuncie aqui</span>
@@ -198,7 +199,7 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
               </div>
         </div>
       </nav>
-      <nav class="compras">
+      <nav class="compras" id="compras">
         <div class="titulo-compras"><i class='bx bxs-basket' ></i>Minhas compras</div>
         <div class="compras-section">
           <div class="numero-pedido">
@@ -289,7 +290,7 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
           </div>
         </div>
       </nav>
-      <nav class="vendas">
+      <nav class="vendas" id="vendas">
         <div class="titulo-vendas"><i class='bx bxs-shopping-bag' ></i>Minha vendas</div>
         <div class="vendas-section">
           <div class="numero-venda">
@@ -338,17 +339,16 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
         </div>
       </nav>
 
-      <nav class="anuncios">
+      <nav class="anuncios" id="anuncios">
         <div class="anuncios-box">
           <div class="tituloanucio">Anucie Aqui</div>
           <form>
-            <div class="textinput">
-              <span class="detalhe">Título do anúncio</span>
-              <input type="text" class="dados">
+            <div>
+              <span>Título do anúncio</span>
+              <input type="text">
             </div>
-            <div class="textinput">
-              <span class="detalhe">Tipo</span>
-              <label  class="dados">
+            <div>
+              <span>Tipo</span>
                 <select id="tipo" name="tipo" form="">
                   <option value="conta">Tipo</option>
                   <option value="conta">Conta</option>
@@ -356,19 +356,19 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
                   <option value="skin">Skin</option>
                   <option value="conta">Itens</option>
                 </select> 
-              </label>
             </div>
-            <div class="textinput">
-              <span class="detalhe">Preço</span>
-              <input type="text" class="dados">
+            <div>
+              <span >Preço</span>
+              <input type="text">
             </div>
-            <div class="textinput">
-              <span class="detalhe">Foto</span>
-              <input type="text" class="dados">
+            <div>
+            <input type="file" name="arquivo" id="arquivo" class="arquivo">
+            <input type="text" name="file" id="file" class="file" placeholder="Arquivo" readonly="readonly">
+            <input type="button" class="btn" value="SELECIONAR">
             </div>
-            <div class="textinput">
-              <span class="detalhe">Descrição</span>
-              <textarea class="dados" name="w3review"></textarea>
+            <div>
+              <span>Descrição</span>
+              <textarea name="w3review"></textarea>
             </div>
           </form>
         </div>
