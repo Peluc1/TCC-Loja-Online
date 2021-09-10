@@ -344,14 +344,15 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
 
       <nav class="anuncios" id="anuncios">
         <div class="anuncios-box">
-          <div class="tituloanucio">Anucie Aqui</div>
+
+          <div class="tituloanucio">Anuncie Aqui</div>
           <form id="anunciar" name="anunciar" enctype="multipart/form-data">
-            <div>
-              <span>Título do anúncio</span>
+            <div class="nomeanuncio">
+              <p>Título do anúncio</p>
               <input type="text" id="nome" name="nome">
             </div>
-            <div>
-              <span>Tipo</span>
+            <div class="tipoanuncio">
+              <p>Tipo</p>
                 <select id="tipo" name="tipo" form="anunciar">
                   <option value="conta">Tipo</option>
                   <option value="conta">Conta</option>
@@ -360,24 +361,29 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
                   <option value="conta">Itens</option>
                 </select> 
             </div>
-            <div>
-              <span >Preço</span>
+            <div class="precoanuncio">
+              <p>Preço</p>
               <input type="text" id="preco" name="preco">
             </div>
-            <div>
-            <input type="file" name="arquivo" id="arquivo" class="arquivo">
-            <input type="text" name="file" id="file" class="file" placeholder="Arquivo" readonly="readonly">
-            <input type="button" class="btn" value="SELECIONAR">
+            <div class="fotoanuncio">
+              <p class="p">Foto do anuncio</p>
+              <input type="file" name="arquivo" id="arquivo" class="arquivo">
+              <p><input type="text" name="file" id="file" class="file" placeholder="Arquivo" readonly="readonly"></p>
+              <input type="button" class="btn" value="SELECIONAR">
             </div>
-            <div>
-              <span>Descrição</span>
+            <div class="descricaoanuncio">
+              <p>Descrição</p>
               <textarea name="descricao"></textarea>
             </div>
-            <input type="submit" value="Anunciar">
+            <div class="btn-anunciar">
+              <input type="submit" value="Anunciar">
+            </div>
           </form>
         </div>
         <div id="mensagem"></div>
       </nav>
+
+
   <footer style="margin-top: 45px;">
     <div class="social">
       <a href="a" class="ftfooter"><img src="imagens/facebook.png" width="50" height="50"></a>

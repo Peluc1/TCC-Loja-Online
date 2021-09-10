@@ -94,25 +94,24 @@ if(isset($_SESSION['email'])){
       </div>
     </div>
   </nav>
-        <nav class="login">
-            <h1>Insira os seus dados cadastrados</h1>
-            <form class="loginform" action="logar.php" method="POST">
-                <div class="fullbox space">
-                    <label for="email">E-Mail</label>
-                    <input type="email" name="email" class="email" placeholder="Digite o seu email">
-                </div>
-                <div class="fullbox space">
-                    <label for="password">Senha</label>
-                    <input type="password" name="password" class="password" placeholder="Digite a sua senha">
-                </div>
-                <div class="fullbox">
-                    <input type="submit" class="btn-submit " value="Realize o login">
-                </div>
-                <p class="erro-validation template"></p>
-                <a href="cadastro.php" style="color:#B181FC;"> <p class="caminhocadastro">Clique aqui caso queira realizar o cadastro</p></a>
-                <a href="#" style="color: #B181FC;"><p class="caminhocadastro">Esqueceu a senha?</p></a>
-            </form>
-        </nav>
+    <nav class="login">
+      <div class="titulo">Login</div>
+      <form action="logar.php" method="post" class="form-login">
+        <div class="campo-dado">
+          <input type="text" name="email"  class="input-login"required>
+          <label>Email</label>
+        </div>
+        <div class="campo-dado">
+          <input type="password" name="password" required>
+          <label>Senha</label>
+        </div>
+        <div class="esqueceu-senha"><a href="#">Esqueceu a senha?</a></div>
+        <div>
+          <input type="submit" value="Fazer login" class="btnlogin">
+        </div>
+        <div class="cadastro-link">Não é membro?<a> Cadastre-se agora</a></div>
+      </form>
+    </nav>
 
         <script src="js/scriptcadastro.js"></script>
 

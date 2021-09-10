@@ -96,52 +96,72 @@ header('Location: perfil.php');
     </div>
   </nav>
         <nav class="cadastro">
-            <h1>Insira os seus dados para se cadastrar</h1>
             <form class="cadastroform" action="cadastrar.php" method="POST">
-                <div class="fullbox space">
-                    <label for="email">Nome</label>
-                    <input type="nome" name="nome" class="nome" placeholder="Digite o seu nome">
+                <div class="titulo-cadastro">Cadastro</div>
+                <div class="detalhes-cadastro">
+                    <div class="fullbox ">
+                        <p for="email">Nome</p>
+                        <input type="nome" name="nome" class="nome" placeholder="Digite o seu nome" required>
+                    </div>
+                    <div class="fullbox">
+                        <p for="email">Sobrenome</p>
+                        <input type="sobrenome" name="sobrenome" class="sobrenome" placeholder="Digite o seu sobrenome" required>
+                    </div>
+                    <div class="fullbox">
+                        <p class="titulo-section-cadastro">E-Mail</p>
+                        <input type="email" name="email" class="email" placeholder="Digite o seu email" required>
+                    </div>
+                    <div class="fullbox">
+                        <p for="email">CPF</p>
+                        <input type="cpf" name="cpf" class="form-control"  onkeypress="$(this).mask('000.000.000-00');" placeholder="000.000.000-00" required>
+                    </div>
+                    <div class="fullbox">
+                        <p for="email">Data de nascimento</p>
+                        <input type="dtnascimento" name="dtnascimento" class="form-control" onkeypress="$(this).mask('00/00/0000')" placeholder="00/00/0000" required>
+                    </div>
+                    <div class="fullbox">
+                        <p for="email">Telefone</p>
+                        <input type="telefone" name="telefone" class="form-control"  onkeypress="$(this).mask('(00) 0000-00009')" placeholder="(00) 0000-00009" required>
+                    </div>
+                    <div class="fullbox">
+                        <p for="password">Senha</p>
+                        <input type="password" name="senha" class="password"  placeholder="Digite a sua senha" required>
+                    </div>
+                    <div class="fullbox">
+                        <p for="email">Confirme a sua senha</p>
+                        <input type="password" name="senha" class="password" placeholder="Confirme a sua senha" required>
+                    </div>
                 </div>
-                <div class="fullbox space">
-                    <label for="email">Sobrenome</label>
-                    <input type="sobrenome" name="sobrenome" class="sobrenome" placeholder="Digite o seu sobrenome">
+                <div class="checkbox-div">
+                    <input type="checkbox">
+                    <label for="agreement">Eu li e aceito os <a href="#" style="color: #9F0080;">termos de uso</a></label>
                 </div>
-                <div class="fullbox space">
-                    <label for="email">E-Mail</label>
-                    <input type="email" name="email" class="email" placeholder="Digite o seu email">
+                <div class="genero-geral">
+                    <input type="radio" name="genero" id="dot-1" class="radiobtn-genero">
+                    <input type="radio" name="genero" id="dot-2" class="radiobtn-genero">
+                    <input type="radio" name="genero" id="dot-3" class="radiobtn-genero">
+                    <span class="genero-titulo">Gênero</span>
+                    <div class="genero-categoria">
+                        <label for="dot-1">
+                            <label class="dot one"></label>
+                            <span class="nenhum">Masculino</span>
+                        </label>
+                        <label for="dot-2">
+                            <label class="dot two"></label>
+                            <span class="nenhum">Feminino</span>
+                        </label>
+                        <label for="dot-3">
+                            <label class="dot three"></label>
+                            <span class="nenhum">Prefiro não dizer</span>
+                        </label>
+                    </div>
                 </div>
-                <div class="half-box space">
-                    <label for="password">Senha</label>
-                    <input type="password" name="senha" class="password" placeholder="Digite a sua senha">
-                </div>
-                <div class="half-box space">
-                    <label for="email">Confirme a sua senha</label>
-                    <input type="password" name="senha" class="password" placeholder="Digite a sua senha">
-                </div>
-                <div class="fullbox space">
-                    <label for="email">CPF</label>
-                    <input type="cpf" name="cpf" class="form-control"  onkeypress="$(this).mask('000.000.000-00');" placeholder="Ex.: 000.000.000-00">
-                </div>
-                <div class="fullbox space">
-                    <label for="email">Data de nascimento</label>
-                    <input type="dtnascimento" name="dtnascimento" class="form-control" onkeypress="$(this).mask('00/00/0000')" placeholder="Digite a sua data de nascimento">
-                </div>
-                <div class="fullbox space">
-                    <label for="email">Telefone</label>
-                    <input type="telefone" name="telefone" class="form-control"  onkeypress="$(this).mask('(00) 0000-00009')" placeholder="Digite o seu numero de telefone">
-                </div>
-                <div class="fullbox">
-                    <input type="checkbox" name="agreement" class="agreement">
-                    <label for="agreement" class="agreement-label">Eu li e aceito os <a href="#" style="color: #9F0080;">termos de uso</a></label>
-                </div>
-                <div class="fullbox">
-                    <input type="submit" class="btn-submit " value="Realizar o cadastro">
+                <div class="cadastro-btn">
+                    <input type="submit" value="Realizar o cadastro" class="btncadastro">
                 </div>
             </form>
         </nav>
-        <script src="js/scriptcadastro.js"></script>
-
-        <footer>
+        <footer style="margin-top: 80px;">
             <div class="social">
               <a href="a" class="ftfooter"><img src="imagens/facebook.png" width="50" height="50"></a>
               <a href="a" class="ftfooter"><img src="imagens/instagram.png" width="50" height="52"></a>
