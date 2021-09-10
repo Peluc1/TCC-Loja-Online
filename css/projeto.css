@@ -1489,16 +1489,18 @@ form .genero-geral .genero-categoria{
     left: 0;
 }
 
-#paginate .paginations{
+.paginas p{
     display: flex;
-    width: 100%;
-    justify-content: center;
+    vertical-align: middle;
+    justify-content:center;
     align-items: center;
 }
 
-#paginate .paginations div{
-    cursor: pointer;
-    font-size: 20px;
-    color: white;
-    margin: 20px 10px 20px 10px;
+.paginas a {
+    color:white;
+    margin: 0 5px 0 5px;
+}
+
+.paginas i{
+    font-size:40px;
 }

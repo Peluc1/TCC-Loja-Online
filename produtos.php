@@ -1,4 +1,22 @@
-<?php include("conexao.php");
+<?php 
+    include("conexao.php");
+    $pagina = (isset($_GET['pagina'])) ? $_GET['pagina'] : 1;
+
+    $limite = 12;
+
+    $inicio = ($limite * $pagina) - $limite;
+
+    $sqlprods = $conexao->prepare("SELECT COUNT(*) AS num FROM loja.produtos");
+    $resultprods = $sqlprods->execute();
+    $num = $sqlprods->fetch(PDO::FETCH_ASSOC);
+
+    $qtdpaginas = ceil($num['num']/$limite);
+
+
+    $sql = $conexao->prepare("SELECT * FROM loja.produtos limit $inicio, $limite");
+    $result = $sql->execute();
+    $produtos = $sql->fetchAll();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -90,16 +108,21 @@
         </nav>
         <nav>
                 <div class="produtos">
+
+                <?php
+                    foreach($produtos as $produto) {
+
+                ?>
                     <div class="product-card">
                         <div class="produto-logo">
                             <img src="logo/CSGO.png" alt="logo">
                             <i class='bx bx-shopping-bag'></i>
                         </div>
                         <div class="imagem-produto">
-                            <img src="imagens/Ak-47 Piloto Neon FT.png">
+                            <img src="<?php echo "imagens/upload/".$produto['fotoproduto']; ?>">
                         </div>
                         <div class="produto-detalhes">
-                            <span class="produto-nome">AK-47 Piloto Neon</span>
+                            <span class="produto-nome"><?php echo $produto['nomeproduto']; ?></span>
                             <div class="estrelas">
                                 <i class='bx bx-star'></i>
                                 <i class='bx bx-star'></i>
@@ -110,7 +133,7 @@
                         </div>
                         <div class="preco-div">
                             <div class="preco">
-                                <p class="preco-nun">R$ 147,00</p>
+                                <p class="preco-nun">R$ <?php echo $produto['preco']; ?></p>
                             </div>
                         </div>
                         <div class="btn-addcarrinho">
@@ -118,8 +141,44 @@
                             <button>Comprar</button>
                         </div>
                     </div>
+                    <?php
+
+                    }
+                    ?>
+                </div>
+                <div class="paginas">
+
+                    <p>
+
+                    <?php    
+                    
+                    if($pagina != 1){
+                        echo "<a href=produtos.php?pagina=".($pagina-1).">
+                              <i class='bx bx-left-arrow-alt' ></i>
+                              </a>";
+                    }
+                    ?>
+                   
+                    <?php
+                        for($i=1;$i<=$qtdpaginas;$i++){
+                            echo "<a href='produtos.php?pagina=$i'>".$i."</a>";
+
+                        }
+                    ?>
+
+                    <?php    
+
+                    if($pagina != $qtdpaginas){
+                        echo "<a href=produtos.php?pagina=".($pagina+1).">
+                        <i class='bx bx-right-arrow-alt' ></i>
+                              </a>";
+                    }
+                    ?>
+
+                   </p>
+
                 </div>
         </nav>
-        <script src="js/paginacao.js"></script>
+
     </body>
 </html>
