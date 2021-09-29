@@ -50,7 +50,7 @@ $dtpostado = "11/11/1111";
    $sql->bindParam(6, $filename);
    $sql->bindParam(7, $idusuario);
    
-   echo $idusuario;
+   echo 'Produto postado com sucesso';
    $sql->execute() or die(print_r($sql->errorInfo(), true));;
 
 

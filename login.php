@@ -98,7 +98,7 @@ if(isset($_SESSION['email'])){
       <div class="titulo">Login</div>
       <form action="logar.php" method="post" class="form-login">
         <div class="campo-dado">
-          <input type="text" name="email"  class="input-login"required>
+          <input type="text" name="email"  class="input-login" required>
           <label>Email</label>
         </div>
         <div class="campo-dado">
@@ -109,7 +109,7 @@ if(isset($_SESSION['email'])){
         <div>
           <input type="submit" value="Fazer login" class="btnlogin">
         </div>
-        <div class="cadastro-link">Não é membro?<a> Cadastre-se agora</a></div>
+        <div class="cadastro-link">Não é membro?<a href="cadastro.php"> Cadastre-se agora</a></div>
       </form>
     </nav>
 

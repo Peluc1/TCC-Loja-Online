@@ -236,15 +236,14 @@ nav .navbar .nav-links .links li a{
     background-color: rgba(39, 91, 214, 0.3);
 }
 .submenu .nav-links .links .submenuprincipal{
-    display: none;
-    
     position: absolute;
     top: 50px;
     left: 0;
     background-color: #004395;
     line-height: 40px;
     border-radius: 0 0 4px 4px;
-    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.35);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    display: none;
 }
 
 .submenu .nav-links .links .submenuprincipal li{
@@ -261,7 +260,6 @@ nav .navbar .nav-links .links li a{
 
 .submenu .nav-links .links li:hover .perfilsubmenu{
     display: block;
-    justify-content: center;
     z-index: 50;
 }
 
@@ -275,8 +273,8 @@ nav .navbar .nav-links .links li a{
 
 .bx-up-arrow-alt{
     color: white;
-    margin-left: 4px;
 }
+
 .submenu .navbar .nav-links .links li:hover .assinaturasarrow,
 .submenu .navbar .nav-links .links li:hover .skinsitensarrow,
 .submenu .navbar .nav-links .links li:hover .contasarrow,
@@ -318,7 +316,7 @@ nav .navbar .nav-links .links li a{
     min-width: 130px;
 }
 
-.bemvindo .pesquisar input::placeholder {
+.pesquisar input::placeholder {
     color:rgba(255,255,255,0.4);
 }
 
@@ -740,8 +738,8 @@ form .detalhes-cadastro .fullbox{
     height: 45px;
     width: 100%;
     outline: none;
-    border-radius: 10px;
-    border: none;
+    border-radius:5px;
+    border: 1px solid black;
     padding-left: 15px;
     font-size: 17px;
 }
@@ -787,7 +785,7 @@ form .genero-geral .genero-categoria{
 #dot-2:checked ~ .genero-categoria label .two,
 #dot-3:checked ~ .genero-categoria label .three{
     border-color: #d9d9d9;
-    background-color: #f063e8;
+    background-color: red;
     
 }
 
@@ -812,8 +810,7 @@ form .genero-geral .genero-categoria{
     height: 40px;
     margin-top: 40px;
     outline: none;
-    background-color: #1fd1f9;
-    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
 }
 
 /* Aqui termina a parta de cadastro */
@@ -939,13 +936,12 @@ form .genero-geral .genero-categoria{
     height: 100vh;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
 }
 
 .container{
     max-width: 700px;
     width: 100%;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    background-color: white;
     padding: 25px 30px;
     border-radius: 5px;
 }
@@ -997,15 +993,14 @@ form .genero-geral .genero-categoria{
     padding-left: 15px;
     line-height: 45px;
     outline: none;
-    border-radius: 10px;
+    border: solid 2px black;
+    border-bottom-width: 3px;
+    border-radius: 5px;
     transition: all 0.3s ease;
-    background-color: white;
-    -webkit-touch-callout: none; 
-    -webkit-user-select: none; 
-    -khtml-user-select: none;
-    -moz-user-select: none; 
-    -ms-user-select: none;
-    user-select: none;
+}
+
+.user-detalhes .textinput label:hover{
+    border-color: #9b56b6;
 }
 
 .endereco{
@@ -1207,16 +1202,17 @@ form .genero-geral .genero-categoria{
 .anuncios {
     display:flex;
     justify-content: center;
-    align-items: center;
     margin-top: 100px;
 }
 
 .anuncios .anuncios-box {
     max-width: 700px;
-    border-radius: 20px;
-    height: fit-content;
+    background-color: white;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 5px;
     padding: 25px 30px;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 
 .anuncios-box .tituloanucio {
@@ -1237,78 +1233,59 @@ form .genero-geral .genero-categoria{
     background: #9b56b6;
 }
 
-.anuncios .anuncios-box .anuncio-box-sub{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 .anuncios .anuncios-box .nomeanuncio{
-    width: calc(100% / 2 - 20px);
+    margin: 0 0 0 0;
 }
 
 .anuncios-box .nomeanuncio p{
     text-align: left;
+    margin-bottom: 5px;
     font-size: 20px;
 }
 
 .anuncios-box .nomeanuncio input{   
-    margin: 10px 0 12px 0;
-    height: 45px;
-    width: 90%;
-    outline: none;
-    border-radius: 10px;
-    border: none;
-    padding-left: 15px;
-    font-size: 17px;
+    padding: 5px;
 }
 
 .anuncios .anuncios-box .tipoanuncio{
-    width: calc(100% / 2 - 20px);
+    margin: 0 0 0 0
 }
 
 .anuncios-box .tipoanuncio p{
     text-align: left;
+    margin-bottom: 5px;
     font-size: 20px;
 }
 
 .anuncios-box .tipoanuncio select {
-    margin: 10px 0 12px 0;
-    height: 45px;
-    width: 95.5%;
-    outline: none;
-    border-radius: 10px;
-    border: none;
-    padding-left: 15px;
-    font-size: 17px;
+    border-style: solid;
+    border-radius: 2px;
+    padding: 5px;
+    width: 20%;
 }
 
 .anuncios .anuncios-box .precoanuncio{
-    width: calc(100% / 2 - 20px);
+    margin: 0 20px 0 0;
 }
 
 .anuncios-box .precoanuncio p{
     text-align: left;
+    margin-bottom: 5px;
     font-size: 20px;
 }
 
 .anuncios-box .precoanuncio input{
-    margin: 10px 0 12px 0;
-    height: 45px;
-    width: 90%;
-    outline: none;
-    border-radius: 10px;
-    border: none;
-    padding-left: 15px;
-    font-size: 17px;
+    width: 25%;
+    padding: 5px;
 }
 
 .anuncios .anuncios-box .fotoanuncio{
-    width: calc(100% / 2 - 20px);
+    margin: 10px 0px 20px 0px;
 }
 
 .anuncios-box .fotoanuncio .p{
     text-align: left;
+    margin-bottom: 5px;
     font-size: 20px;
 }
 
@@ -1317,14 +1294,16 @@ form .genero-geral .genero-categoria{
 }
 
 .anuncios-box .fotoanuncio .file{
-    margin: 10px 0 12px 0;
-    height: 45px;
-    width: 90%;
-    outline: none;
-    border-radius: 10px;
-    border: none;
-    padding-left: 15px;
-    font-size: 17px;
+    cursor: not-allowed;
+    margin-bottom: 5px;
+    width: 115%;
+    line-height: 30px;
+    height: 30px;
+    border: 1px solid #A7A7A7;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 15px;
+    vertical-align: middle;
 }
 
 .anuncios-box .fotoanuncio .btn{
@@ -1341,40 +1320,28 @@ form .genero-geral .genero-categoria{
 
 .anuncios-box form textarea{
     height: 150px;
-    margin: 10px 0 12px 0;
     width: 690px;
-    resize: none;
-    outline: none;
-    font-size: 17px;
-    border-radius: 10px;
-    border: none;
-    padding: 10px 10px 0 10px;
+    resize: none
 }
 
 .anuncios-box .descricaoanuncio p{
     text-align: left;
     margin-top: 5px;
+    margin-bottom: 5px;
     font-size: 20px;
 }
 
 .anuncios .anuncios-box .btn-anunciar{
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    margin-top: 15px;
 }
 
 .anuncios-box .btn-anunciar input{
-    color: white;
-    width: 349px;
-    height: 45px;
-    border-radius: 25px;
-    font-size: 20px;
-    margin-top: 20px;
-    background: linear-gradient(-135deg, #c850c0, #4158d0);
-    font-weight: 600;
-    border: none;
-    padding-left: none;
+    padding: 5px;
+    border-radius: 5px;
+    width: 120%;
+    background-color: white;
     cursor: pointer;
+    font-size: 20px;
 }
 
 /* Aqui termina a parte do Perfil */
@@ -1536,8 +1503,4 @@ form .genero-geral .genero-categoria{
 
 .paginas i{
     font-size:40px;
-}
-
-.filtro-produtos form input::placeholder{
-    color: black;
 }

@@ -108,7 +108,7 @@ header('Location: perfil.php');
                         <input type="sobrenome" name="sobrenome" class="sobrenome" placeholder="Digite o seu sobrenome" required>
                     </div>
                     <div class="fullbox">
-                        <p class="titulo-section-cadastro">E-Mail</p>
+                        <p>E-Mail</p>
                         <input type="email" name="email" class="email" placeholder="Digite o seu email" required>
                     </div>
                     <div class="fullbox">
@@ -137,9 +137,9 @@ header('Location: perfil.php');
                     <label for="agreement">Eu li e aceito os <a href="#" style="color: #9F0080;">termos de uso</a></label>
                 </div>
                 <div class="genero-geral">
-                    <input type="radio" name="genero" id="dot-1" class="radiobtn-genero">
-                    <input type="radio" name="genero" id="dot-2" class="radiobtn-genero">
-                    <input type="radio" name="genero" id="dot-3" class="radiobtn-genero">
+                    <input type="radio" name="genero" id="dot-1" class="radiobtn-genero" value="Masculino">
+                    <input type="radio" name="genero" id="dot-2" class="radiobtn-genero" value="Feminino">
+                    <input type="radio" name="genero" id="dot-3" class="radiobtn-genero" value="Outro">
                     <span class="genero-titulo">Gênero</span>
                     <div class="genero-categoria">
                         <label for="dot-1">

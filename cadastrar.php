@@ -9,9 +9,10 @@ $senha = md5($_POST['senha']);
 $cpf = $_POST['cpf'];
 $dtnascimento = $_POST['dtnascimento'];
 $telefone = $_POST['telefone'];
+$sexo = $_POST['genero'];
 
 
-$sql = $conexao->prepare("INSERT INTO loja.usuario(nome, sobrenome, email, senha, cpf, dtnascimento, telefone) VALUES(?,?,?,?,?,?,?)");
+$sql = $conexao->prepare("INSERT INTO loja.usuario(nome, sobrenome, email, senha, cpf, dtnascimento, telefone, sexo) VALUES(?,?,?,?,?,?,?,?)");
 $sql->bindParam(1, $nome);
 $sql->bindParam(2, $sobrenome);
 $sql->bindParam(3, $email);
@@ -19,9 +20,10 @@ $sql->bindParam(4, $senha);
 $sql->bindParam(5, $cpf);
 $sql->bindParam(6, $dtnascimento);
 $sql->bindParam(7, $telefone);
+$sql->bindParam(8, $sexo);
 
 $sql->execute();
-header('Location: projeto.php');
+header('Location: perfil.php');
 
 
 

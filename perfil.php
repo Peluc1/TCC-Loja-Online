@@ -20,7 +20,8 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
     <link rel="sortcut icon" href="imagens/logo.jpeg" type="image/x-icon" />
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <script src="js/JQuery3.3.1.js"></script>
-   
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery.maskMoney.js" type="text/javascript"></script>
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <script src="js/scriptdiv.js" defer></script>
@@ -175,6 +176,10 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
                 <div class="textinput">
                   <span class="detalhe">Data de nascimento:</span>
                   <label  class="dados">  <?php echo $user["dtnascimento"]; ?></label>
+                </div>
+                <div class="textinput">
+                  <span class="detalhe">Sexo:</span>
+                  <label  class="dados">  <?php echo $user["sexo"]; ?></label>
                 </div>
               </div>
             </form>
@@ -344,43 +349,43 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
 
       <nav class="anuncios" id="anuncios">
         <div class="anuncios-box">
-
           <div class="tituloanucio">Anuncie Aqui</div>
           <form id="anunciar" name="anunciar" enctype="multipart/form-data">
-            <div class="nomeanuncio">
-              <p>Título do anúncio</p>
-              <input type="text" id="nome" name="nome">
-            </div>
-            <div class="tipoanuncio">
-              <p>Tipo</p>
-                <select id="tipo" name="tipo" form="anunciar">
-                  <option value="conta">Tipo</option>
-                  <option value="conta">Conta</option>
-                  <option value="assinatura">Assinatura</option>
-                  <option value="skin">Skin</option>
-                  <option value="conta">Itens</option>
-                </select> 
-            </div>
-            <div class="precoanuncio">
-              <p>Preço</p>
-              <input type="text" id="preco" name="preco">
-            </div>
-            <div class="fotoanuncio">
-              <p class="p">Foto do anuncio</p>
-              <input type="file" name="arquivo" id="arquivo" class="arquivo">
-              <p><input type="text" name="file" id="file" class="file" placeholder="Arquivo" readonly="readonly"></p>
-              <input type="button" class="btn" value="SELECIONAR">
-            </div>
-            <div class="descricaoanuncio">
-              <p>Descrição</p>
-              <textarea name="descricao"></textarea>
-            </div>
-            <div class="btn-anunciar">
-              <input type="submit" value="Anunciar">
+            <div class="anuncio-box-sub">
+              <div class="nomeanuncio">
+                <p>Título do anúncio</p>
+                <input type="text" id="nome" name="nome" placeholder="Titulo do anúncio" required>
+              </div>
+              <div class="tipoanuncio">
+                <p>Tipo</p>
+                  <select id="tipo" name="tipo" form="anunciar" required>
+                    <option value="" disabled selected>Escolha a sua opção</option>
+                    <option value="conta"><span>Conta</span></option>
+                    <option value="assinatura"><span>Assinatura</span></option>
+                    <option value="skin"><span>Skin</span></option>
+                    <option value="itens"><span>Itens</span></option>
+                  </select> 
+              </div>
+              <div class="precoanuncio">
+                <p>Preço</p>
+                <input type="text" id="preco" name="preco"  placeholder="R$ 0,00" required>
+              </div>
+              <div class="fotoanuncio">
+                <p class="p">Foto do anuncio</p>
+                <input type="file" name="arquivo" id="arquivo" class="arquivo">
+                <input type="text" name="file" id="file" class="file" placeholder="Arquivo" readonly="readonly">
+                <input type="button" class="btn" value="SELECIONAR">
+              </div>
+              <div class="descricaoanuncio" required>
+                <p>Descrição</p>
+                <textarea name="descricao" id="text" maxlength="350" placeholder="Fale um pouco mais sobre o produto"></textarea>
+              </div>
+              <div class="btn-anunciar">
+                <input type="submit" value="Anunciar">
+              </div>
             </div>
           </form>
         </div>
-        <div id="mensagem"></div>
       </nav>
 
 
@@ -435,6 +440,25 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
     btn.onclick = function(){
       sidebar.classList.toggle("o")
     }
+    $("#preco").maskMoney({prefix:'R$ ', allowNegative: true, thousands:'.', decimal:',', affixesStay: true});
+
+    textarea=document.getElementById('user_post_textarea');
+    function len(){
+    t_v=textarea.value;
+    if(t_v.length>180){
+      long_post_container.innerHTML=long_post;
+      post_button.className=post_button.className.replace('post_it_regular','post_it_disabled');
+      post_button.disabled=true;
+    }
+    else{
+      long_post_container.innerHTML="";
+      post_button.className=post_button.className.replace('post_it_disabled','post_it_regular');
+      post_button.disabled=false;
+    }
+    if(t_v.length>186){
+          t_v=t_v.substring(0,186);
+      }
+}
   </script>
    <script src="js/scriptajax.js"></script>
   <script src="js/scriptmenu.js"></script>

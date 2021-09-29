@@ -70,43 +70,46 @@
             <div class="navbar">
                 <div class="nav-links">
                     <ul class="links">
-                    <li>
-                        <a href="#" class="home2">Assinaturas</a>
-                        <i class='bx bx-up-arrow-alt arrow assinaturasarrow' ></i>
-                        <ul class="perfilsubmenu submenuprincipal">
-                            <li><a href="#">Netflix</li></a>
-                            <li><a href="#">Disney+</li></a>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="home2">Skins e itens</a>
-                        <i class='bx bx-up-arrow-alt arrow skinsitensarrow' ></i>
-                        <ul class="perfilsubmenu submenuprincipal">
-                            <li><a href="#">Netflix</li></a>
-                            <li><a href="#">Disney+</li></a>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="home2">Contas</a>
-                        <i class='bx bx-up-arrow-alt arrow contasarrow' ></i>
-                        <ul class="perfilsubmenu submenuprincipal">
-                            <li><a href="#">Netflix</li></a>
-                            <li><a href="#">Disney+</li></a>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="home2">Jogos</a>
-                        <i class='bx bx-up-arrow-alt arrow jogosarrow' ></i>
-                        <ul class="perfilsubmenu submenuprincipal">
-                            <li><a href="#">Netflix</li></a>
-                            <li><a href="#">Disney+</li></a>
-                        </ul>
-                    </li>
+                        <li>
+                            <a href="#" class="home2">Assinaturas</a>
+                            <i class='bx bx-up-arrow-alt arrow assinaturasarrow' ></i>
+                            <ul class="perfilsubmenu submenuprincipal">
+                                <li><a href="#">Netflix</li></a>
+                                <li><a href="#">Disney+</li></a>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="home2">Skins e itens</a>
+                            <i class='bx bx-up-arrow-alt arrow skinsitensarrow' ></i>
+                            <ul class="perfilsubmenu submenuprincipal">
+                                <li><a href="#">Cs:Go</li></a>
+                                <li><a href="#">Lol</li></a>
+                                <li><a href="#">Dota</li></a>
+                                <li><a href="#">Wow</li></a>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="home2">Contas</a>
+                            <i class='bx bx-up-arrow-alt arrow contasarrow' ></i>
+                            <ul class="perfilsubmenu submenuprincipal">
+                                <li><a href="#">Netflix</li></a>
+                                <li><a href="#">Disney+</li></a>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="home2">Jogos</a>
+                            <i class='bx bx-up-arrow-alt arrow jogosarrow' ></i>
+                            <ul class="perfilsubmenu submenuprincipal">
+                                <li><a href="#">Netflix</li></a>
+                                <li><a href="#">Disney+</li></a>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
         <nav>
+
                 <div class="produtos">
 
                 <?php
@@ -115,7 +118,7 @@
                 ?>
                     <div class="product-card">
                         <div class="produto-logo">
-                            <img src="logo/CSGO.png" alt="logo">
+                            <img src="imagens/logo_fundo.png" alt="logo">
                             <i class='bx bx-shopping-bag'></i>
                         </div>
                         <div class="imagem-produto">
@@ -179,6 +182,6 @@
 
                 </div>
         </nav>
-
+        
     </body>
 </html>

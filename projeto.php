@@ -26,21 +26,18 @@
         </div>
 
         <div class="nav-links ender">
-
             <ul class="links">
                 <li>
                     <i class='bx bx-user-circle'></i>
                     <ul class="perfilsubmenu submenuprincipal">
                         <li><a href="#">Login</li></a>
-                        <li><a href="#">Perfil</li></a>
+                        <li><a href="perfil.php">Perfil</li></a>
                     </ul>
                 </li>
                 <li>
                     <i class='bx bx-cart' ></i>
                 </li>
             </ul>
-        
-
             <div class="search-box">
                 <i class='bx bx-search' ></i>
                 <div class="input-box pesquisar">
