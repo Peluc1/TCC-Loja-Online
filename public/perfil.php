@@ -142,7 +142,7 @@ $user = $sql->fetch(PDO::FETCH_ASSOC);
               <span class="tooltip">Anuncie aqui</span>
             </li>
             <li>
-              <a href="logout.php">
+              <a href="../app/logout.php">
               <i class='bx bxs-door-open'></i>
               <span class="links-name">Sair</span>
               </a>
