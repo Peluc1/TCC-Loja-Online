@@ -15,7 +15,7 @@ $(document).ready(function(){
 
         
            $.ajax({
-              url: './js/cadastroproduto.php',
+              url: '../app/cadastroproduto.php',
               type: 'post',
               data: fd,
               contentType: false,

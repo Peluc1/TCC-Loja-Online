@@ -1,7 +1,8 @@
-<?php include("conexao.php");
+<?php 
+require("../app/db/conexao.php");
 session_start();
 if(isset($_SESSION['email'])){
-header('Location: perfil.php');
+header('Location: ../public/perfil.php');
 }
 ?>
 <!DOCTYPE html>
@@ -21,7 +22,7 @@ header('Location: perfil.php');
     <header>
     <nav class="menuprincipal">
       <div class="navbar" id="navbar">
-        <div class="logo"><a href="projeto.php">MyTeams</a></div>
+        <div class="logo"><a href="index.php">MyTeams</a></div>
         <div class="nav-links pre-ender">
           <ul class="links">
             <li><a href="#" class="home2">Home</a></li>
@@ -96,7 +97,7 @@ header('Location: perfil.php');
     </div>
   </nav>
         <nav class="cadastro">
-            <form class="cadastroform" action="cadastrar.php" method="POST">
+            <form class="cadastroform" action="../app/cadastrar.php" method="POST">
                 <div class="titulo-cadastro">Cadastro</div>
                 <div class="detalhes-cadastro">
                     <div class="fullbox ">

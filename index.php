@@ -1,187 +1,257 @@
 <?php 
-    include("conexao.php");
-    $pagina = (isset($_GET['pagina'])) ? $_GET['pagina'] : 1;
-
-    $limite = 12;
-
-    $inicio = ($limite * $pagina) - $limite;
-
-    $sqlprods = $conexao->prepare("SELECT COUNT(*) AS num FROM loja.produtos");
-    $resultprods = $sqlprods->execute();
-    $num = $sqlprods->fetch(PDO::FETCH_ASSOC);
-
-    $qtdpaginas = ceil($num['num']/$limite);
-
-
-    $sql = $conexao->prepare("SELECT * FROM loja.produtos limit $inicio, $limite");
-    $result = $sql->execute();
-    $produtos = $sql->fetchAll();
-
+    require("app/db/conexao.php");
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-        <title>MyTeams / Produtos</title>
+    <head>
+        <!-- TCC - Matheus, necessário PHP >= 8.0.0 -->
+        <title>MyTeams / Inicio</title>
+        <link rel="sortcut icon" href="public/imagens/logo.jpeg" type="image/x-icon" />
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="css/projeto.css">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="public/css/projeto.css">
+        <link rel="stylesheet" type="text/css" href="public/css/lightslider.css">
+        <script type="text/javascript" src="public/js/JQuery3.3.1.js"></script>
+        <script type="text/javascript" src="public/js/lightslider.js"></script>
         <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="public/js/productslide.js"></script>
     </head>
     <body>
-        <header>
-            <nav class="menuprincipal">
-                <div class="navbar" id="navbar">
-                    <div class="logo"><a href="projeto.php">MyTeams</a></div>
-                    <div class="nav-links pre-ender">
-                    <ul class="links">
-                        <li><a href="#" class="home2">Home</a></li>
-                        <li><a href="#" class="home2">Sobre Nós</a></li>
+    <header>
+    <nav class="menuprincipal">
+      <div class="navbar" id="navbar">
+        <div class="logo"><a href="public/index.php">MyTeams</a></div>
+        <div class="nav-links pre-ender">
+          <ul class="links">
+            <li><a href="#" class="home2">Home</a></li>
+            <li><a href="#" class="home2">Sobre Nós</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-links ender">
+            <ul class="links">
+                <li>
+                    <i class='bx bx-user-circle'></i>
+                    <ul class="perfilsubmenu submenuprincipal">
+                        <li><a href="#">Login</li></a>
+                        <li><a href="public/perfil.php">Perfil</li></a>
                     </ul>
-                    </div>
+                </li>
+                <li>
+                    <i class='bx bx-cart' ></i>
+                </li>
+            </ul>
+            <div class="search-box">
+                <i class='bx bx-search' ></i>
+                <div class="input-box pesquisar">
+                    <input type="text" placeholder="O que procura?">
+                </div>
+            </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <nav class="submenu" id="submenu">
+    <div class="navbar">
+      <div class="nav-links">
+        <ul class="links">
+          <li>
+            <a href="#" class="home2">Assinaturas</a>
+            <i class='bx bx-up-arrow-alt arrow assinaturasarrow' ></i>
+            <ul class="perfilsubmenu submenuprincipal">
+                <li><a href="#">Netflix</li></a>
+                <li><a href="#">Disney+</li></a>
+              </ul>
+          </li>
+          <li>
+            <a href="#" class="home2">Skins e itens</a>
+            <i class='bx bx-up-arrow-alt arrow skinsitensarrow' ></i>
+            <ul class="perfilsubmenu submenuprincipal">
+                <li><a href="#">Netflix</li></a>
+                <li><a href="#">Disney+</li></a>
+              </ul>
+          </li>
+          <li>
+            <a href="#" class="home2">Contas</a>
+            <i class='bx bx-up-arrow-alt arrow contasarrow' ></i>
+            <ul class="perfilsubmenu submenuprincipal">
+                <li><a href="#">Netflix</li></a>
+                <li><a href="#">Disney+</li></a>
+              </ul>
+          </li>
+          <li>
+            <a href="#" class="home2">Jogos</a>
+            <i class='bx bx-up-arrow-alt arrow jogosarrow' ></i>
+            <ul class="perfilsubmenu submenuprincipal">
+                <li><a href="#">Netflix</li></a>
+                <li><a href="#">Disney+</li></a>
+              </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+        <nav class="bemvindo">
+            <img src="public/imagens/logo_fundo.png" height="300" width="300">
+            <div class="text">MYTEAMS</div>
+            <div class="text2">Encontre o que precisar para seu lazer digital</div>
+        </nav>
 
-                    <div class="nav-links ender">
-
-                        <ul class="links">
-                            <li>
-                                <i class='bx bx-user-circle'></i>
-                                <ul class="perfilsubmenu submenuprincipal">
-                                    <li><a href="#">Login</li></a>
-                                    <li><a href="#">Perfil</li></a>
-                                </ul>
-                            </li>
-                            <li>
-                                <i class='bx bx-cart' ></i>
-                            </li>
-                        </ul>
-                        <div class="search-box">
-                            <i class='bx bx-search' ></i>
-                            <div class="input-box pesquisar">
-                                <input type="text" placeholder="O que procura?">
+        <!-- DESTAQUES -->
+        <nav class="destaquesprincipal">
+           <h1 class="destaquestitulo">Destaques</h1>
+            
+            <div class="destaques">
+                <ul id="autoWidth" class="cs-hidden">
+                    <li class="item-a">
+                        <div class="box">
+                            <p class="tituloproduto">Skin</p>
+                            <img src="public/imagens/Ak-47 Piloto Neon FT.png"  class="model">
+                            <div class="detalhes">
+                                <p>Nome</p>
+                                <hr>
+                                <p>Preço</p>
+                                <img src="public/imagens/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
                             </div>
                         </div>
-                    </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="box">
+                            <p class="tituloproduto">Skin</p>
+                            <img src="public/imagens/Ak-47 Piloto Neon FT.png"  class="model">
+                            <div class="detalhes">
+                                <p>Nome</p>
+                                <hr>
+                                <p>Preço</p>
+                                <img src="public/imagens/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="box">
+                            <p class="tituloproduto">Skin</p>
+                            <img src="public/imagens/Ak-47 Piloto Neon FT.png"  class="model">
+                            <div class="detalhes">
+                                <p>Nome</p>
+                                <hr>
+                                <p>Preço</p>
+                                <img src="public/imagens/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="box">
+                            <p class="tituloproduto">Skin</p>
+                            <img src="public/imagens/Ak-47 Piloto Neon FT.png"  class="model">
+                            <div class="detalhes">
+                                <p>Nome</p>
+                                <hr>
+                                <p>Preço</p>
+                                <img src="public/imagens/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="box">
+                            <p class="tituloproduto">Skin</p>
+                            <img src="public/imagens/Ak-47 Piloto Neon FT.png"  class="model">
+                            <div class="detalhes">
+                                <p>Nome</p>
+                                <hr>
+                                <p>Preço</p>
+                                <img src="public/imagens/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="box">
+                            <p class="tituloproduto">Skin</p>
+                            <img src="public/imagens/Ak-47 Piloto Neon FT.png"  class="model">
+                            <div class="detalhes">
+                                <p>Nome</p>
+                                <hr>
+                                <p>Preço</p>
+                                <img src="public/imagens/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item-a">
+                        <div class="box">
+                            <p class="tituloproduto">Skin</p>
+                            <img src="public/imagens/Ak-47 Piloto Neon FT.png"  class="model">
+                            <div class="detalhes">
+                                <p>Nome</p>
+                                <hr>
+                                <p>Preço</p>
+                                <img src="public/imagens/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
+                            </div>
+                        </div>
+                    </li>
+                </ul>    
+            </div>      
+        </nav>
+        <!-- Fim DESTAQUES -->
+
+        <nav class="catalogoprincipal">
+            <hr style="width: 90%">
+                <p class="textcatalogotitulo noselect">NOSSO CATÁLOGO</p>
+                <p class="textcatalogotitulo2 noselect">Comece suas compras online</p>
+            <nav class="catalogo1">
+                <img src="public/imagens/assinatura.jpg" class="imagecatalogo1">
+                <div class="textcatalogo1">
+                    <li class="textcatalogo1titulo noselect">Assinaturas</li>
+                    <li class="textcatalogo1corpo1 noselect">O MyTeams tem a mais ampla seleção de assinatura onlines. Não importa o que você está procurando, garantimos que encontrará o que precisa.</li>
                 </div>
             </nav>
-        </header>
-        <nav class="submenu" id="submenu">
-            <div class="navbar">
-                <div class="nav-links">
-                    <ul class="links">
-                        <li>
-                            <a href="#" class="home2">Assinaturas</a>
-                            <i class='bx bx-up-arrow-alt arrow assinaturasarrow' ></i>
-                            <ul class="perfilsubmenu submenuprincipal">
-                                <li><a href="#">Netflix</li></a>
-                                <li><a href="#">Disney+</li></a>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="home2">Skins e itens</a>
-                            <i class='bx bx-up-arrow-alt arrow skinsitensarrow' ></i>
-                            <ul class="perfilsubmenu submenuprincipal">
-                                <li><a href="#">Cs:Go</li></a>
-                                <li><a href="#">Lol</li></a>
-                                <li><a href="#">Dota</li></a>
-                                <li><a href="#">Wow</li></a>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="home2">Contas</a>
-                            <i class='bx bx-up-arrow-alt arrow contasarrow' ></i>
-                            <ul class="perfilsubmenu submenuprincipal">
-                                <li><a href="#">Netflix</li></a>
-                                <li><a href="#">Disney+</li></a>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="home2">Jogos</a>
-                            <i class='bx bx-up-arrow-alt arrow jogosarrow' ></i>
-                            <ul class="perfilsubmenu submenuprincipal">
-                                <li><a href="#">Netflix</li></a>
-                                <li><a href="#">Disney+</li></a>
-                            </ul>
-                        </li>
-                    </ul>
+            <nav class="catalogo2">
+                <div class="textcatalogo2">
+                    <li class="textcatalogo2titulo noselect">Skins de jogos</li>
+                    <li class="textcatalogo2corpo1 noselect">Com qualquer uma de nossas skins você vai ser motivo de inveja entre todos os seus amigos. Oferecemos uma vasta seleção de skins de diversos jogos online.</li>
+                </div>
+                <img src="public/imagens/skinsdestaques.jpg" class="imagecatalogo2">
+            </nav>
+        </nav>
+
+
+        <nav class="melhoresmarcas">
+            <div>
+                <p class="titulomarcas">Assinaturas de Streaming</p>
+                <p class="subtitulomarcas">O que oferecemos.</p>
+            </div>
+            <div class="marcas">
+                <div class="orgmarcas">
+                    <img src="public/imagens/disney-plus.png" class="imagemarcas">
+                    <p class="text3">Disney +</p>
+                </div>
+                <div class="orgmarcas">
+                    <img src="public/imagens/netflix.png" class="imagemarcas">
+                    <p class="text3">Netflix</p>
+                </div>
+                <div class="orgmarcas">
+                    <img src="public/imagens/primevideo.png" class="imagemarcas">
+                    <p class="text3">Prime Vídeo</p>
+                </div>
+                <div class="orgmarcas">
+                    <img src="public/imagens/hbogo.png" class="imagemarcas">
+                    <p class="text3">HBO GO</p>
                 </div>
             </div>
         </nav>
-        <nav>
-
-                <div class="produtos">
-
-                <?php
-                    foreach($produtos as $produto) {
-
-                ?>
-                    <div class="product-card">
-                        <div class="produto-logo">
-                            <img src="imagens/logo_fundo.png" alt="logo">
-                            <i class='bx bx-shopping-bag'></i>
-                        </div>
-                        <div class="imagem-produto">
-                            <img src="<?php echo "imagens/upload/".$produto['fotoproduto']; ?>">
-                        </div>
-                        <div class="produto-detalhes">
-                            <span class="produto-nome"><?php echo $produto['nomeproduto']; ?></span>
-                            <div class="estrelas">
-                                <i class='bx bx-star'></i>
-                                <i class='bx bx-star'></i>
-                                <i class='bx bx-star'></i>
-                                <i class='bx bx-star'></i>
-                                <i class='bx bx-star'></i>
-                            </div>
-                        </div>
-                        <div class="preco-div">
-                            <div class="preco">
-                                <p class="preco-nun">R$ <?php echo $produto['preco']; ?></p>
-                            </div>
-                        </div>
-                        <div class="btn-addcarrinho">
-                            <div class="button-layey"></div>
-                            <button>Comprar</button>
-                        </div>
-                    </div>
-                    <?php
-
-                    }
-                    ?>
-                </div>
-                <div class="paginas">
-
-                    <p>
-
-                    <?php    
-                    
-                    if($pagina != 1){
-                        echo "<a href=produtos.php?pagina=".($pagina-1).">
-                              <i class='bx bx-left-arrow-alt' ></i>
-                              </a>";
-                    }
-                    ?>
-                   
-                    <?php
-                        for($i=1;$i<=$qtdpaginas;$i++){
-                            echo "<a href='produtos.php?pagina=$i'>".$i."</a>";
-
-                        }
-                    ?>
-
-                    <?php    
-
-                    if($pagina != $qtdpaginas){
-                        echo "<a href=produtos.php?pagina=".($pagina+1).">
-                        <i class='bx bx-right-arrow-alt' ></i>
-                              </a>";
-                    }
-                    ?>
-
-                   </p>
-
-                </div>
-        </nav>
-        
+        <footer style="border-top:solid #004395 30px;">
+           <div class="social">
+             <a href="a" class="ftfooter"><img src="public/imagens/facebook.png" width="50" height="50"></a>
+             <a href="a" class="ftfooter"><img src="public/imagens/instagram.png" width="50" height="52"></a>
+             <a href="a" class="ftfooter"><img src="public/imagens/twitter.png" width="50" height="50"></a>
+            </div>
+            <div class="elementfooter">
+                <a href="a" class="textfooter">Suporte</a>
+                <a href="a" class="textfooter">Sobre</a>
+                <a href="a" class="textfooter">Termos de uso</a>
+                <a href="a" class="textfooter">Política de Privacidade</a>
+            </div>
+            <div class="creditos">
+                <p class="textfooter">© Desenvolvido por Matheus, Pedro e Rafael</p>
+            </div>
+        </footer>
+        <script src="public/js/scriptmenu.js"></script>
     </body>
 </html>

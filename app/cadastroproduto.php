@@ -1,6 +1,7 @@
 <?php
 
-include("../conexao.php");
+include("db/conexao.php");
+
 session_start();
 
 if(isset($_FILES['file']['name'])){
@@ -9,7 +10,7 @@ if(isset($_FILES['file']['name'])){
     $filename = $_FILES['file']['name'];
  
     /* Location */
-    $location = "../imagens/upload/".$filename;
+    $location = "../public/imagens/upload/".$filename;
     $imageFileType = pathinfo($location,PATHINFO_EXTENSION);
     $imageFileType = strtolower($imageFileType);
  
@@ -25,13 +26,7 @@ if(isset($_FILES['file']['name'])){
        }
     }
  
- }
-
-$sql = $conexao->prepare("SELECT idusuario FROM loja.usuario where email = ?");
-$sql->bindParam(1, $_SESSION['email']);
-
-$result = $sql->execute();
-$idusuario  = $sql->fetchColumn();
+}
 
 $nomeproduto = $_POST['nome'];
 $descricao = $_POST['descricao'];
@@ -40,19 +35,16 @@ $preco = doubleval($_POST['preco']);
 $dtpostado = "11/11/1111";
 //$dtpostado = $_POST['dtpostado'];
 
-  
-   $sql = $conexao->prepare("INSERT INTO loja.produtos(nomeproduto, descricao, tipoproduto, preco, dtpostado, fotoproduto,idfornecedor) VALUES(?,?,?,?,?,?,?)");
+   $sql = 'INSERT INTO loja.produtos(nomeproduto, descricao, tipoproduto, preco, dtpostado, fotoproduto,idfornecedor)
+            VALUES(?,?,?,?,?,?,?)';
+   $sql = $conexao->prepare($sql);
    $sql->bindParam(1, $nomeproduto);
    $sql->bindParam(2, $descricao);
    $sql->bindParam(3, $tipoproduto);
    $sql->bindParam(4, $preco);
    $sql->bindParam(5, $dtpostado);
    $sql->bindParam(6, $filename);
-   $sql->bindParam(7, $idusuario);
+   $sql->bindParam(7, $_SESSION['iduser']);
    
    echo 'Produto postado com sucesso';
-   $sql->execute() or die(print_r($sql->errorInfo(), true));;
-
-
-
-?>
+   $sql->execute() or die(print_r($sql->errorInfo(), true));

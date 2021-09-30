@@ -1,4 +1,5 @@
-<?php include("conexao.php");
+<?php 
+    require("../app/db/conexao.php");
 ?>
 <!DOCTYPE html>
 <html>

@@ -1,14 +1,17 @@
 <?php
-session_start();
-if(!isset($_SESSION['email'])){
-    header('Location: login.php');
-}
-include_once 'conexao.php';
-$sql = $conexao->prepare("SELECT * FROM loja.usuario where email = ?");
-$sql->bindParam(1, $_SESSION['email']);
 
+require("../app/db/conexao.php");
+
+session_start();
+
+if(!isset($_SESSION['iduser'])){
+    header('Location: public/login.php');
+    exit;
+}
+$sql = $conexao->prepare("SELECT * FROM loja.usuario where iduser = :id_session");
+$sql->bindParam('id_session', $_SESSION['iduser'], PDO::PARAM_INT);
 $result = $sql->execute();
-$user  = $sql->fetch(PDO::FETCH_ASSOC);
+$user = $sql->fetch(PDO::FETCH_ASSOC);
 
 
 ?>
@@ -16,8 +19,8 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
 <html>
  <head>
     <title>MyTeams / Perfil</title>
-    <link rel="stylesheet" href="css/projeto.css?v=<?php echo time(); ?>">
-    <link rel="sortcut icon" href="imagens/logo.jpeg" type="image/x-icon" />
+    <link rel="stylesheet" href="../public/css/projeto.css?v=<?php echo time(); ?>">
+    <link rel="sortcut icon" href="../public/imagens/logo.jpeg" type="image/x-icon" />
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <script src="js/JQuery3.3.1.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
@@ -368,7 +371,7 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
               </div>
               <div class="precoanuncio">
                 <p>Preço</p>
-                <input type="text" id="preco" name="preco"  placeholder="R$ 0,00" required>
+                <input type="text" id="preco" name="preco"  placeholder="R$ 0,00" maxlength="12" required>
               </div>
               <div class="fotoanuncio">
                 <p class="p">Foto do anuncio</p>
@@ -442,23 +445,6 @@ $user  = $sql->fetch(PDO::FETCH_ASSOC);
     }
     $("#preco").maskMoney({prefix:'R$ ', allowNegative: true, thousands:'.', decimal:',', affixesStay: true});
 
-    textarea=document.getElementById('user_post_textarea');
-    function len(){
-    t_v=textarea.value;
-    if(t_v.length>180){
-      long_post_container.innerHTML=long_post;
-      post_button.className=post_button.className.replace('post_it_regular','post_it_disabled');
-      post_button.disabled=true;
-    }
-    else{
-      long_post_container.innerHTML="";
-      post_button.className=post_button.className.replace('post_it_disabled','post_it_regular');
-      post_button.disabled=false;
-    }
-    if(t_v.length>186){
-          t_v=t_v.substring(0,186);
-      }
-}
   </script>
    <script src="js/scriptajax.js"></script>
   <script src="js/scriptmenu.js"></script>
