@@ -1,5 +1,9 @@
 <?php
 
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    exit;
+}
+
 require("../app/db/conexao.php");
 
 if(isset($_POST["nomeproduto"])){

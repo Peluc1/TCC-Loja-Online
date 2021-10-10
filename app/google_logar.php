@@ -1,5 +1,9 @@
 <?php
 
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    exit;
+}
+
 require'../vendor/autoload.php';
 require 'db/env.php';
 var_dump($_POST);
@@ -36,6 +40,9 @@ if (!isset($_COOKIE['g_csrf_token']) || $_COOKIE['g_csrf_token'] !== $_POST['g_c
         $data = json_decode($json);
 
         var_dump($data);
+
+
+
     }
 }
 

@@ -1,5 +1,9 @@
 <?php
 
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    exit;
+}
+
 require("../app/db/conexao.php");
 
 $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
@@ -21,8 +25,12 @@ if (empty($email) || empty($senha)) {
         if (password_verify($senha, $result['senha'])) {
 
             session_start();
-            $_SESSION['iduser'] = $result['iduser'];
-            echo $_SESSION['iduser'];
+
+            if ($result['is_admin']){
+                $_SESSION['iduser'] = -1;
+            } else {
+                $_SESSION['iduser'] = $result['iduser'];
+            }
 
             header("location: ../public/perfil.php");
             exit;

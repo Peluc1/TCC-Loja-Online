@@ -1,96 +1,17 @@
 <?php 
     require("app/db/conexao.php");
-?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <!-- TCC - Matheus, necessário PHP >= 8.0.0 -->
-        <title>MyTeams / Inicio</title>
-        <link rel="sortcut icon" href="public/imagens/logo.jpeg" type="image/x-icon" />
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="public/css/projeto.css">
-        <link rel="stylesheet" type="text/css" href="public/css/lightslider.css">
-        <script type="text/javascript" src="public/js/JQuery3.3.1.js"></script>
-        <script type="text/javascript" src="public/js/lightslider.js"></script>
-        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-        <script type="text/javascript" src="public/js/productslide.js"></script>
-    </head>
-    <body>
-    <header>
-    <nav class="menuprincipal">
-      <div class="navbar" id="navbar">
-        <div class="logo"><a href="public/index.php">MyTeams</a></div>
-        <div class="nav-links pre-ender">
-          <ul class="links">
-            <li><a href="#" class="home2">Home</a></li>
-            <li><a href="public/produtos.php" class="home2">Produtos</a></li>
-            <li><a href="#" class="home2">Sobre Nós</a></li>
-          </ul>
-        </div>
 
-        <div class="nav-links ender">
-            <ul class="links">
-                <li>
-                    <i class='bx bx-user-circle'></i>
-                    <ul class="perfilsubmenu submenuprincipal">
-                        <li><a href="#">Login</li></a>
-                        <li><a href="public/perfil.php">Perfil</li></a>
-                    </ul>
-                </li>
-                <li>
-                    <i class='bx bx-cart' ></i>
-                </li>
-            </ul>
-            <div class="search-box">
-                <i class='bx bx-search' ></i>
-                <div class="input-box pesquisar">
-                    <input type="text" placeholder="O que procura?">
-                </div>
-            </div>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <nav class="submenu" id="submenu">
-    <div class="navbar">
-      <div class="nav-links">
-        <ul class="links">
-          <li>
-            <a href="#" class="home2">Assinaturas</a>
-            <i class='bx bx-up-arrow-alt arrow assinaturasarrow' ></i>
-            <ul class="perfilsubmenu submenuprincipal">
-                <li><a href="#">Netflix</li></a>
-                <li><a href="#">Disney+</li></a>
-              </ul>
-          </li>
-          <li>
-            <a href="#" class="home2">Skins e itens</a>
-            <i class='bx bx-up-arrow-alt arrow skinsitensarrow' ></i>
-            <ul class="perfilsubmenu submenuprincipal">
-                <li><a href="#">Netflix</li></a>
-                <li><a href="#">Disney+</li></a>
-              </ul>
-          </li>
-          <li>
-            <a href="#" class="home2">Contas</a>
-            <i class='bx bx-up-arrow-alt arrow contasarrow' ></i>
-            <ul class="perfilsubmenu submenuprincipal">
-                <li><a href="#">Netflix</li></a>
-                <li><a href="#">Disney+</li></a>
-              </ul>
-          </li>
-          <li>
-            <a href="#" class="home2">Jogos</a>
-            <i class='bx bx-up-arrow-alt arrow jogosarrow' ></i>
-            <ul class="perfilsubmenu submenuprincipal">
-                <li><a href="#">Netflix</li></a>
-                <li><a href="#">Disney+</li></a>
-              </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    $page_title = 'MyTeams / Inicio';
+    $links = ['<link rel="stylesheet" type="text/css" href="public/css/projeto.css">
+                <link rel="stylesheet" type="text/css" href="public/css/lightslider.css">
+                <script type="text/javascript" src="public/js/JQuery3.3.1.js"></script>
+                <script type="text/javascript" src="public/js/lightslider.js"></script>
+                <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+                <script type="text/javascript" src="public/js/productslide.js"></script>'];
+
+    require('public/includes/header.php');
+?>
+
         <nav class="bemvindo">
             <img src="public/imagens/logo_fundo.png" height="300" width="300">
             <div class="text">MYTEAMS</div>

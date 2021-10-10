@@ -18,19 +18,18 @@ $user = $sql->fetch(PDO::FETCH_ASSOC);
 <html>
  <head>
     <title>MyTeams / Perfil</title>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="../public/css/projeto.css?v=<?php echo time(); ?>">
     <link rel="sortcut icon" href="../public/imagens/logo.jpeg" type="image/x-icon" />
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <script src="js/JQuery3.3.1.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-    <script src="js/jquery.maskMoney.js" type="text/javascript"></script>
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
     <script src="js/scriptdiv.js" defer></script>
   </head>
 <body>

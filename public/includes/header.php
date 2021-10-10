@@ -3,12 +3,13 @@
     <head>
         <title><?=$page_title?></title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="css/projeto.css">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <link rel="sortcut icon" href="<?=URLROOT?>/public/imagens/logo.jpeg" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="<?=URLROOT?>/public/css/projeto.css">
+        <?php
+            foreach($links as $src) {
+                echo $src;
+            }
+        ?>
     </head>
     <body>
     <header>
@@ -33,7 +34,7 @@
                     </ul>
                 </li>
                 <li>
-                    <i class='bx bx-cart' ></i>
+                    <a href="<?=URLROOT?>/public/carrinho.php"><i class='bx bx-cart'></i></a>
                 </li>
             </ul>
             <div class="search-box">

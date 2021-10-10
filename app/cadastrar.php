@@ -1,5 +1,9 @@
 <?php
 
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    exit;
+}
+
     include("../app/db/conexao.php");
 
     $nome = filter_var($_POST['nome'], FILTER_SANITIZE_STRING);
