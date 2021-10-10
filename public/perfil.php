@@ -13,104 +13,29 @@ $sql->bindParam('id_session', $_SESSION['iduser'], PDO::PARAM_INT);
 $result = $sql->execute();
 $user = $sql->fetch(PDO::FETCH_ASSOC);
 
+$page_title = 'MyTeams | Perfil';
+
+$links = ['<link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="js/JQuery3.3.1.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script src="js/scriptdiv.js" defer></script><link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="js/JQuery3.3.1.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script src="js/scriptdiv.js" defer></script>'];
+
+require('includes/header.php');
+
 ?>
-<!DOCTYPE html>
-<html>
- <head>
-    <title>MyTeams / Perfil</title>
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../public/css/projeto.css?v=<?php echo time(); ?>">
-    <link rel="sortcut icon" href="../public/imagens/logo.jpeg" type="image/x-icon" />
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="js/JQuery3.3.1.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-    <script src="js/scriptdiv.js" defer></script>
-  </head>
-<body>
-<header>
-    <nav class="menuprincipal">
-      <div class="navbar" id="navbar">
-        <div class="logo"><a href="projeto.php">MyTeams</a></div>
-        <div class="nav-links pre-ender">
-          <ul class="links">
-            <li><a href="#" class="home2">Home</a></li>
-            <li><a href="produtos.php" class="home2">Produtos</a></li>
-            <li><a href="#" class="home2">Sobre Nós</a></li>
-          </ul>
-        </div>
-
-        <div class="nav-links ender">
-
-            <ul class="links">
-                <li>
-                    <i class='bx bx-user-circle'></i>
-                    <ul class="perfilsubmenu submenuprincipal">
-                        <li><a href="#">Login</li></a>
-                        <li><a href="#">Perfil</li></a>
-                    </ul>
-                </li>
-                <li>
-                    <i class='bx bx-cart' ></i>
-                </li>
-            </ul>
-        
-
-            <div class="search-box">
-                <i class='bx bx-search' ></i>
-                <div class="input-box pesquisar">
-                    <input type="text" placeholder="O que procura?">
-                </div>
-            </div>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <nav class="submenu" id="submenu">
-    <div class="navbar">
-      <div class="nav-links">
-        <ul class="links">
-            <li>
-              <a href="#" class="home2">Assinaturas</a>
-              <i class='bx bx-up-arrow-alt arrow assinaturasarrow' ></i>
-              <ul class="perfilsubmenu submenuprincipal">
-                  <li><a href="#">Netflix</li></a>
-                  <li><a href="#">Disney+</li></a>
-                </ul>
-            </li>
-            <li>
-              <a href="#" class="home2">Skins e itens</a>
-              <i class='bx bx-up-arrow-alt arrow skinsitensarrow' ></i>
-              <ul class="perfilsubmenu submenuprincipal">
-                  <li><a href="#">Netflix</li></a>
-                  <li><a href="#">Disney+</li></a>
-                </ul>
-            </li>
-            <li>
-              <a href="#" class="home2">Contas</a>
-              <i class='bx bx-up-arrow-alt arrow contasarrow' ></i>
-              <ul class="perfilsubmenu submenuprincipal">
-                  <li><a href="#">Netflix</li></a>
-                  <li><a href="#">Disney+</li></a>
-              </ul>
-            </li>
-            <li>
-              <a href="#" class="home2">Jogos</a>
-              <i class='bx bx-up-arrow-alt arrow jogosarrow' ></i>
-              <ul class="perfilsubmenu submenuprincipal">
-                  <li><a href="#">Netflix</li></a>
-                  <li><a href="#">Disney+</li></a>
-                </ul>
-            </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
       <div class="sidebar" id="sidebar">
         <div>
           <i class='bx bx-menu' id="btn"></i>
@@ -517,5 +442,6 @@ $user = $sql->fetch(PDO::FETCH_ASSOC);
   <script src="js/scriptajax.js"></script>
   <script src="js/scriptmenu.js"></script>
   <script src="js/modeldados.js" type="text/javascript"></script>
-</body>
-</html>
+<?php
+  require('includes/footer.php');
+?>

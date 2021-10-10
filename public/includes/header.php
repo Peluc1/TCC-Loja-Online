@@ -3,8 +3,9 @@
     <head>
         <title><?=$page_title?></title>
         <meta charset="UTF-8">
-        <link rel="sortcut icon" href="<?=URLROOT?>/public/imagens/logo.jpeg" type="image/x-icon" />
+        <link rel="sortcut icon" href="<?=URLROOT?>/public/imagens/icons/logo.jpeg" type="image/x-icon" />
         <link rel="stylesheet" type="text/css" href="<?=URLROOT?>/public/css/projeto.css">
+        <link rel="stylesheet" type="text/css" href="<?=URLROOT?>/public/css/style.css">
         <?php
             foreach($links as $src) {
                 echo $src;
@@ -18,9 +19,9 @@
         <div class="logo"><a href="public/index.php">MyTeams</a></div>
         <div class="nav-links pre-ender">
           <ul class="links">
-            <li><a href="#" class="home2">Home</a></li>
-            <li><a href="produtos.php" class="home2">Produtos</a></li>
-            <li><a href="#" class="home2">Sobre Nós</a></li>
+            <li><a href="<?=URLROOT?>/index.php" class="home2">Home</a></li>
+            <li><a href="<?=URLROOT?>/public/produtos.php" class="home2">Produtos</a></li>
+            <li><a href="<?=URLROOT?>/public/about.php" class="home2">Sobre Nós</a></li>
           </ul>
         </div>
 
@@ -34,7 +35,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="<?=URLROOT?>/public/carrinho.php"><i class='bx bx-cart'></i></a>
+                    <a href="<?=URLROOT?>/public/icons/carrinho.php"><i class='bx bx-cart'></i></a>
                 </li>
             </ul>
             <div class="search-box">

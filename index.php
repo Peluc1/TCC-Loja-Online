@@ -13,7 +13,7 @@
 ?>
 
         <nav class="bemvindo">
-            <img src="public/imagens/logo_fundo.png" height="300" width="300">
+            <img src="public/imagens/icons/logo_fundo.png" height="300" width="300">
             <div class="text">MYTEAMS</div>
             <div class="text2">Encontre o que precisar para seu lazer digital</div>
         </nav>
@@ -27,12 +27,12 @@
                     <li class="item-a">
                         <div class="box">
                             <p class="tituloproduto">Skin</p>
-                            <img src="public/imagens/Ak-47 Piloto Neon FT.png"  class="model">
+                            <img src="public/imagens/upload/Ak-47 Piloto Neon FT.png"  class="model">
                             <div class="detalhes">
                                 <p>Nome</p>
                                 <hr>
                                 <p>Preço</p>
-                                <img src="public/imagens/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
+                                <img src="public/imagens/icons/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
                             </div>
                         </div>
                     </li>
@@ -44,7 +44,7 @@
                                 <p>Nome</p>
                                 <hr>
                                 <p>Preço</p>
-                                <img src="public/imagens/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
+                                <img src="public/imagens/icons/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
                             </div>
                         </div>
                     </li>
@@ -56,7 +56,7 @@
                                 <p>Nome</p>
                                 <hr>
                                 <p>Preço</p>
-                                <img src="public/imagens/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
+                                <img src="public/imagens/icons/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
                             </div>
                         </div>
                     </li>
@@ -68,7 +68,7 @@
                                 <p>Nome</p>
                                 <hr>
                                 <p>Preço</p>
-                                <img src="public/imagens/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
+                                <img src="public/imagens/icons/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
                             </div>
                         </div>
                     </li>
@@ -80,7 +80,7 @@
                                 <p>Nome</p>
                                 <hr>
                                 <p>Preço</p>
-                                <img src="public/imagens/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
+                                <img src="public/imagens/icons/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
                             </div>
                         </div>
                     </li>
@@ -92,7 +92,7 @@
                                 <p>Nome</p>
                                 <hr>
                                 <p>Preço</p>
-                                <img src="public/imagens/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
+                                <img src="public/imagens/icons/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
                             </div>
                         </div>
                     </li>
@@ -104,7 +104,7 @@
                                 <p>Nome</p>
                                 <hr>
                                 <p>Preço</p>
-                                <img src="public/imagens/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
+                                <img src="public/imagens/icons/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
                             </div>
                         </div>
                     </li>
@@ -118,7 +118,7 @@
                 <p class="textcatalogotitulo noselect">NOSSO CATÁLOGO</p>
                 <p class="textcatalogotitulo2 noselect">Comece suas compras online</p>
             <nav class="catalogo1">
-                <img src="public/imagens/assinatura.jpg" class="imagecatalogo1">
+                <img src="public/imagens/icons/assinatura.jpg" class="imagecatalogo1">
                 <div class="textcatalogo1">
                     <li class="textcatalogo1titulo noselect">Assinaturas</li>
                     <li class="textcatalogo1corpo1 noselect">O MyTeams tem a mais ampla seleção de assinatura onlines. Não importa o que você está procurando, garantimos que encontrará o que precisa.</li>
@@ -129,7 +129,7 @@
                     <li class="textcatalogo2titulo noselect">Skins de jogos</li>
                     <li class="textcatalogo2corpo1 noselect">Com qualquer uma de nossas skins você vai ser motivo de inveja entre todos os seus amigos. Oferecemos uma vasta seleção de skins de diversos jogos online.</li>
                 </div>
-                <img src="public/imagens/skinsdestaques.jpg" class="imagecatalogo2">
+                <img src="public/imagens/icons/skinsdestaques.jpg" class="imagecatalogo2">
             </nav>
         </nav>
 
@@ -141,39 +141,25 @@
             </div>
             <div class="marcas">
                 <div class="orgmarcas">
-                    <img src="public/imagens/disney-plus.png" class="imagemarcas">
+                    <img src="public/imagens/icons/disney-plus.png" class="imagemarcas">
                     <p class="text3">Disney +</p>
                 </div>
                 <div class="orgmarcas">
-                    <img src="public/imagens/netflix.png" class="imagemarcas">
+                    <img src="public/imagens/icons/netflix.png" class="imagemarcas">
                     <p class="text3">Netflix</p>
                 </div>
                 <div class="orgmarcas">
-                    <img src="public/imagens/primevideo.png" class="imagemarcas">
+                    <img src="public/imagens/icons/primevideo.png" class="imagemarcas">
                     <p class="text3">Prime Vídeo</p>
                 </div>
                 <div class="orgmarcas">
-                    <img src="public/imagens/hbogo.png" class="imagemarcas">
+                    <img src="public/imagens/icons/hbogo.png" class="imagemarcas">
                     <p class="text3">HBO GO</p>
                 </div>
             </div>
         </nav>
-        <footer style="border-top:solid #004395 30px;">
-           <div class="social">
-             <a href="a" class="ftfooter"><img src="public/imagens/facebook.png" width="50" height="50"></a>
-             <a href="a" class="ftfooter"><img src="public/imagens/instagram.png" width="50" height="52"></a>
-             <a href="a" class="ftfooter"><img src="public/imagens/twitter.png" width="50" height="50"></a>
-            </div>
-            <div class="elementfooter">
-                <a href="a" class="textfooter">Suporte</a>
-                <a href="a" class="textfooter">Sobre</a>
-                <a href="a" class="textfooter">Termos de uso</a>
-                <a href="a" class="textfooter">Política de Privacidade</a>
-            </div>
-            <div class="creditos">
-                <p class="textfooter">© Desenvolvido por Matheus, Pedro e Rafael</p>
-            </div>
-        </footer>
         <script src="public/js/scriptmenu.js"></script>
-    </body>
-</html>
+
+        <?php
+            require('public/includes/footer.php');
+        ?>
