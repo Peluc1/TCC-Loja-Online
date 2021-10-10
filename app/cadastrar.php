@@ -10,6 +10,7 @@
     $dtnascimento = filter_var($_POST['dtnascimento'], FILTER_SANITIZE_STRING);
     $telefone = filter_var($_POST['telefone'], FILTER_SANITIZE_STRING);
     $sexo = filter_var($_POST['genero'], FILTER_SANITIZE_STRING);
+    $data = DateTime::createFromFormat('d/m/Y', $dtnascimento)->format('Y-m-d');
 
     if (empty($nome) || empty($sobrenome) || empty($email) || empty($senha) || empty($cpf) || empty($dtnascimento) || empty($telefone) || empty($sexo) ){
         exit;
@@ -26,7 +27,7 @@
     $stmt->bindValue(':email', $email);
     $stmt->bindValue(':senha', $senha);
     $stmt->bindValue(':cpf', $cpf);
-    $stmt->bindValue(':dtnascimento', $dtnascimento);
+    $stmt->bindValue(':dtnascimento', $data);
     $stmt->bindValue(':telefone', $telefone);
     $stmt->bindValue(':sexo', $sexo);
 

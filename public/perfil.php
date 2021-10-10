@@ -13,7 +13,6 @@ $sql->bindParam('id_session', $_SESSION['iduser'], PDO::PARAM_INT);
 $result = $sql->execute();
 $user = $sql->fetch(PDO::FETCH_ASSOC);
 
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,6 +20,11 @@ $user = $sql->fetch(PDO::FETCH_ASSOC);
     <title>MyTeams / Perfil</title>
     <link rel="stylesheet" href="../public/css/projeto.css?v=<?php echo time(); ?>">
     <link rel="sortcut icon" href="../public/imagens/logo.jpeg" type="image/x-icon" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <script src="js/JQuery3.3.1.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
@@ -37,6 +41,7 @@ $user = $sql->fetch(PDO::FETCH_ASSOC);
         <div class="nav-links pre-ender">
           <ul class="links">
             <li><a href="#" class="home2">Home</a></li>
+            <li><a href="produtos.php" class="home2">Produtos</a></li>
             <li><a href="#" class="home2">Sobre Nós</a></li>
           </ul>
         </div>
@@ -71,38 +76,38 @@ $user = $sql->fetch(PDO::FETCH_ASSOC);
     <div class="navbar">
       <div class="nav-links">
         <ul class="links">
-          <li>
-            <a href="#" class="home2">Assinaturas</a>
-            <i class='bx bx-up-arrow-alt arrow assinaturasarrow' ></i>
-            <ul class="perfilsubmenu submenuprincipal">
-                <li><a href="#">Netflix</li></a>
-                <li><a href="#">Disney+</li></a>
+            <li>
+              <a href="#" class="home2">Assinaturas</a>
+              <i class='bx bx-up-arrow-alt arrow assinaturasarrow' ></i>
+              <ul class="perfilsubmenu submenuprincipal">
+                  <li><a href="#">Netflix</li></a>
+                  <li><a href="#">Disney+</li></a>
+                </ul>
+            </li>
+            <li>
+              <a href="#" class="home2">Skins e itens</a>
+              <i class='bx bx-up-arrow-alt arrow skinsitensarrow' ></i>
+              <ul class="perfilsubmenu submenuprincipal">
+                  <li><a href="#">Netflix</li></a>
+                  <li><a href="#">Disney+</li></a>
+                </ul>
+            </li>
+            <li>
+              <a href="#" class="home2">Contas</a>
+              <i class='bx bx-up-arrow-alt arrow contasarrow' ></i>
+              <ul class="perfilsubmenu submenuprincipal">
+                  <li><a href="#">Netflix</li></a>
+                  <li><a href="#">Disney+</li></a>
               </ul>
-          </li>
-          <li>
-            <a href="#" class="home2">Skins e itens</a>
-            <i class='bx bx-up-arrow-alt arrow skinsitensarrow' ></i>
-            <ul class="perfilsubmenu submenuprincipal">
-                <li><a href="#">Netflix</li></a>
-                <li><a href="#">Disney+</li></a>
-              </ul>
-          </li>
-          <li>
-            <a href="#" class="home2">Contas</a>
-            <i class='bx bx-up-arrow-alt arrow contasarrow' ></i>
-            <ul class="perfilsubmenu submenuprincipal">
-                <li><a href="#">Netflix</li></a>
-                <li><a href="#">Disney+</li></a>
-              </ul>
-          </li>
-          <li>
-            <a href="#" class="home2">Jogos</a>
-            <i class='bx bx-up-arrow-alt arrow jogosarrow' ></i>
-            <ul class="perfilsubmenu submenuprincipal">
-                <li><a href="#">Netflix</li></a>
-                <li><a href="#">Disney+</li></a>
-              </ul>
-          </li>
+            </li>
+            <li>
+              <a href="#" class="home2">Jogos</a>
+              <i class='bx bx-up-arrow-alt arrow jogosarrow' ></i>
+              <ul class="perfilsubmenu submenuprincipal">
+                  <li><a href="#">Netflix</li></a>
+                  <li><a href="#">Disney+</li></a>
+                </ul>
+            </li>
         </ul>
       </div>
     </div>
@@ -178,7 +183,7 @@ $user = $sql->fetch(PDO::FETCH_ASSOC);
                 </div>
                 <div class="textinput">
                   <span class="detalhe">Data de nascimento:</span>
-                  <label  class="dados">  <?php echo $user["dtnascimento"]; ?></label>
+                  <label  class="dados">  <?php echo DateTime::createFromFormat('Y-m-d', $user["dtnascimento"])->format('d/m/Y');; ?></label>
                 </div>
                 <div class="textinput">
                   <span class="detalhe">Sexo:</span>
@@ -186,6 +191,70 @@ $user = $sql->fetch(PDO::FETCH_ASSOC);
                 </div>
               </div>
             </form>
+            <div class="modal-div-btn"> 
+              <a id="modalbtn">Alterar dados pessoais</a>
+            </div>
+
+              <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <span class="titulodados" style="margin: 20px;">Alteração de dados</span>
+                  <span class="close"></span>
+                  <form action="POST">
+                    <div class="alteracao-dados">
+                      <div class="alteracao-dados-input">
+                        <span class="nome-alterado">Nome:</span>
+                        <input type="sobrenome" name="sobrenome" class="sobrenome" placeholder="<?php echo $user["nome"];?>" >
+                      </div>
+
+                      <div class="alteracao-dados-input">
+                        <span class="nome-alterado">Sobrenome:</span>
+                        <input type="sobrenome" name="sobrenome" class="sobrenome" placeholder="<?php echo $user["sobrenome"];?>">
+                      </div>
+
+                      <div class="alteracao-dados-input">
+                        <span class="nome-alterado">Email:</span>
+                        <input type="sobrenome" name="sobrenome" class="sobrenome" placeholder="<?php echo $user["email"];?>">
+                      </div>
+                      <div class="alteracao-dados-input">
+                        <span class="nome-alterado">CPF:</span>
+                        <input type="cpf" name="cpf" class="form-control"  onkeypress="$(this).mask('000.000.000-00');" placeholder="<?php echo $user["cpf"];?>" >
+                      </div> 
+                      <div class="alteracao-dados-input">
+                        <span class="nome-alterado">Data de nascimento:</span>
+                        <input type="dtnascimento" name="dtnascimento" class="form-control" onkeypress="$(this).mask('00/00/0000')" placeholder="<?php echo DateTime::createFromFormat('Y-m-d', $user["dtnascimento"])->format('d/m/Y');; ?>">
+                      </div>
+                      <div class="alteracao-dados-input">
+                        <span class="nome-alterado">Telefone:</span>
+                        <input type="telefone" name="telefone" class="form-control"  onkeypress="$(this).mask('(00) 0000-00009')" placeholder="<?php echo $user["telefone"];?>">
+                      </div>
+                    </div>
+                    <div class="genero-geral"  style="margin: 20px;">
+                    <input type="radio" name="genero" id="dot-1" class="radiobtn-genero" value="Masculino">
+                    <input type="radio" name="genero" id="dot-2" class="radiobtn-genero" value="Feminino">
+                    <input type="radio" name="genero" id="dot-3" class="radiobtn-genero" value="Outro">
+                    <span class="genero-titulo">Sexo</span>
+                    <div class="genero-categoria">
+                        <label for="dot-1">
+                            <label class="dot one"></label>
+                            <span class="nenhum">Masculino</span>
+                        </label>
+                        <label for="dot-2">
+                            <label class="dot two"></label>
+                            <span class="nenhum">Feminino</span>
+                        </label>
+                        <label for="dot-3">
+                            <label class="dot three"></label>
+                            <span class="nenhum">Prefiro não dizer</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="alteracao-dados-btn">
+                      <input type="submit" value="Realizar Alteração" class="btncadastro">
+                    </div>
+                  </form>
+                </div>
+              </div>
+              
             <div class="titulodados">Endereço</div>
               <div class="endereco">
                 <div class="subtituloendereco">Endereço Principal</div>
@@ -409,44 +478,45 @@ $user = $sql->fetch(PDO::FETCH_ASSOC);
     </div>
 </footer>
   <script>
-    let navheight = document.getElementById("navbar").offsetHeight;
-    let subheight = document.getElementById("submenu").offsetHeight;
-    let firstheight = navheight + subheight;
+        let navheight = document.getElementById("navbar").offsetHeight;
+        let subheight = document.getElementById("submenu").offsetHeight;
+        let firstheight = navheight + subheight;
 
-    let sideMenu = document.getElementById("sidebar");
-    sideMenu.style.top = firstheight;
-    console.log(navheight)
-    console.log(subheight)
-    console.log(firstheight);
-
-    var lastScroll = 0;
-
-    document.addEventListener('scroll', () => {
-    let st = window.pageYOffset || document.documentElement.scrollTop;
-    if(st > lastScroll) {
-        navheight = document.getElementById("navbar").clientHeight;
-        subheight = document.getElementById("submenu").clientHeight;
-        sec = firstheight-(navheight + subheight);
-
-        sideMenu.style.top = sec;
-
-    }else{
-
+        let sideMenu = document.getElementById("sidebar");
         sideMenu.style.top = firstheight;
-    }
+        console.log(navheight)
+        console.log(subheight)
+        console.log(firstheight);
 
-    })
+        var lastScroll = 0;
 
-    let btn = document.querySelector("#btn");
-    let sidebar = document.querySelector(".sidebar");
+        document.addEventListener('scroll', () => {
+        let st = window.pageYOffset || document.documentElement.scrollTop;
+        if(st > lastScroll) {
+            navheight = document.getElementById("navbar").clientHeight;
+            subheight = document.getElementById("submenu").clientHeight;
+            sec = firstheight-(navheight + subheight);
 
-    btn.onclick = function(){
-      sidebar.classList.toggle("o")
-    }
-    $("#preco").maskMoney({prefix:'R$ ', allowNegative: true, thousands:'.', decimal:',', affixesStay: true});
+            sideMenu.style.top = sec;
+
+        }else{
+
+            sideMenu.style.top = firstheight;
+        }
+
+        })
+
+        let btn = document.querySelector("#btn");
+        let sidebar = document.querySelector(".sidebar");
+
+        btn.onclick = function(){
+          sidebar.classList.toggle("o")
+        }
+        $("#preco").maskMoney({prefix:'R$ ', allowNegative: false, thousands:'.', decimal:',', affixesStay: true});
 
   </script>
-   <script src="js/scriptajax.js"></script>
+  <script src="js/scriptajax.js"></script>
   <script src="js/scriptmenu.js"></script>
+  <script src="js/modeldados.js" type="text/javascript"></script>
 </body>
 </html>

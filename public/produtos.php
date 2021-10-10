@@ -34,6 +34,7 @@
         <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
     </head>
     <body>
         <header>
@@ -43,6 +44,7 @@
                     <div class="nav-links pre-ender">
                     <ul class="links">
                         <li><a href="#" class="home2">Home</a></li>
+                        <li><a href="produtos.php" class="home2">Produtos</a></li>
                         <li><a href="#" class="home2">Sobre Nós</a></li>
                     </ul>
                     </div>
@@ -105,8 +107,8 @@
                             <a href="#" class="home2">Jogos</a>
                             <i class='bx bx-up-arrow-alt arrow jogosarrow' ></i>
                             <ul class="perfilsubmenu submenuprincipal">
-                                <li><a href="#">Netflix</li></a>
-                                <li><a href="#">Disney+</li></a>
+                                <li><a href="#">CSGO</li></a>
+                                <li><a href="#">LOL</li></a>
                             </ul>
                         </li>
                     </ul>
@@ -114,79 +116,75 @@
             </div>
         </nav>
         <nav>
-
-                <div class="produtos">
-
-                <?php
-                    foreach($produtos as $produto) {
-
-                ?>
-                    <div class="product-card">
-                        <div class="produto-logo">
-                            <img src="imagens/logo_fundo.png" alt="logo">
-                            <i class='bx bx-shopping-bag'></i>
-                        </div>
-                        <div class="imagem-produto">
-                            <img src="<?php echo "imagens/upload/".$produto['fotoproduto']; ?>">
-                        </div>
-                        <div class="produto-detalhes">
-                            <span class="produto-nome"><?php echo $produto['nomeproduto']; ?></span>
-                            <div class="estrelas">
-                                <i class='bx bx-star'></i>
-                                <i class='bx bx-star'></i>
-                                <i class='bx bx-star'></i>
-                                <i class='bx bx-star'></i>
-                                <i class='bx bx-star'></i>
-                            </div>
-                        </div>
-                        <div class="preco-div">
-                            <div class="preco">
-                                <p class="preco-nun">R$ <?php echo $produto['preco']; ?></p>
-                            </div>
-                        </div>
-                        <div class="btn-addcarrinho">
-                            <div class="button-layey"></div>
-                            <button>Comprar</button>
-                        </div>
-                    </div>
+            <div class="pesquisar-produtos">
+                <input type="text" name="pesquisar" id="pesquisar">
+            </div>
+                <div class="produtos" id="resultado">
                     <?php
-
-                    }
+                        foreach($produtos as $produto) {
                     ?>
-                </div>
-                <div class="paginas">
-
-                    <p>
-
-                    <?php    
-                    
-                    if($pagina != 1){
-                        echo "<a href=public/produtos.php?pagina=".($pagina-1).">
-                              <i class='bx bx-left-arrow-alt' ></i>
-                              </a>";
-                    }
-                    ?>
-                   
-                    <?php
-                        for($i=1;$i<=$qtdpaginas;$i++){
-                            echo "<a href='public/produtos.php?pagina=$i'>".$i."</a>";
+                        <a class= "product-card" href="produto.php?product_id= <?php echo $produto['idproduto']; ?>" >
+                                <div class="produto-logo">
+                                    <img src="imagens/logo_fundo.png" alt="logo">
+                                    <i class='bx bx-shopping-bag'></i>
+                                </div>
+                                <div class="imagem-produto">
+                                    <img src="imagens/upload/<?=$produto['fotoproduto'] ?>">
+                                </div>
+                                <div class="produto-detalhes">
+                                    <span class="produto-nome"><?php echo $produto['nomeproduto']; ?></span>
+                                    <div class="estrelas">
+                                        <i class='bx bx-star'></i>
+                                        <i class='bx bx-star'></i>
+                                        <i class='bx bx-star'></i>
+                                        <i class='bx bx-star'></i>
+                                        <i class='bx bx-star'></i>
+                                    </div>
+                                </div>
+                                <div class="preco-div">
+                                    <div class="preco">
+                                        <p class="preco-nun">R$ <?php echo $produto['preco']; ?></p>
+                                    </div>
+                                </div>
+                                <div class="btn-addcarrinho">
+                                    <div class="button-layey"></div>
+                                    <button>Comprar</button>
+                                </div>
+                        </a>
+                        <?php
 
                         }
-                    ?>
-
+                        ?>
+                </div>
+                <div class="paginas">
+                    <p>
                     <?php    
+                    
+                        if($pagina != 1){
+                            echo "<a href=produtos.php?pagina=".($pagina-1).">
+                                <i class='bx bx-left-arrow-alt' ></i>
+                                </a>";
+                        }
+                        ?>
+                    
+                        <?php
+                            for($i=1;$i<=$qtdpaginas;$i++){
+                                echo "<a href='produtos.php?pagina=$i'>".$i."</a>";
 
-                    if($pagina != $qtdpaginas){
-                        echo '<a href="public/produtos.php?pagina='.($pagina+1).'">
-                        <i class="bx bx-right-arrow-alt"></i>
-                              </a>';
-                    }
+                            }
+                        ?>
+
+                        <?php    
+
+                        if($pagina != $qtdpaginas){
+                            echo '<a href="produtos.php?pagina='.($pagina+1).'">
+                            <i class="bx bx-right-arrow-alt"></i>
+                                </a>';
+                        }
                     ?>
-
                    </p>
-
                 </div>
         </nav>
-        
+    <script src="js/pesquisar-produtos.js" type="text/javascript"></script>   
     </body>
 </html>

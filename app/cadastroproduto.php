@@ -31,9 +31,10 @@ if(isset($_FILES['file']['name'])){
 $nomeproduto = $_POST['nome'];
 $descricao = $_POST['descricao'];
 $tipoproduto = $_POST['tipo'];
-$preco = doubleval($_POST['preco']);
-$dtpostado = "11/11/1111";
-//$dtpostado = $_POST['dtpostado'];
+$pr = preg_replace("/[^\,0-9]/", "", $_POST['preco']);
+$preco = str_replace(',', '.', $pr);
+$dtpostado = date('Y-m-d H:i:s');
+echo $preco;
 
    $sql = 'INSERT INTO loja.produtos(nomeproduto, descricao, tipoproduto, preco, dtpostado, fotoproduto,idfornecedor)
             VALUES(?,?,?,?,?,?,?)';

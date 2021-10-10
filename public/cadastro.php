@@ -18,34 +18,31 @@ header('Location: ../public/perfil.php');
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     </head>
     <body>
-
     <header>
     <nav class="menuprincipal">
       <div class="navbar" id="navbar">
-        <div class="logo"><a href="index.php">MyTeams</a></div>
+        <div class="logo"><a href="public/index.php">MyTeams</a></div>
         <div class="nav-links pre-ender">
           <ul class="links">
             <li><a href="#" class="home2">Home</a></li>
+            <li><a href="produtos.php" class="home2">Produtos</a></li>
             <li><a href="#" class="home2">Sobre Nós</a></li>
           </ul>
         </div>
 
         <div class="nav-links ender">
-
             <ul class="links">
                 <li>
                     <i class='bx bx-user-circle'></i>
                     <ul class="perfilsubmenu submenuprincipal">
                         <li><a href="#">Login</li></a>
-                        <li><a href="#">Perfil</li></a>
+                        <li><a href="public/perfil.php">Perfil</li></a>
                     </ul>
                 </li>
                 <li>
                     <i class='bx bx-cart' ></i>
                 </li>
             </ul>
-        
-
             <div class="search-box">
                 <i class='bx bx-search' ></i>
                 <div class="input-box pesquisar">
@@ -109,7 +106,7 @@ header('Location: ../public/perfil.php');
                         <input type="sobrenome" name="sobrenome" class="sobrenome" placeholder="Digite o seu sobrenome" required>
                     </div>
                     <div class="fullbox">
-                        <p>E-Mail</p>
+                        <p for="email">E-Mail</p>
                         <input type="email" name="email" class="email" placeholder="Digite o seu email" required>
                     </div>
                     <div class="fullbox">

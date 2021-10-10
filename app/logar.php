@@ -21,8 +21,8 @@ if (empty($email) || empty($senha)) {
         if (password_verify($senha, $result['senha'])) {
 
             session_start();
-            $id = $conexao->lastInsertId();
-            $_SESSION['iduser'] = $id;
+            $_SESSION['iduser'] = $result['iduser'];
+            echo $_SESSION['iduser'];
 
             header("location: ../public/perfil.php");
             exit;

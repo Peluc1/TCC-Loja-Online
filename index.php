@@ -23,6 +23,7 @@
         <div class="nav-links pre-ender">
           <ul class="links">
             <li><a href="#" class="home2">Home</a></li>
+            <li><a href="public/produtos.php" class="home2">Produtos</a></li>
             <li><a href="#" class="home2">Sobre Nós</a></li>
           </ul>
         </div>

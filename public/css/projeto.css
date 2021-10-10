@@ -231,13 +231,13 @@ nav .navbar .nav-links .links li a{
 .submenu{
     top: 70px;
     width: 100%;
-    height: 50px;
+    height: 55px;
     box-shadow: 0 10px 10px rgba(0,0,0,0.2);
     background-color: rgba(39, 91, 214, 0.3);
 }
+
 .submenu .nav-links .links .submenuprincipal{
     display: none;
-    
     position: absolute;
     top: 50px;
     left: 0;
@@ -272,6 +272,7 @@ nav .navbar .nav-links .links li a{
     justify-content: space-between;
     padding: 0 50px;
 }
+
 
 .bx-up-arrow-alt{
     color: white;
@@ -685,7 +686,12 @@ footer{
     transform: translateY(-60%);
 }
 
-
+.google-principal{
+   display: flex;
+   justify-content: center;
+   position: relative;
+   bottom: 20px;
+}
 /* Aqui termina a estlizaçao do formulario */
 
 
@@ -1006,6 +1012,96 @@ form .genero-geral .genero-categoria{
     -moz-user-select: none; 
     -ms-user-select: none;
     user-select: none;
+}
+
+form .editar{
+    margin: 15px 10px 20px 0px;
+}
+
+form .editar a{
+    font-size: 20px;
+    color: black;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.dadospessoais .container .modal-div-btn{
+    margin: 15px 0px 20px 0px;
+}
+
+.container .modal-div-btn a{
+    font-size: 20px;
+    cursor: pointer;
+    color: rgba(0,0,0,0.7);
+}
+
+.container .modal-div-btn a:hover{
+    color: black;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    margin: auto; 
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 700px;
+    width: 100%;
+}
+
+.modal-content form .alteracao-dados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.modal-content .alteracao-dados .alteracao-dados-input{
+    margin: 20px;
+    width: 300px;
+}
+
+.alteracao-dados .alteracao-dados-input span{
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.alteracao-dados .alteracao-dados-input input{
+    width: 100%;
+    height: 45px;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 5px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.alteracao-dados .alteracao-dados-input input::placeholder{
+    color: black;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .endereco{
@@ -1393,12 +1489,14 @@ form .genero-geral .genero-categoria{
 .produtos .product-card{
     max-width: 250px;
     border-radius: 25px;
-    margin-bottom: 20px;
-    margin-left: 10px;
+    margin-bottom: 100px;
+    margin-left: 35px;
+    margin-right: 35px;
     padding: 20px 30px 30px 30px;
     width: 100%;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     background: white;
+    color:black;
     overflow: hidden;
 }
 
@@ -1493,7 +1591,7 @@ form .genero-geral .genero-categoria{
    overflow: hidden;
 }
 
-.product-card .btn-addcarrinho button{
+.btn-addcarrinho button{
     position: relative;
     cursor: pointer;
     height: 100%;
@@ -1540,4 +1638,104 @@ form .genero-geral .genero-categoria{
 
 .filtro-produtos form input::placeholder{
     color: black;
+}
+
+.produto-container{
+    display:flex;  
+    background-color: rgba(255,255,255,0.3);;
+    margin: auto;
+    min-height: 30px;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.produto-container .info-produtos-container{
+    color:white;
+    font-size:large;
+    display: flex;
+    justify-content: left;
+    flex-wrap: nowrap;
+    flex:50%;
+}
+
+.produto-container .info-produtos-container .img-produtro-container{
+    background: transparent;
+    margin: 20px 0px 20px 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1px;
+}
+
+.produto-container .info-produtos-container .img-produtro-container img{
+    margin: 20px 20px 20px 20px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.produto-container .info-produtos-container .text-produtos-container{
+    flex-wrap: wrap;
+}
+
+.produto-container .info-produtos-container .text-produtos-subcontainer{
+    width: 50%;
+    margin: 20px 10px 10px 20px;
+    font-size: 20px;
+}
+
+.produto-container .info-produtos-container .text-produtos-subcontainer-preco{
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.produto-container .info-produtos-container .text-produtos-subcontainer-title{
+    font-size: xx-large;
+}
+
+.produto-container .text-produtos-container .btn-comprar-subcontainer{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+}
+
+.text-produtos-container .btn-comprar-subcontainer button{
+    position: relative;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.text-produtos-container .btn-comprar-subcontainer .btn-comprar{
+    position: absolute;
+    height: 100%;
+    left: -100%;
+    width: 300%;
+    background-image: linear-gradient(1355deg, #0cbaba, #380036,#7f5a83, #0d324d);
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+}
+
+.text-produtos-container .btn-comprar-subcontainer:hover .btn-comprar{
+    left: 0px;
+}
+
+.produto-container .info-fornecedor-container{
+    display: flex;
+    justify-content: left;
+}
+
+.produtos-relacinados{
+    background-color: white;
 }

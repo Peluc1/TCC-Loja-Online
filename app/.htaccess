@@ -1,0 +1,6 @@
+#Esse comando nega permissões ao sistema de arquivo a partir de aqui#
+Options -Indexes
+
+RewriteEngine On
+RewriteRule ^db/ - [L,R=404,NC]
+ErrorDocument 404 /TCC/404.php
