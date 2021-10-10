@@ -159,6 +159,10 @@ nav .navbar .nav-links .links li a{
     font-size: 45px;
 }
 
+.perfilsubmenu .submenuprincipal:hover{
+    display: block;
+}
+
 .navbar .search-box{
     position: relative;
     height: 40px;

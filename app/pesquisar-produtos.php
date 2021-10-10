@@ -18,7 +18,7 @@ if($rowCount > 0){
     foreach($result as $produto){
         
         $data .= "
-            <a class='product-card' href='produto.php?product_id= ".$produto['idproduto']. "' >
+            <a class='product-card' href='produto.php?product_id=".$produto['idproduto']. "' >
             <div class='produto-logo'>
                 <img src='../public/imagens/logo_fundo.png' alt='logo'>
                 <i class='bx bx-shopping-bag'></i>
