@@ -1,4 +1,4 @@
-<footer style="border-top:solid #004395 30px;">
+<footer>
            <div class="social">
              <a href="a" class="ftfooter"><img src="<?=URLROOT?>/public/imagens/icons/facebook.png" width="50" height="50"></a>
              <a href="a" class="ftfooter"><img src="<?=URLROOT?>/public/imagens/icons/instagram.png" width="50" height="52"></a>
@@ -17,6 +17,5 @@
         
     </body>
 </html>
-
 </body>
 </html>

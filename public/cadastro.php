@@ -2,7 +2,7 @@
     require("../app/db/conexao.php");
     session_start();
 
-    $page_title = '>MyTeams / Cadastro';
+    $page_title = 'MyTeams / Cadastro';
 
     $links = ['<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
@@ -13,7 +13,7 @@
     require('includes/header.php');
 
 ?>
-<nav class="cadastro">
+<nav class="cadastro" style="margin-bottom: 50px;">
     <form class="cadastroform" action="../app/cadastrar.php" method="POST">
         <div class="titulo-cadastro">Cadastro</div>
         <div class="detalhes-cadastro">
@@ -79,23 +79,8 @@
         </div>
     </form>
 </nav>
-<footer style="margin-top: 80px;">
-    <div class="social">
-        <a href="a" class="ftfooter"><img src="imagens/facebook.png" width="50" height="50"></a>
-        <a href="a" class="ftfooter"><img src="imagens/instagram.png" width="50" height="52"></a>
-        <a href="a" class="ftfooter"><img src="imagens/twitter.png" width="50" height="50"></a>
-        </div>
-        <div class="elementfooter">
-            <a href="a" class="textfooter">Suporte</a>
-            <a href="a" class="textfooter">Sobre</a>
-            <a href="a" class="textfooter">Termos de uso</a>
-            <a href="a" class="textfooter">Política de Privacidade</a>
-        </div>
-        <div class="creditos">
-            <p class="textfooter">© Desenvolvido por Matheus, Pedro e Rafael</p>
-        </div>
-    </footer>
-    <script src="js/scriptmenu.js"></script>
+<script src="js/scriptmenu.js"></script>
+
 <?php
 require('includes/footer.php');
 ?>

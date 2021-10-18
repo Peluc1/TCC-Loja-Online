@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 require'../vendor/autoload.php';
-require 'db/env.php';
+require 'db/conexao.php';
 var_dump($_POST);
 
 $google_client = new Google_Client();
@@ -39,9 +39,23 @@ if (!isset($_COOKIE['g_csrf_token']) || $_COOKIE['g_csrf_token'] !== $_POST['g_c
         $json = file_get_contents("https://oauth2.googleapis.com/tokeninfo?id_token=".$idToken);
         $data = json_decode($json);
 
+        if ($data['email_verified'] !== 'true') exit;
+
         var_dump($data);
 
+        $query = 'SELECT FROM loja.usuario WHERE email = :email';
+        $stmt = $conexao -> prepare($query);
+        $stmt -> bindValue(':email',$data['email']);
+        $return = $stmt -> execute();
+    
+        if ($stmt -> rowCount() > 0) {
+            $return = $stmt -> fetch(PDO::FETCH_ASSOC);
+            if ($return['senhha'] === $data['aud']) {
 
+            }
+        } else {
+
+        }
 
     }
 }

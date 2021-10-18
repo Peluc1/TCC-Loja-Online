@@ -83,13 +83,12 @@ fieldset {
     flex-wrap: nowrap;
     justify-content: flex-end;
     flex:30%;
-
-
+    align-items: center;
 }
 
 .pre-ender {
     display: flex;
-    flex:100%;
+    flex: 100%;
     justify-content: center;
 }
 
@@ -119,8 +118,8 @@ nav .navbar .nav-links .links li a{
 .aa {
     display: flex;
     flex-wrap: wrap;
-   position: relative;
-   float: right;
+    position: relative;
+    float: right;
 }
 
 .navbar .nav-links .links .submenuprincipal{
@@ -131,6 +130,7 @@ nav .navbar .nav-links .links li a{
     border-radius: 0 0 4px 4px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.2);
     display: none;
+    
 }
 
 .navbar .nav-links .links .submenuprincipal li{
@@ -145,8 +145,8 @@ nav .navbar .nav-links .links li a{
     font: 500;
 }
 
-.navbar .nav-links .links li .perfilsubmenu:hover{
-    display: block;
+.navbar .nav-links .perfil-li:hover .submenuprincipal {
+    display: flex;
     z-index: 10;
 }
 
@@ -158,10 +158,6 @@ nav .navbar .nav-links .links li a{
 .bx-user-circle{
     color: white;
     font-size: 45px;
-}
-
-.perfilsubmenu .submenuprincipal:hover{
-    display: block;
 }
 
 .navbar .search-box{
@@ -291,3 +287,90 @@ nav .navbar .nav-links .links li a{
 }
 
 /* Aqui termina o Header */
+
+.carrinho-wrapper{
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+    z-index: 1;
+}
+
+.carrinho-wrapper .carrinho{
+    background-color: rgba(145, 141, 141, 0.5);
+    padding: 7px;
+    border-radius: 15px;
+    width: min-content;
+    margin-top: 0.7em;
+}
+
+.carrinho-wrapper .dados-carrinho{
+    background-color: white;
+    border-radius: 15px;
+    display: none;
+    width: 350px;
+    height: 350px;
+    padding: 20px;
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.carrinho-wrapper .dados-carrinho #lista-carrinho{
+    overflow-y: scroll;
+    max-height: 280px;
+}
+
+.carrinho-wrapper .dados-carrinho .close{
+   margin-bottom: 5px;
+   width: min-content;
+}
+
+.carrinho-wrapper .dados-carrinho::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    color: transparent;
+    border: 10px solid black;
+    border-color: white transparent transparent;
+    margin-top: 370px;
+    margin-left: 0px;
+}
+
+.carrinho-wrapper .text-dados-carrinho .precocarrinho-linkcarrinho{
+    display: flex;
+    justify-content: space-between;
+}
+
+.carrinho-wrapper .dados-carrinho .preco-total{
+    font-size: 20px;
+    margin-top: 15px;
+    color: rgb(73, 73, 73);
+}
+
+.carrinho-wrapper .text-dados-carrinho .link-carrinho{
+    font-size: 20px;
+    margin-top: 15px;
+    color: rgb(73, 73, 73);
+    cursor: pointer;
+}
+
+.carrinho-wrapper .text-dados-carrinho .link-carrinho:hover{
+   color: black;
+}
+
+.carrinho-wrapper .count-produto{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: -0.5em;
+    padding: 6px;
+    background-color: red;
+    height: 15px;
+    width: 15px;
+    color: white;
+    font-size: 0.9em;
+    border-radius: 20px;
+}
+

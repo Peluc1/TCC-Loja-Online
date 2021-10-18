@@ -13,6 +13,7 @@ var dadospessoais = document.getElementById("dadospessoais");
 var compras = document.getElementById("compras");
 var vendas = document.getElementById("vendas");
 var anuncios = document.getElementById("anuncios");
+var carrinhomodal = document.getElementById('modal-carrinho')
 
 
 
@@ -23,6 +24,8 @@ window.onload = () => {
     vendas.style.display = "none";
 
     anuncios.style.display = "none";
+
+    carrinhomodal.style.display="none";
 }
 
 
@@ -89,4 +92,4 @@ var actionanuncios = document.getElementById("action-anuncios");
 
     anuncios.style.display = "flex";
         
-    });
+});

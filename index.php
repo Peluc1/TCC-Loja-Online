@@ -21,95 +21,6 @@
         <!-- DESTAQUES -->
         <nav class="destaquesprincipal">
            <h1 class="destaquestitulo">Destaques</h1>
-            
-            <div class="destaques">
-                <ul id="autoWidth" class="cs-hidden">
-                    <li class="item-a">
-                        <div class="box">
-                            <p class="tituloproduto">Skin</p>
-                            <img src="public/imagens/upload/Ak-47 Piloto Neon FT.png"  class="model">
-                            <div class="detalhes">
-                                <p>Nome</p>
-                                <hr>
-                                <p>Preço</p>
-                                <img src="public/imagens/icons/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-a">
-                        <div class="box">
-                            <p class="tituloproduto">Skin</p>
-                            <img src="public/imagens/Ak-47 Piloto Neon FT.png"  class="model">
-                            <div class="detalhes">
-                                <p>Nome</p>
-                                <hr>
-                                <p>Preço</p>
-                                <img src="public/imagens/icons/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-a">
-                        <div class="box">
-                            <p class="tituloproduto">Skin</p>
-                            <img src="public/imagens/Ak-47 Piloto Neon FT.png"  class="model">
-                            <div class="detalhes">
-                                <p>Nome</p>
-                                <hr>
-                                <p>Preço</p>
-                                <img src="public/imagens/icons/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-a">
-                        <div class="box">
-                            <p class="tituloproduto">Skin</p>
-                            <img src="public/imagens/Ak-47 Piloto Neon FT.png"  class="model">
-                            <div class="detalhes">
-                                <p>Nome</p>
-                                <hr>
-                                <p>Preço</p>
-                                <img src="public/imagens/icons/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-a">
-                        <div class="box">
-                            <p class="tituloproduto">Skin</p>
-                            <img src="public/imagens/Ak-47 Piloto Neon FT.png"  class="model">
-                            <div class="detalhes">
-                                <p>Nome</p>
-                                <hr>
-                                <p>Preço</p>
-                                <img src="public/imagens/icons/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-a">
-                        <div class="box">
-                            <p class="tituloproduto">Skin</p>
-                            <img src="public/imagens/Ak-47 Piloto Neon FT.png"  class="model">
-                            <div class="detalhes">
-                                <p>Nome</p>
-                                <hr>
-                                <p>Preço</p>
-                                <img src="public/imagens/icons/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-a">
-                        <div class="box">
-                            <p class="tituloproduto">Skin</p>
-                            <img src="public/imagens/Ak-47 Piloto Neon FT.png"  class="model">
-                            <div class="detalhes">
-                                <p>Nome</p>
-                                <hr>
-                                <p>Preço</p>
-                                <img src="public/imagens/icons/plus.png" class="plus" width="30px" style="height: auto; max-width:100%; max-height:100%; padding: 5px;">
-                            </div>
-                        </div>
-                    </li>
-                </ul>    
-            </div>      
         </nav>
         <!-- Fim DESTAQUES -->
 
@@ -158,8 +69,6 @@
                 </div>
             </div>
         </nav>
-        <script src="public/js/scriptmenu.js"></script>
-
         <?php
             require('public/includes/footer.php');
         ?>

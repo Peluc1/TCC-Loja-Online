@@ -5,7 +5,7 @@ require("../app/db/conexao.php");
 session_start();
 
 if(!isset($_SESSION['iduser'])){
-    header('Location: public/login.php');
+    header('Location: login.php');
     exit;
 }
 $sql = $conexao->prepare("SELECT * FROM loja.usuario where iduser = :id_session");
@@ -357,6 +357,7 @@ require('includes/header.php');
                   <select id="tipo" name="tipo" form="anunciar" required>
                     <option value="" disabled selected>Escolha a sua opção</option>
                     <option value="conta"><span>Conta</span></option>
+                    <option value="jogo"><span>Jogo</span></option>
                     <option value="assinatura"><span>Assinatura</span></option>
                     <option value="skin"><span>Skin</span></option>
                     <option value="itens"><span>Itens</span></option>
@@ -383,25 +384,10 @@ require('includes/header.php');
           </form>
         </div>
       </nav>
-
-
-  <footer style="margin-top: 45px;">
-    <div class="social">
-      <a href="a" class="ftfooter"><img src="imagens/facebook.png" width="50" height="50"></a>
-      <a href="a" class="ftfooter"><img src="imagens/instagram.png" width="50" height="52"></a>
-      <a href="a" class="ftfooter"><img src="imagens/twitter.png" width="50" height="50"></a>
-    </div>
-    <div class="elementfooter">
-      <a href="a" class="textfooter">Suporte</a>
-      <a href="a" class="textfooter">Sobre</a>
-      <a href="a" class="textfooter">Termos de uso</a>
-      <a href="a" class="textfooter">Política de Privacidade</a>
-    </div>
-    <div class="creditos">
-      <p class="textfooter">© Desenvolvido por Matheus, Pedro e Rafael</p>
-    </div>
-</footer>
-  <script>
+<?php
+  require('includes/footer.php');
+?>
+<script>
         let navheight = document.getElementById("navbar").offsetHeight;
         let subheight = document.getElementById("submenu").offsetHeight;
         let firstheight = navheight + subheight;
@@ -440,8 +426,4 @@ require('includes/header.php');
 
   </script>
   <script src="js/scriptajax.js"></script>
-  <script src="js/scriptmenu.js"></script>
-  <script src="js/modeldados.js" type="text/javascript"></script>
-<?php
-  require('includes/footer.php');
-?>
+  <script src="js/jquery.maskMoney.js"></script>
