@@ -57,20 +57,13 @@
                     <a class= "product-card" href="produto.php?product_id=<?php echo $produto['idproduto'];?>">
                             <div class="produto-logo">
                                 <img src="imagens/icons/logo_fundo.png" alt="logo">
-                                <i class='bx bx-shopping-bag'></i>
+                                <i class='bx bx-shopping-bag' id="add-carrinho"></i>
                             </div>
                             <div class="imagem-produto">
                                 <img src="imagens/upload/<?=$produto['fotoproduto'] ?>">
                             </div>
                             <div class="produto-detalhes">
                                 <span class="produto-nome"><?php echo $produto['nomeproduto']; ?></span>
-                                <div class="estrelas">
-                                    <i class='bx bx-star'></i>
-                                    <i class='bx bx-star'></i>
-                                    <i class='bx bx-star'></i>
-                                    <i class='bx bx-star'></i>
-                                    <i class='bx bx-star'></i>
-                                </div>
                             </div>
                             <div class="preco-div">
                                 <div class="preco">
@@ -118,7 +111,24 @@
                 ?>
                 </p>
             </div>
-<script src="js/pesquisar-produtos.js" type="text/javascript"></script>   
+<script src="js/pesquisar-produtos.js" type="text/javascript"></script>
+<script>
+    var addcarrinho = document.getElementById('add-carrinho')
+
+    addcarrinho.addEventListener("click", function(){
+    l   et produto = [];
+    if(localStorage.getItem('produto')){
+        produto = JSON.parse(localStorage.getItem('produto'));
+
+        produto.forEach((item)=> {
+            console.log('nao ta vazio')
+        })
+    }
+        produto.push({'produtoId' :id, 'nomeproduto' : nomeproduto, 'valor': valor, 'imagem': imagem});
+        localStorage.setItem('produto', JSON.stringify(produto));
+        alert('Produto adicionado com sucesso')
+        })
+</script>   
 <?php
     require('includes/footer.php');
 ?>

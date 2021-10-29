@@ -1,6 +1,6 @@
 /*
 
-Script SQL TCC - '10.4.21-MariaDB'
+Script SQL TCC - '10.4.21-MySQL'
 
 CREATE DATABASE loja;
 

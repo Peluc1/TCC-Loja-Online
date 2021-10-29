@@ -23,15 +23,15 @@ $links = ['<link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" re
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="js/JQuery3.3.1.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-<script src="js/scriptdiv.js" defer></script><link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+<script src="js/scriptdiv.js" defer></script>
+<link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="js/JQuery3.3.1.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-<script src="js/scriptdiv.js" defer></script>'];
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>'];
 
 require('includes/header.php');
 
@@ -176,29 +176,6 @@ require('includes/header.php');
                       <input type="submit" value="Realizar Alteração" class="btncadastro">
                     </div>
                   </form>
-                </div>
-              </div>
-              
-            <div class="titulodados">Endereço</div>
-              <div class="endereco">
-                <div class="subtituloendereco">Endereço Principal</div>
-                <div>
-                    <label>Bauru, SP</label>
-                </div>
-                <div>
-                    <label>Rua: Alfredo Ruiz</label>
-                </div>
-                <div>
-                    <label>Numero: 10-70</label>
-                </div>
-                <div>
-                    <label>CEP: 17014-350</label>
-                </div>
-                <div>
-                    <label>Bairro: Vila Mesquita</label>
-                </div>
-                <div class="edit">
-                  <a href="#"><div>EDITAR</div></a>
                 </div>
               </div>
         </div>
@@ -375,7 +352,7 @@ require('includes/header.php');
               </div>
               <div class="descricaoanuncio" required>
                 <p>Descrição</p>
-                <textarea name="descricao" id="text" maxlength="350" placeholder="Fale um pouco mais sobre o produto"></textarea>
+                <textarea name="descricao" id="text" maxlength="150" placeholder="Fale um pouco mais sobre o produto"></textarea>
               </div>
               <div class="btn-anunciar">
                 <input type="submit" value="Anunciar">
@@ -420,8 +397,16 @@ require('includes/header.php');
         let sidebar = document.querySelector(".sidebar");
 
         btn.onclick = function(){
-          sidebar.classList.toggle("o")
+          sidebar.classList.toggle("o");
         }
+
+        let modal_btn_dados = document.getElementById("modalbtn")
+        let modal_dados = document.getElementById("myModal")
+
+        modal_btn_dados.onclick = function(){
+          modal_dados.style.display = "flex";
+        }
+
         $("#preco").maskMoney({prefix:'R$ ', allowNegative: false, thousands:'.', decimal:',', affixesStay: true});
 
   </script>

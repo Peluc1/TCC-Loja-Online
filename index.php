@@ -43,32 +43,6 @@
                 <img src="public/imagens/icons/skinsdestaques.jpg" class="imagecatalogo2">
             </nav>
         </nav>
-
-
-        <nav class="melhoresmarcas">
-            <div>
-                <p class="titulomarcas">Assinaturas de Streaming</p>
-                <p class="subtitulomarcas">O que oferecemos.</p>
-            </div>
-            <div class="marcas">
-                <div class="orgmarcas">
-                    <img src="public/imagens/icons/disney-plus.png" class="imagemarcas">
-                    <p class="text3">Disney +</p>
-                </div>
-                <div class="orgmarcas">
-                    <img src="public/imagens/icons/netflix.png" class="imagemarcas">
-                    <p class="text3">Netflix</p>
-                </div>
-                <div class="orgmarcas">
-                    <img src="public/imagens/icons/primevideo.png" class="imagemarcas">
-                    <p class="text3">Prime Vídeo</p>
-                </div>
-                <div class="orgmarcas">
-                    <img src="public/imagens/icons/hbogo.png" class="imagemarcas">
-                    <p class="text3">HBO GO</p>
-                </div>
-            </div>
-        </nav>
         <?php
             require('public/includes/footer.php');
         ?>

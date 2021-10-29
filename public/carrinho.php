@@ -53,9 +53,6 @@ require('../app/db/conexao.php');
         <div class="nav-links">
           <ul class="links">
             <li>
-              <a href="<?=URLROOT?>/public/produtos.php?tipo=assinatura" class="home2">Assinaturas</a>
-            </li>
-            <li>
               <a href="<?=URLROOT?>/public/produtos.php?tipo=skin" class="home2">Skins</a>
             </li>
             <li>
@@ -72,16 +69,36 @@ require('../app/db/conexao.php');
           </ul>
         </div>
       </div>
-
-      <div class="carrinho-lista-container">
-          <p>Produtos</p>
-          <div class="carrinho-lista-produtos" id="carrinho-lista-produtos"></div>
+      <div class="carrinho-resumo">
+        <div class="carrinho-lista-container">
+          <div class="titulo-lista-container-carrinho">
+            <i class='bx bxs-shopping-bag-alt'></i>
+            <span>PRODUTOS</span>
+          </div>
+            <div class="carrinho-lista-produtos" id="carrinho-lista-produtos">
+            </div>
+        </div>
+        
+        <div class="resumo-preco-total">
+          <div class="titulo-resumo-preco">
+            <i class='bx bxs-paste'></i>
+            <span>RESUMO</span>
+          </div>
+          <div class="preco-total-subcontainer-carrinho" id="resumo-preco"></div>
+          <div class="button-pagamento-carrinho">
+            <a href="" class="button-pagamento-link">Ir para o pagamento</a>
+          </div>
+          <div class="button-sair-carrinho">
+            <a href="<?=URLROOT?>/public/produtos.php" class="button-sair-link">Continuar comprando</a>
+          </div>
+        </div>
       </div>
 </nav>
+</body>
 <script>
         let inputbox = document.querySelector(".input-box");
         let searchBox = document.querySelector(".search-box .bx-search");
-        var p,t,l,s,hr;
+        var i,p,d,n,q,r,s,hr,tx;
         var totalpreco = 0;
         var count = 0;
 
@@ -93,25 +110,77 @@ require('../app/db/conexao.php');
         if(typeof produto !== 'undefined' && produto.length > 0){
           
           produto.forEach(function (item, indice, array) {
-            p = document.createElement("div");
-            s = document.createElement("span");
-            hr = document.createElement("hr")
-            t = document.createTextNode(item.nomeproduto);
-            l = document.createTextNode('R$ ' + item.valor);
-            p.appendChild(t);
-            s.appendChild(l);
-            document.getElementById("carrinho-lista-produtos").appendChild(p);
-            document.getElementById("carrinho-lista-produtos").appendChild(s);
-            document.getElementById("carrinho-lista-produtos").appendChild(hr);
-            console.log(item)
+            i = document.createElement("img");
+            p = document.createElement("div"); //carrinho-produto-nome
+            d = document.createElement("div"); //carrinho-produto-individual
+            n = document.createElement("div"); //linha-descricao-carrinho
+            q = document.createElement("div"); //divisoria div
+            r = document.createElement("div"); //divisoria div
+            s = document.createElement("span"); //carrinho-produto-preco
+            hr = document.createElement("hr"); //divisoria
 
-            totalpreco= parseFloat(totalpreco)+parseFloat(item.valor);
+            //imagem
+            //img
+            i.src = "imagens/upload/" + item.imagem;
+            i.width = "120"
+            i.height = "120"
+            //imagem
+
+            //nome produto
+            //div
+            p.className = "carrinho-produto-nome";
+            t = document.createTextNode(item.nomeproduto);
+            p.appendChild(t);
+            //nome produto
+
+            //preco produto
+            //span
+            s.className = "carrinho-produto-preco";
+            l = document.createTextNode('R$ ' + item.valor);
+            s.appendChild(l);
+            //preco produto
+
+            //div do produto
+            d.className = "carrinho-produto-individual"
+            d.appendChild(i);//imagem
+            d.appendChild(p);//nome
+            d.appendChild(s);//preco
+            //div do produto
+
+            //divisoria
+            //hr
+            n.className = "linha-descricao-carrinho"
+            hr.className = "linha-divisioria-carrinho"            
+            m = document.createTextNode("Nome ");
+            v = document.createTextNode("Preço ");
+              //cria div
+            n.appendChild(q);
+            n.appendChild(r);
+              
+              //add texto na div
+            q.appendChild(m);
+            r.appendChild(v);
+            //divisoria
+                    
+            //adiciona tudo na pagina
+            document.getElementById("carrinho-lista-produtos").appendChild(n);
+            document.getElementById("carrinho-lista-produtos").appendChild(d);
+            document.getElementById("carrinho-lista-produtos").appendChild(hr);
+            //adiciona tudo na pagina
+
+            totalpreco=parseFloat(totalpreco)+parseFloat(item.valor);
             console.log(totalpreco)
 
             count++
           });
-          p = document.createTextNode( 'Valor total: '+'R$ ' + totalpreco);
-          document.getElementById('preco-total').appendChild(p)
-          document.getElementById('count-produto').textContent =  count
+
+          //resumo
+          t = document.createElement("p")
+          p = document.createTextNode('Valor total: ');
+          tx = document.createTextNode('R$ ' + totalpreco);
+          t.appendChild(tx);
+          document.getElementById('resumo-preco').appendChild(p);
+          document.getElementById('resumo-preco').appendChild(t);
+          document.getElementById('count-produto').textContent = count
         }
       </script>

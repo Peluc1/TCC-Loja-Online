@@ -52,7 +52,7 @@
         </div>
         <div class="checkbox-div">
             <input type="checkbox">
-            <label for="agreement">Eu li e aceito os <a href="#" style="color: #9F0080;">termos de uso</a></label>
+            <label for="agreement" required>Eu li e aceito os <a href="#" style="color: #9F0080;">termos de uso</a></label>
         </div>
         <div class="genero-geral">
             <input type="radio" name="genero" id="dot-1" class="radiobtn-genero" value="Masculino">

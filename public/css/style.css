@@ -308,16 +308,22 @@ nav .navbar .nav-links .links li a{
     border-radius: 15px;
     display: none;
     width: 350px;
-    height: 350px;
+    height: 370px;
     padding: 20px;
     display: flex;
     font-size: 18px;
     font-weight: 600;
 }
 
+.div-carrinho-nome-produto{
+   min-width: 350px;
+   margin-bottom: 7px;
+}
+
 .carrinho-wrapper .dados-carrinho #lista-carrinho{
     overflow-y: scroll;
-    max-height: 280px;
+    max-height: 270px;
+
 }
 
 .carrinho-wrapper .dados-carrinho .close{
@@ -334,13 +340,12 @@ nav .navbar .nav-links .links li a{
     color: transparent;
     border: 10px solid black;
     border-color: white transparent transparent;
-    margin-top: 370px;
+    top: 410px;
     margin-left: 0px;
 }
 
 .carrinho-wrapper .text-dados-carrinho .precocarrinho-linkcarrinho{
-    display: flex;
-    justify-content: space-between;
+   margin-bottom: 5px;
 }
 
 .carrinho-wrapper .dados-carrinho .preco-total{

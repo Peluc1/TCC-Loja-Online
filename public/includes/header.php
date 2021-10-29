@@ -17,7 +17,7 @@
   <header>
     <nav class="menuprincipal">
       <div class="navbar" id="navbar">
-        <div class="logo"><a href="../index.php">MyTeams</a></div>
+        <div class="logo"><a href="<?=URLROOT?>/index.php">MyTeams</a></div>
         <div class="nav-links pre-ender">
           <ul class="links">
             <li><a href="<?=URLROOT?>/index.php" class="home2">Home</a></li>
@@ -51,9 +51,6 @@
         <div class="nav-links">
           <ul class="links">
             <li>
-              <a href="<?=URLROOT?>/public/produtos.php?tipo=assinatura" class="home2">Assinaturas</a>
-            </li>
-            <li>
               <a href="<?=URLROOT?>/public/produtos.php?tipo=skin" class="home2">Skins</a>
             </li>
             <li>
@@ -78,8 +75,10 @@
             <i class='bx bx-x close'></i>
             <div id="lista-carrinho"></div>
             <div class="precocarrinho-linkcarrinho">
-              <a href="<?=URLROOT?>/public/carrinho.php" class="link-carrinho">Ver carrinho</a>
               <div class="preco-total" id="preco-total"></div>
+            </div>
+            <div class="precocarrinho-linkcarrinho">
+              <a href="<?=URLROOT?>/public/carrinho.php" class="link-carrinho">Ver carrinho</a>
             </div>
           </div>
         </div>
@@ -106,7 +105,7 @@
             s = document.createElement("span");
             hr = document.createElement("hr")
             s.className = "span-preco";
-            p.className = "span-carrinho";
+            p.className = "div-carrinho-nome-produto";
             t = document.createTextNode(item.nomeproduto);
             l = document.createTextNode('R$ ' + item.valor);
             p.appendChild(t);
@@ -121,7 +120,7 @@
 
             count++
           });
-          p = document.createTextNode( 'Valor total: '+'R$ ' + totalpreco);
+          p = document.createTextNode('Valor total: '+'R$ ' + totalpreco);
           document.getElementById('preco-total').appendChild(p)
           document.getElementById('count-produto').textContent =  count
       }else {

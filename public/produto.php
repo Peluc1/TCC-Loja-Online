@@ -37,22 +37,26 @@
                         <?php echo $produto['nomeproduto'];?>
                         <hr>
                     </div>
-                    <div class="text-produtos-subcontainer">
+                    <div class="text-produtos-subcontainer text-produtos-subcontainer-descricao ">
                         <?php echo $produto['descricao'];?>
                     </div>
                     <div class="text-produtos-subcontainer text-produtos-subcontainer-preco">
                         <?php echo 'R$'.$produto['preco'];?>
                     </div>
-                    <div class="text-produtos-subcontainer">
-                        <div class="btn-comprar-subcontainer">
-                            <div class="btn-comprar"></div>
-                            <button>Comprar</button>
+                    <div class="bnt-container-comprar">
+                        <div class="btn-comprar-subcontainer-button">
+                            <div class="btn-comprar-subcontainer">
+                                <div class="btn-comprar"></div>
+                                <button>Comprar</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="text-produtos-subcontainer">
-                        <div class="btn-comprar-subcontainer">
-                            <div class="btn-comprar"></div>
-                            <button id="add-carrinho">Adicionar ao carrinho</button>
+                    <div class="bnt-container-comprar">
+                        <div class="btn-comprar-subcontainer-button">
+                            <div class="btn-comprar-subcontainer">
+                                <div class="btn-comprar"></div>
+                                <button id="add-carrinho">Adicionar ao carrinho</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -72,7 +76,7 @@
         let id = "<?php echo $_GET['product_id']; ?>"
         let nomeproduto = "<?php echo $produto['nomeproduto'];?>"
         let valor = "<?php echo $produto['preco'];?>"
-        let imagem = "<img src='imagens/upload/<?php echo $produto['fotoproduto'];?>'>"
+        let imagem = "<?php echo $produto['fotoproduto'];?>"
 
         var addcarrinho = document.getElementById('add-carrinho')
 
@@ -87,6 +91,7 @@
             }
                 produto.push({'produtoId' :id, 'nomeproduto' : nomeproduto, 'valor': valor, 'imagem': imagem});
                 localStorage.setItem('produto', JSON.stringify(produto));
+                alert('Produto adicionado com sucesso')
                 })
     </script>
 <?php
