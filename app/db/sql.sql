@@ -59,8 +59,6 @@ CREATE TABLE loja.pedidos (
     data_pedido DATE DEFAULT (CURRENT_DATE),
     fk_user BIGINT UNSIGNED,
     FOREIGN KEY(fk_user) REFERENCES usuario (iduser),
-    fk_endereco BIGINT UNSIGNED,
-    FOREIGN KEY(fk_endereco) REFERENCES enderecos (id_endereco)
 );
 
 CREATE TABLE loja.pedidos_produtos (

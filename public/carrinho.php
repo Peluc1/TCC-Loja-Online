@@ -86,7 +86,7 @@ require('../app/db/conexao.php');
           </div>
           <div class="preco-total-subcontainer-carrinho" id="resumo-preco"></div>
           <div class="button-pagamento-carrinho">
-            <a href="" class="button-pagamento-link">Ir para o pagamento</a>
+            <a href="pagamento.php" class="button-pagamento-link">Ir para o pagamento</a>
           </div>
           <div class="button-sair-carrinho">
             <a href="<?=URLROOT?>/public/produtos.php" class="button-sair-link">Continuar comprando</a>
