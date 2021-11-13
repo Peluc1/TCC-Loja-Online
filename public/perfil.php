@@ -325,10 +325,12 @@ require('includes/header.php');
           <div class="tituloanucio">Anuncie Aqui</div>
           <form id="anunciar" name="anunciar" enctype="multipart/form-data">
             <div class="anuncio-box-sub">
+
               <div class="nomeanuncio">
                 <p>Título do anúncio</p>
                 <input type="text" id="nome" name="nome" placeholder="Titulo do anúncio" required>
               </div>
+
               <div class="tipoanuncio">
                 <p>Tipo</p>
                   <select id="tipo" name="tipo" form="anunciar" required>
@@ -340,23 +342,28 @@ require('includes/header.php');
                     <option value="itens"><span>Itens</span></option>
                   </select> 
               </div>
+
               <div class="precoanuncio">
                 <p>Preço</p>
                 <input type="text" id="preco" name="preco"  placeholder="R$ 0,00" maxlength="12" required>
               </div>
+
               <div class="fotoanuncio">
                 <p class="p">Foto do anuncio</p>
                 <input type="file" name="arquivo" id="arquivo" class="arquivo">
                 <input type="text" name="file" id="file" class="file" placeholder="Arquivo" readonly="readonly">
                 <input type="button" class="btn" value="SELECIONAR">
               </div>
+
               <div class="descricaoanuncio" required>
                 <p>Descrição</p>
                 <textarea name="descricao" id="text" maxlength="150" placeholder="Fale um pouco mais sobre o produto"></textarea>
               </div>
+              
               <div class="btn-anunciar">
                 <input type="submit" value="Anunciar">
               </div>
+              
             </div>
           </form>
         </div>
@@ -365,34 +372,6 @@ require('includes/header.php');
   require('includes/footer.php');
 ?>
 <script>
-        let navheight = document.getElementById("navbar").offsetHeight;
-        let subheight = document.getElementById("submenu").offsetHeight;
-        let firstheight = navheight + subheight;
-
-        let sideMenu = document.getElementById("sidebar");
-        sideMenu.style.top = firstheight;
-        console.log(navheight)
-        console.log(subheight)
-        console.log(firstheight);
-
-        var lastScroll = 0;
-
-        document.addEventListener('scroll', () => {
-        let st = window.pageYOffset || document.documentElement.scrollTop;
-        if(st > lastScroll) {
-            navheight = document.getElementById("navbar").clientHeight;
-            subheight = document.getElementById("submenu").clientHeight;
-            sec = firstheight-(navheight + subheight);
-
-            sideMenu.style.top = sec;
-
-        }else{
-
-            sideMenu.style.top = firstheight;
-        }
-
-        })
-
         let btn = document.querySelector("#btn");
         let sidebar = document.querySelector(".sidebar");
 

@@ -50,10 +50,6 @@
                 <input type="password" name="senha" class="password" placeholder="Confirme a sua senha" required>
             </div>
         </div>
-        <div class="checkbox-div">
-            <input type="checkbox">
-            <label for="agreement" required>Eu li e aceito os <a href="#" style="color: #9F0080;">termos de uso</a></label>
-        </div>
         <div class="genero-geral">
             <input type="radio" name="genero" id="dot-1" class="radiobtn-genero" value="Masculino">
             <input type="radio" name="genero" id="dot-2" class="radiobtn-genero" value="Feminino">
@@ -70,13 +66,18 @@
                 </label>
                 <label for="dot-3">
                     <label class="dot three"></label>
-                    <span class="nenhum">Prefiro não dizer</span>
+                    <span class="nenhum">Outro</span>
                 </label>
             </div>
+        </div>
+        <div class="checkbox-div">
+            <input type="checkbox">
+            <label for="agreement" required>Eu li e aceito os <a href="#" style="color: #9F0080;">termos de uso</a></label>
         </div>
         <div class="cadastro-btn">
             <input type="submit" value="Realizar o cadastro" class="btncadastro">
         </div>
+        <div class="cadastro-link">Já tem uma conta?<a href="../public/login.php"> Faça seu login</a></div>
     </form>
 </nav>
 <script src="js/scriptmenu.js"></script>

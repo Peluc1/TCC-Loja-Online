@@ -1,5 +1,5 @@
 <footer>
-           <div class="social">
+           <div class="social" style="margin-top: 60px;">
              <a href="a" class="ftfooter"><img src="<?=URLROOT?>/public/imagens/icons/facebook.png" width="50" height="50"></a>
              <a href="a" class="ftfooter"><img src="<?=URLROOT?>/public/imagens/icons/instagram.png" width="50" height="52"></a>
              <a href="a" class="ftfooter"><img src="<?=URLROOT?>/public/imagens/icons/twitter.png" width="50" height="50"></a>

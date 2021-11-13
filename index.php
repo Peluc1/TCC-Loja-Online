@@ -3,10 +3,11 @@
 
     $page_title = 'MyTeams / Inicio';
     $links = ['<link rel="stylesheet" type="text/css" href="public/css/projeto.css">
-                <link rel="stylesheet" type="text/css" href="public/css/lightslider.css">
+                <link rel="stylesheet" type="text/css" href="public/css/slider-css.css">
+                <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@5.5.0/keen-slider.min.css"/>
                 <script type="text/javascript" src="public/js/JQuery3.3.1.js"></script>
                 <script type="text/javascript" src="public/js/lightslider.js"></script>
-                <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
                 <script type="text/javascript" src="public/js/productslide.js"></script>'];
 
     require('public/includes/header.php');
@@ -17,10 +18,101 @@
             <div class="text">MYTEAMS</div>
             <div class="text2">Encontre o que precisar para seu lazer digital</div>
         </nav>
-
         <!-- DESTAQUES -->
         <nav class="destaquesprincipal">
-           <h1 class="destaquestitulo">Destaques</h1>
+            <h1 class="destaquestitulo">Destaques</h1>
+                <div id="my-keen-slider" class="keen-slider">
+                    <div class="keen-slider__slide number-slide1 container-geral-destaques">
+                        <div class="text-div-destaques">
+                            <div class="img-destaque-produto">
+                                <img src="public/imagens/upload/88addd36ff.jpg">
+                            </div>
+                            <div class="titulo-descricao-destaques">
+                                <p class="titulo-destaques">AK-47 | Piloto Neon FT</p>
+                                <p class="destaque-descricao">Float: 0,3405 Testada em Campo</p>
+                            </div>
+                        </div>
+                        <div class="preco-destaques">
+                            <p>R$ 138.00</p>
+                            <i class='bx bx-cart'></i>
+                        </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide2 container-geral-destaques">
+                        <div class="text-div-destaques">
+                            <div class="img-destaque-produto">
+                                <img src="public/imagens/upload/88addd36ff.jpg">
+                            </div>
+                            <div class="titulo-descricao-destaques">
+                                <p class="titulo-destaques">AK-47 | Piloto Neon FT</p>
+                                <p class="destaque-descricao">Float: 0,3405 Testada em Campo</p>
+                            </div>
+                        </div>
+                        <div class="preco-destaques">
+                            <p>R$ 138.00</p>
+                            <i class='bx bx-cart'></i>
+                        </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide3 container-geral-destaques">
+                        <div class="text-div-destaques">
+                            <div class="img-destaque-produto">
+                                <img src="public/imagens/upload/88addd36ff.jpg">
+                            </div>
+                            <div class="titulo-descricao-destaques">
+                                <p class="titulo-destaques">AK-47 | Piloto Neon FT</p>
+                                <p class="destaque-descricao">Float: 0,3405 Testada em Campo</p>
+                            </div>
+                        </div>
+                        <div class="preco-destaques">
+                            <p>R$ 138.00</p>
+                            <i class='bx bx-cart'></i>
+                        </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide4 container-geral-destaques">
+                        <div class="text-div-destaques">
+                            <div class="img-destaque-produto">
+                                <img src="public/imagens/upload/88addd36ff.jpg">
+                            </div>
+                            <div class="titulo-descricao-destaques">
+                                <p class="titulo-destaques">AK-47 | Piloto Neon FT</p>
+                                <p class="destaque-descricao">Float: 0,3405 Testada em Campo</p>
+                            </div>
+                        </div>
+                        <div class="preco-destaques">
+                            <p>R$ 138.00</p>
+                            <i class='bx bx-cart'></i>
+                        </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide5 container-geral-destaques">
+                        <div class="text-div-destaques">
+                            <div class="img-destaque-produto">
+                                <img src="public/imagens/upload/88addd36ff.jpg">
+                            </div>
+                            <div class="titulo-descricao-destaques">
+                                <p class="titulo-destaques">AK-47 | Piloto Neon FT</p>
+                                <p class="destaque-descricao">Float: 0,3405 Testada em Campo</p>
+                            </div>
+                        </div>
+                        <div class="preco-destaques">
+                            <p>R$ 138.00</p>
+                            <i class='bx bx-cart'></i>
+                        </div>
+                    </div>
+                    <div class="keen-slider__slide number-slide6 container-geral-destaques">
+                        <div class="text-div-destaques">
+                            <div class="img-destaque-produto">
+                                <img src="public/imagens/upload/88addd36ff.jpg">
+                            </div>
+                            <div class="titulo-descricao-destaques">
+                                <p class="titulo-destaques">Glock-18 (Lembrança) | Farol Alto FALLEN FN - Nova de Fábrica 0,0068</p>
+                                <p class="destaque-descricao">Glock-18 (Lembrança) | Farol Alto FALLEN FN - Nova de Fábrica 0,0068</p>
+                            </div>
+                        </div>
+                        <div class="preco-destaques">
+                            <p>R$ 138.00</p>
+                            <i class='bx bx-cart'></i>
+                        </div>
+                    </div>
+            </div>
         </nav>
         <!-- Fim DESTAQUES -->
 
@@ -43,6 +135,13 @@
                 <img src="public/imagens/icons/skinsdestaques.jpg" class="imagecatalogo2">
             </nav>
         </nav>
+        <script src="https://cdn.jsdelivr.net/npm/keen-slider@5.5.0/keen-slider.min.js"></script>
+        <script>
+            var slider = new KeenSlider("#my-keen-slider", {
+                slidesPerView: 3,
+                spacing: 15,
+            })
+        </script>
         <?php
             require('public/includes/footer.php');
         ?>

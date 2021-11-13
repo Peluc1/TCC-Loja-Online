@@ -24,7 +24,6 @@ ul, li, p{
     margin: 0px;
     padding: 0px;
     list-style: none;
-    text-align: center;
 }
 
 a{
@@ -113,6 +112,45 @@ nav .navbar .nav-links .links li a{
     color: white;
     white-space: nowrap;
     text-decoration: none;
+}
+
+.menuprincipal .nav-links .dropdown{
+    position: relative;
+}
+
+.dropdown .dropdown-menu{
+    position: absolute;
+    background-color: #310e68;
+    background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
+    width: fit-content;
+    height: fit-content;
+    top: 50px;
+    padding: 0px 20px 0px 20px;
+    background-color: black;
+    border-radius:  10px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0, .6);
+    opacity: 0;
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown .dropdown-menu .links-dropdown{
+    font-size: 20px;
+}
+
+.dropdown button{
+    border:none;
+    background-color: transparent;
+    display: flex;
+    color: white;
+}
+
+.dropdown button img{
+    width: 45px;
+    height: 45px;
+}
+
+.nav-links .dropdown > .links-dropdown:focus + .dropdown-menu{
+    opacity: 1;
 }
 
 .aa {

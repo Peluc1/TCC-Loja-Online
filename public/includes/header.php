@@ -27,15 +27,18 @@
         </div>
 
           <div class="nav-links ender">
-            <ul class="links">
-                <li class="perfil-li">
-                  <i class='bx bx-user-circle'></i>
-                  <ul class="perfilsubmenu submenuprincipal">
-                      <li><a href="<?=URLROOT?>/public/login.php">Login</li></a>
-                      <li><a href="<?=URLROOT?>/public/perfil.php">Perfil</li></a>
-                  </ul>
-                </li>
-            </ul>
+            <div class="links">
+              <li class="perfil-li">
+                <div class="dropdown">
+                  <button class="links-dropdown"><i class='bx bx-user-circle'></i></button>
+                  <div class="dropdown-menu">
+                    <a href="<?=URLROOT?>/public/login.php" class="links-dropdown">Login</a>
+                    <hr>
+                    <a href="<?=URLROOT?>/public/perfil.php" class="links-dropdown">Perfil</a>
+                  </div>
+                </div>
+               </li>
+            </div>
             <div class="search-box">
               <i class='bx bx-search' ></i>
               <div class="input-box pesquisar">

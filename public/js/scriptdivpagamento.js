@@ -17,6 +17,7 @@ var buttonpagamentopix = document.getElementById("button-pagamento-pix")
 var formapagamento = document.getElementById("formapagamento")
 
 
+
 window.onload = () => {
     
     carrinhomodal.style.display = "none"
@@ -38,7 +39,7 @@ btnpagamentopix.addEventListener("click" , function(){
 
     btnpagamentopix.style.backgroundColor = "gray"
 
-    btnpagamentoboleto.style.backgroundColor = "white"
+    btnpagamentoboleto.style.backgroundColor = "transparent"
 
     divboleto.style.display = "none"
 
@@ -55,7 +56,7 @@ btnpagamentoboleto.addEventListener("click" , function(){
 
     divpix.style.display = "none"
 
-    btnpagamentopix.style.backgroundColor = "white"
+    btnpagamentopix.style.backgroundColor = "transparent"
 
     btnpagamentoboleto.style.backgroundColor = "gray"
 
@@ -64,6 +65,7 @@ btnpagamentoboleto.addEventListener("click" , function(){
     buttonpagamentopix.value = "Pagar com o boleto"
 
     formapagamento.value="boleto"
+
 });
 
 
