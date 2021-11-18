@@ -272,7 +272,7 @@ require('includes/header.php');
         </div>
       </nav>
       <nav class="vendas" id="vendas">
-        <div class="titulo-vendas"><i class='bx bxs-shopping-bag' ></i>Minha vendas</div>
+        <div class="titulo-vendas"><i class='bx bxs-shopping-bag'></i><p>Minhas vendas</p></div>
         <div class="vendas-section">
           <div class="numero-venda">
               <span>Número da venda</span>
@@ -336,8 +336,6 @@ require('includes/header.php');
                   <select id="tipo" name="tipo" form="anunciar" required>
                     <option value="" disabled selected>Escolha a sua opção</option>
                     <option value="conta"><span>Conta</span></option>
-                    <option value="jogo"><span>Jogo</span></option>
-                    <option value="assinatura"><span>Assinatura</span></option>
                     <option value="skin"><span>Skin</span></option>
                     <option value="itens"><span>Itens</span></option>
                   </select> 

@@ -72,7 +72,7 @@
         </div>
         <div class="checkbox-div">
             <input type="checkbox">
-            <label for="agreement" required>Eu li e aceito os <a href="#" style="color: #9F0080;">termos de uso</a></label>
+            <label for="agreement" required>Eu li e aceito os <a href="/TCC/public/termosdeuso.php" style="color: #9F0080;">termos de uso</a></label>
         </div>
         <div class="cadastro-btn">
             <input type="submit" value="Realizar o cadastro" class="btncadastro">

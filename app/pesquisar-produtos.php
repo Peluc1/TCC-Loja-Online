@@ -32,13 +32,6 @@ if($rowCount > 0){
             </div>
             <div class='produto-detalhes'>
                 <span class='produto-nome'> ".$produto['nomeproduto'] ." </span>
-                <div class='estrelas'>
-                    <i class='bx bx-star'></i>
-                    <i class='bx bx-star'></i>
-                    <i class='bx bx-star'></i>
-                    <i class='bx bx-star'></i>
-                    <i class='bx bx-star'></i>
-                </div>
             </div>
             <div class='preco-div'>
                 <div class='preco'>
@@ -53,6 +46,6 @@ if($rowCount > 0){
     }
 }
 else{
-    $data="Nenhum registro encontrado";
+    $data= '<div style="padding:100px; color:white; font-size:20px; font-weight:600;">Nenhum produto encontrado</div>';
 }
 echo $data;

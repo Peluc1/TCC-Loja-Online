@@ -12,62 +12,32 @@
 }
 
 .number-slide1 {
-  background: rgb(64, 175, 255);
-  background: linear-gradient(
-    128deg,
-    rgba(64, 175, 255, 1) 0%,
-    rgba(63, 97, 255, 1) 100%
-  );
+  background-color: rgb(0, 0, 90);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 .number-slide2 {
-  background: rgb(64, 175, 255);
-  background: linear-gradient(
-    128deg,
-    rgba(64, 175, 255, 1) 0%,
-    rgba(63, 97, 255, 1) 100%
-  );
+  background-color: rgb(0, 0, 90);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 .number-slide3 {
-  background: rgb(64, 175, 255);
-  background: linear-gradient(
-    128deg,
-    rgba(64, 175, 255, 1) 0%,
-    rgba(63, 97, 255, 1) 100%
-  );
-  background: rgb(64, 175, 255);
-  background: linear-gradient(
-    128deg,
-    rgba(64, 175, 255, 1) 0%,
-    rgba(63, 97, 255, 1) 100%
-  );
+  background-color: rgb(0, 0, 90);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 .number-slide4 {
-  background: rgb(64, 175, 255);
-  background: linear-gradient(
-    128deg,
-    rgba(64, 175, 255, 1) 0%,
-    rgba(63, 97, 255, 1) 100%
-  );
+  background-color: rgb(0, 0, 90);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 .number-slide5 {
-  background: rgb(64, 175, 255);
-  background: linear-gradient(
-    128deg,
-    rgba(64, 175, 255, 1) 0%,
-    rgba(63, 97, 255, 1) 100%
-  );
+  background-color: rgb(0, 0, 90);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 .number-slide6 {
-  background: rgb(64, 175, 255);
-  background: linear-gradient(
-    128deg,
-    rgba(64, 175, 255, 1) 0%,
-    rgba(63, 97, 255, 1) 100%
-  );
+  background-color: rgb(0, 0, 90);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 .container-geral-destaques{

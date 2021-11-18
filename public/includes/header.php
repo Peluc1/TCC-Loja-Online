@@ -61,11 +61,6 @@
             </li>
             <li>
               <a href="<?=URLROOT?>/public/produtos.php?tipo=conta" class="home2">Contas</a>
-              
-            </li>
-            <li>
-              <a href="<?=URLROOT?>/public/produtos.php?tipo=jogo" class="home2">Jogos</a>
-              
             </li>
           </ul>
         </div>

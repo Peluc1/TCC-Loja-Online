@@ -417,3 +417,54 @@ nav .navbar .nav-links .links li a{
     border-radius: 20px;
 }
 
+
+/* Aqui começa a parte do rodape */
+
+footer{
+    background-color: rgb(88, 25, 204);
+    margin-top: 150px;
+}
+
+footer .social-geral-footer{
+    display: flex;
+    justify-content: center;
+}
+
+footer .social-geral-footer img{
+    width: 45px;
+    height: 45px;
+    margin-top: 30px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+footer .links-geral-footer{
+    display: flex;
+    justify-content: center;
+}
+
+footer .links-geral-footer a{
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+footer .creditos-footer{
+    display: flex;
+    justify-content: center;
+}
+
+footer .creditos-footer p{
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 20px;
+    margin-top: 20px;
+    opacity: 0.5;
+    color: white;
+    padding-bottom: 10px;
+}
+
+/* Aqui termina a parte do rodape */

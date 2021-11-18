@@ -17,9 +17,9 @@ require('../app/db/conexao.php');
   </head>
   <body>
   <header>
-    <nav class="menuprincipal">
+  <nav class="menuprincipal">
       <div class="navbar" id="navbar">
-        <div class="logo"><a href="../index.php">MyTeams</a></div>
+        <div class="logo"><a href="<?=URLROOT?>/index.php">MyTeams</a></div>
         <div class="nav-links pre-ender">
           <ul class="links">
             <li><a href="<?=URLROOT?>/index.php" class="home2">Home</a></li>
@@ -29,15 +29,18 @@ require('../app/db/conexao.php');
         </div>
 
           <div class="nav-links ender">
-            <ul class="links">
-                <li class="perfil-li">
-                  <i class='bx bx-user-circle'></i>
-                  <ul class="perfilsubmenu submenuprincipal">
-                      <li><a href="<?=URLROOT?>/public/login.php">Login</li></a>
-                      <li><a href="<?=URLROOT?>/public/perfil.php">Perfil</li></a>
-                  </ul>
-                </li>
-            </ul>
+            <div class="links">
+              <li class="perfil-li">
+                <div class="dropdown">
+                  <button class="links-dropdown"><i class='bx bx-user-circle'></i></button>
+                  <div class="dropdown-menu">
+                    <a href="<?=URLROOT?>/public/login.php" class="links-dropdown">Login</a>
+                    <hr>
+                    <a href="<?=URLROOT?>/public/perfil.php" class="links-dropdown">Perfil</a>
+                  </div>
+                </div>
+               </li>
+            </div>
             <div class="search-box">
               <i class='bx bx-search' ></i>
               <div class="input-box pesquisar">
@@ -60,15 +63,11 @@ require('../app/db/conexao.php');
             </li>
             <li>
               <a href="<?=URLROOT?>/public/produtos.php?tipo=conta" class="home2">Contas</a>
-              
-            </li>
-            <li>
-              <a href="<?=URLROOT?>/public/produtos.php?tipo=jogo" class="home2">Jogos</a>
-              
             </li>
           </ul>
         </div>
       </div>
+
       <div class="carrinho-resumo">
         <div class="carrinho-lista-container">
           <div class="titulo-lista-container-carrinho">

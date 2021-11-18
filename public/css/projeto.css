@@ -52,12 +52,7 @@
 /* Aqui começa a parte de destaques */
 
 .destaquesprincipal{
-    background: rgb(64, 76, 255);
-    background: linear-gradient(
-      128deg,
-      rgba(64, 76, 255, 1) 0%,
-      rgba(174, 63, 255, 1) 100%
-    );
+    background-image: linear-gradient(to right, #003d99b7 ,#5a07a8);
     box-sizing: border-box;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -148,155 +143,76 @@
     color: white;
 }
 
-
-.catalogo1{
-    column-count: 2;
+.catalogoprincipal .catalogo1{
     display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-.textcatalogo1{
+.catalogoprincipal .catalogo1 .img-catalogo1 img{
+    width: 900px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.catalogoprincipal .catalogo1 .titulo-text-catalogo1{
+    margin-left: 30px;
+    text-align: center;
+}
+
+.catalogoprincipal .catalogo1 .titulo-text-catalogo1 .titulo-catalogo1{
+    font-size: 26px;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-
+    font-weight: 600;
 }
 
-.textcatalogo1titulo{
-    font-size: 30px;
-}
-
-.textcatalogo1corpo1{
+.catalogoprincipal .catalogo1 .titulo-text-catalogo1 .text-catalogo1{
     font-size: 20px;
-    margin:20px 10px 10px 10px;
-}
-
-.imagecatalogo1{
-   width: 50%;
-   height: 450px;
-   margin: 10px 0px 0px 13.5px;
-   outline-style: solid;
-   outline-width: 1px ;
-   outline-color: #004395;
-}
-
-
-.catalogo2{
-    display: flex;
-    margin-right: 13.5px;
-    column-count: 2;
-}
-
-.textcatalogo2{
     color: white;
+    font-weight: 600;
+    margin-top: 50px;
+}
+
+.catalogoprincipal .catalogo1 .credito-img-catalogo1{
+    position: absolute;
+    top: 1980px;
+    right: 635px;
+    opacity: 0.7;
+    color: white;
+}
+
+.catalogoprincipal .catalogo2{
     display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-.textcatalogo2titulo{
-    font-size: 30px;
+.catalogoprincipal .catalogo2 .img-catalogo2 img{
+    width: 900px;
+    height: 500px;
+    border-radius: 10px;
 }
 
-.textcatalogo2corpo1{
+.catalogoprincipal .catalogo2 .titulo-text-catalogo2{
+    text-align: center;
+    margin-right: 50px;
+}
+
+.catalogoprincipal .catalogo2 .titulo-text-catalogo2 .titulo-catalogo2{
+    font-size: 26px;
+    color: white;
+    font-weight: 600;
+}
+
+.catalogoprincipal .catalogo2 .titulo-text-catalogo2 .text-catalogo2{
     font-size: 20px;
-    margin:20px 10px 10px 10px;
-}
-
-.imagecatalogo2{
-   width: 50%;
-   height: 450px;
-   margin: 0px 0px 30px 0px;
-   outline-style: solid;
-   outline-width: 1px ;
-   outline-color: #004395;
-   
+    color: white;
+    font-weight: 600;
+    margin-top: 50px;
 }
 
 /* Aqui termina a parte do catálogo */
-
-/* Aqui começa a parte das marcas */
-
-.melhoresmarcas{
-    border-top:solid rgba(255, 255, 255, 0) 30px;
-    background-color: #030a25;
-}
-
-.titulomarcas{
-    margin: 80px 0 30px 0;
-    font-size: 50px;
-    text-align: center;
-    color: white;
-}
-
-.subtitulomarcas{
-    text-align: center;
-    font-size: 20px;
-    color: white;
-    margin-bottom: 70px;
-}
-
-.marcas{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-bottom: 80px;
-    color: white;
-    margin: 0 45px 0 45px;
-
-}
-
-.orgmarcas{
-    text-align: center;
-    /*border:solid 2px #00184E;
-    border-radius: 10px;
-    background-color:#00184E;
-    padding: 5px;*/
-}
-
-.imagemarcas{
-    width: 220px;
-    height: 235px;
-}
-
-/* Aqui termina a parte das marcas */
-
-/* Aqui começa a parte do rodape */
-
-footer{
-    padding-bottom: 20px;
-}
-
-.ftfooter{
-    margin-left: 20px;
-    margin-top: 20px;
-}
-
-.social{
-    display: flex;
-    justify-content: center;
-}
-
-.elementfooter{
-    display: flex;
-    justify-content: center;
-}
-
-.textfooter{
-    color: white;
-    margin-left: 20px;
-    margin-top: 15px;
-}
-
-.creditos{
-    display: flex;
-    justify-content: center;
-    
-}
-
-/* Aqui termina a parte do rodape */
 
 /* Aqui a começa a parte do Perfil */
 
@@ -1006,6 +922,7 @@ form .editar a{
     left: 20px;
     height: 200px;
     width: 200px;
+    border-radius: 10px;
     object-fit: cover;
 
 }
@@ -1168,7 +1085,7 @@ form .editar a{
 }
 
 .produto-container .info-produtos-container .text-produtos-subcontainer{
-    min-width: 100%;
+    min-width: 95%;
     margin: 20px 10px 10px 20px;
     font-size: 20px;
 }
@@ -1728,4 +1645,61 @@ form .editar a{
     font-size: 22px;
     margin: 10px 40px 0px 20px;
     color: white;
+}
+
+
+/* Aqui termina a parte so sobre */
+
+/* Aqui começa a parte dos Termos de Uso */
+
+.container-geral-termos-deuso{
+    width: 100vh;
+    margin: auto;
+    color: white;
+}
+
+.container-geral-termos-deuso p{
+    font-size: 18px;
+    text-align: justify;
+    padding-top:20px;
+}
+
+.container-geral-termos-deuso .titulo-termos-deuso{
+    margin: 80px 0px 40px 0px;
+}
+
+.container-geral-termos-deuso .titulo-termos-deuso .titulo-principal-termos{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.container-geral-termos-deuso .titulo-termos-deuso .subtitulo-principal-termos{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.container-geral-termos-deuso .subscontainers-termos{
+    margin-bottom: 40px;
+}
+
+.container-geral-termos-deuso .subscontainers-termos .titulo-termos-de-uso-sub-org{
+    font-size: 23px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.container-geral-termos-deuso .subscontainers-termos .titulo-termos-de-uso-sub-org-ul{
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.container-geral-termos-deuso .subscontainers-termos ul{
+    margin: 20px 0px 20px 0px;
+}
+
+.container-geral-termos-deuso .subscontainers-termos li{
+    font-size: 18px;
+    list-style-type: circle;
 }

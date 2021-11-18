@@ -118,22 +118,23 @@
 
         <nav class="catalogoprincipal">
             <hr style="width: 90%">
-                <p class="textcatalogotitulo noselect">NOSSO CATÁLOGO</p>
-                <p class="textcatalogotitulo2 noselect">Comece suas compras online</p>
-            <nav class="catalogo1">
-                <img src="public/imagens/icons/assinatura.jpg" class="imagecatalogo1">
-                <div class="textcatalogo1">
-                    <li class="textcatalogo1titulo noselect">Assinaturas</li>
-                    <li class="textcatalogo1corpo1 noselect">O MyTeams tem a mais ampla seleção de assinatura onlines. Não importa o que você está procurando, garantimos que encontrará o que precisa.</li>
+            <p class="textcatalogotitulo noselect">NOSSO CATÁLOGO</p>
+            <p class="textcatalogotitulo2 noselect">Comece suas compras online</p>
+            <div class="catalogo1">
+                <div class="img-catalogo1"><img src="public/imagens/icons/1616769336_skrinshot-26-03-2021-19_33_33.png"></div>
+                <div class="titulo-text-catalogo1">
+                    <p class="titulo-catalogo1">Skins</p>
+                    <p class="text-catalogo1">Com qualquer uma de nossas skins você vai ser motivo de inveja entre todos os seus amigos. Oferecemos uma vasta seleção de skins de diversos jogos online.</p>
                 </div>
-            </nav>
-            <nav class="catalogo2">
-                <div class="textcatalogo2">
-                    <li class="textcatalogo2titulo noselect">Skins de jogos</li>
-                    <li class="textcatalogo2corpo1 noselect">Com qualquer uma de nossas skins você vai ser motivo de inveja entre todos os seus amigos. Oferecemos uma vasta seleção de skins de diversos jogos online.</li>
+                <div class="credito-img-catalogo1"><p>Creditos à DSH :)</p></div>
+            </div>
+            <div class="catalogo2">
+                <div class="titulo-text-catalogo2">
+                    <p class="titulo-catalogo2">Contas</p>
+                    <p class="text-catalogo2">Com qualquer uma de nossas contas você vai ser motivo de inveja entre todos os seus amigos. Oferecemos uma vasta seleção de contas de jogo, como o League of Legends.</p>
                 </div>
-                <img src="public/imagens/icons/skinsdestaques.jpg" class="imagecatalogo2">
-            </nav>
+                <div class="img-catalogo2"><img src="public/imagens/icons/PBECICLOp1_Easy-Resize.com_.jpg"></div>
+            </div>
         </nav>
         <script src="https://cdn.jsdelivr.net/npm/keen-slider@5.5.0/keen-slider.min.js"></script>
         <script>

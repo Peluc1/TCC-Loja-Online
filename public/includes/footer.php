@@ -1,20 +1,18 @@
-<footer>
-           <div class="social" style="margin-top: 60px;">
-             <a href="a" class="ftfooter"><img src="<?=URLROOT?>/public/imagens/icons/facebook.png" width="50" height="50"></a>
-             <a href="a" class="ftfooter"><img src="<?=URLROOT?>/public/imagens/icons/instagram.png" width="50" height="52"></a>
-             <a href="a" class="ftfooter"><img src="<?=URLROOT?>/public/imagens/icons/twitter.png" width="50" height="50"></a>
+        <footer>
+            <div class="social-geral-footer">
+                <a><img src="<?=URLROOT?>/public/imagens/icons/twitter-64.png" class="twitter"></a>
+                <a><img src="<?=URLROOT?>/public/imagens/icons/instagram-64.png"></a>
+                <a><img src="<?=URLROOT?>/public/imagens/icons/facebook-64.png"></a>
             </div>
-            <div class="elementfooter">
-                <a href="a" class="textfooter">Suporte</a>
-                <a href="<?=URLROOT?>/public/about.php" class="textfooter">Sobre</a>
-                <a href="a" class="textfooter">Termos de uso</a>
-                <a href="a" class="textfooter">Política de Privacidade</a>
+            <div class="links-geral-footer">
+                <a href="<?=URLROOT?>/index.php">Inicio</a>
+                <a href="<?=URLROOT?>/public/about.php">Sobre</a>
+                <a href="<?=URLROOT?>/public/termosdeuso.php">Termos de uso</a>
             </div>
-            <div class="creditos">
-                <p class="textfooter">© Desenvolvido por Matheus, Pedro e Rafael</p>
+            <div class="creditos-footer">
+                <p>© MyTeams</p>
             </div>
         </footer>
-        
     </body>
 </html>
 </body>

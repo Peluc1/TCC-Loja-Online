@@ -79,7 +79,8 @@
 
                         }
                     }else{
-                        echo '<div style="color:white; font-size:20px; font-weight:600;">Nenhum produto encontrado</div>';
+                        echo '<div style="padding:100px; color:white; font-size:20px; font-weight:600;">Nenhum produto encontrado</div>
+                            <i style="display:none;">';
                     }
                     ?>
             </div>
