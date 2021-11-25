@@ -216,6 +216,8 @@
 
 /* Aqui a começa a parte do Perfil */
 
+    /*Aqui começa a parte da sidebar */
+
 .sidebar{
     position: fixed;
     height: 100%;
@@ -330,6 +332,9 @@
     font-size: 25px;
 }
 
+    /*Aqui termina a parte da sidebar */
+
+    /*Aqui começa a parte de dados pessoais */
 
 .dadospessoais{
     display: flex;
@@ -413,6 +418,10 @@ form .editar a{
     color: black;
 }
 
+    /*Aqui termina a parte de dados pessoais */
+
+    /*Aqui começa a parte de alteração de dados pessoais */
+
 .modal {
     display: none; 
     position: fixed; 
@@ -428,6 +437,10 @@ form .editar a{
 
 .dadospessoais .container .modal-div-btn{
     margin: 15px 0px 20px 0px;
+}
+
+.modal .modal-content .tituloalteracao{
+    margin-left: 20px;
 }
 
 .container .modal-div-btn a{
@@ -465,6 +478,11 @@ form .editar a{
     font-weight: 550;
 }
 
+.modal-content .close{
+    margin-right: 100%;
+    color: black;
+}
+
 .alteracao-dados .alteracao-dados-input input{
     width: 100%;
     height: 45px;
@@ -480,6 +498,29 @@ form .editar a{
     color: black;
 }
 
+.modal-content .alteracao-dados-btn{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.modal-content .alteracao-dados-btn .btncadastro{
+    color: white;
+    width: 360px;
+    height: 45px;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-top: 20px;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    font-weight: 600;
+    border: none;
+    padding-left: none;
+    cursor: pointer;
+}
+
+
+
 .close {
     color: #aaa;
     font-size: 28px;
@@ -493,19 +534,6 @@ form .editar a{
     cursor: pointer;
 }
 
-.endereco{
-    background:rgba(39, 91, 214, 0.4);
-    margin: 20px 0 12px 0;
-    border-radius:5px;
-    border-left:solid 5px black; 
-    padding: 10px;
-} 
-
-.subtituloendereco{
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
 
 .dadospessoais .edit div{
     margin: 20px 10px 10px 0px;
@@ -519,6 +547,9 @@ form .editar a{
     font-size: 17px;
 }
 
+    /*Aqui termina a parte de alteração de dados pessoais */
+
+    /*Aqui começa a parte de compras */
 
 .compras{
     display: flex;
@@ -600,6 +631,9 @@ form .editar a{
     font-weight: 600;
 }
 
+    /*Aqui termina a parte de compras */
+
+    /*Aqui começa a parte de vendas */
 
 .vendas{
     display: flex;
@@ -687,7 +721,9 @@ form .editar a{
     font-weight: 600;
 }
 
+    /*Aqui termina a parte de vendas */
 
+    /*Aqui começa a parte de anuncios */
 
 .anuncios {
     display:flex;
@@ -859,6 +895,8 @@ form .editar a{
     padding-left: none;
     cursor: pointer;
 }
+
+    /*Aqui termina a parte de anuncios */
 
 /* Aqui termina a parte do Perfil */
 
@@ -1143,7 +1181,7 @@ form .editar a{
     left: -100%;
     width: 300%;
     background-image: linear-gradient(1355deg, #9708CC,#43CBFF,#9708CC,#43CBFF );
-    transition: all 0.3s ease;
+    transition: all 0.6s ease;
     border: none;
     outline: none;
 }

@@ -124,7 +124,7 @@ nav .navbar .nav-links .links li a{
     background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
     width: fit-content;
     height: fit-content;
-    top: 50px;
+    top: 60px;
     padding: 0px 20px 0px 20px;
     background-color: black;
     border-radius:  10px;
@@ -266,6 +266,61 @@ nav .navbar .nav-links .links li a{
     font-size: 16px;
 }
 
+.carteira-digital{
+    position: relative;
+}
+
+.carteira-digital button{
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    outline: none;
+    font-size: 45px;
+}
+
+.carteira-digital .carteira-digital-subcontainer{
+    background-color: rgb(17, 0, 92);
+    position: absolute;
+    right: 30px;
+    width: 200px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.24);
+    color: white;
+    padding: 0px 20px 20px 20px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.carteira-digital-subcontainer .valor-carteira .saldo-carteira{
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.carteira-digital-subcontainer .valor-carteira .valor-sub-carteira{
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+
+.carteira-digital .carteira-digital-subcontainer .add-fundos{
+    font-size: 20px;
+    background-color: darkblue;
+    padding: 0;
+    margin: 0;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.carteira-digital > .links-dropdown:focus + .carteira-digital-subcontainer{
+    opacity: 1;
+}
+
+
+/* Aqui começa o submenu */
 
 .submenu{
     top: 70px;
@@ -313,16 +368,6 @@ nav .navbar .nav-links .links li a{
 }
 
 
-.bx-up-arrow-alt{
-    color: white;
-    margin-left: 4px;
-}
-.submenu .navbar .nav-links .links li:hover .assinaturasarrow,
-.submenu .navbar .nav-links .links li:hover .skinsitensarrow,
-.submenu .navbar .nav-links .links li:hover .contasarrow,
-.submenu .navbar .nav-links .links li:hover .jogosarrow{
-    transform: rotate(180deg);
-}
 
 /* Aqui termina o Header */
 
@@ -348,7 +393,6 @@ nav .navbar .nav-links .links li a{
     width: 350px;
     height: 370px;
     padding: 20px;
-    display: flex;
     font-size: 18px;
     font-weight: 600;
 }
@@ -417,6 +461,144 @@ nav .navbar .nav-links .links li a{
     border-radius: 20px;
 }
 
+/* Aqui começa a parte do chat online */
+
+.atendimento-chat-container {
+    position: fixed;
+    bottom: 1em;
+    z-index: 1;
+    right: 1em;
+}
+
+.atendimento-chat-container .chat-subcontainer{
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px 20px 30px 20px;
+    width: 350px;
+    height: 550px;
+    margin: auto;
+    display: none;
+}
+
+.atendimento-chat-container .chat-subcontainer .close{
+    width: fit-content;
+}
+
+.atendimento-chat-container .chat-subcontainer p{
+    font-weight: 600;
+}
+
+.atendimento-chat-container .chat-online{
+    background-color: rgba(255, 255, 255, 0.432);
+    padding: 8px;
+    border-radius: 15px;
+    width: min-content;
+    margin-top: 0.7em;
+    right: 1em;
+}
+
+.chat-subcontainer #titulo-chatonline{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0px 0px 15px 0px;
+}
+
+.chat-subcontainer #display-mensagem{
+    background-color: rgba(0, 0, 0, 0.151);
+    border-radius: 20px;
+    width: 350px;
+    height: 470px;
+    max-width: 350px;
+    max-height: 470px;
+    position: absolute;
+    margin: 0px 20px 2000px 0px;
+    padding-bottom: 20px;
+    overflow-y: auto;
+}
+
+
+.chat-subcontainer  #display-mensagem .chat{
+    min-width: 40px;
+    max-width: 60%;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 15px 10px 0px 10px;
+}
+
+.chat-subcontainer  #display-mensagem .bot-mensagens{
+    background-color: yellow;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.chat-subcontainer  #display-mensagem .mensagem-container{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.chat-subcontainer  #display-mensagem .user-mensagens{
+    background-color: yellow;
+}
+
+.chat-subcontainer #Input-user{
+    height: 50px;
+    width: 85%;
+    position: absolute;
+    left: 7%;
+    bottom: 16%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+#Input-user #mensagens{
+   height: 50px;
+   width: 85%;
+   position: absolute;
+   left: 0;
+   border: none;
+   outline: none;
+   background: transparent;
+   padding:0 15px ;
+}
+
+#Input-user #enviar{
+    height: 50px;
+    width: 24%;
+    position: absolute;
+    right: 0;
+    border: none;
+    display: grid;
+    place-items: center;
+    font-size: 17px;
+}
+
+.chat-online i{
+    font-size: 50px;
+    color: white;
+}
+
+.atendimento-chat-container .chat-subcontainer::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    color: transparent;
+    border: 10px solid black;
+    border-color: white transparent transparent;
+    top: 600px;
+    margin-left: 0px;
+    right: 15px;
+}
+
+
+
+/* Aqui termina a parte do chat online */
 
 /* Aqui começa a parte do rodape */
 

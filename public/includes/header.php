@@ -29,6 +29,16 @@
           <div class="nav-links ender">
             <div class="links">
               <li class="perfil-li">
+                <div class="carteira-digital">
+                  <button class="links-dropdown"><i class='bx bxs-wallet' style="color:white;margin-right:25px"></i></button>
+                  <div class="carteira-digital-subcontainer">
+                    <div class="valor-carteira">
+                      <span class="saldo-carteira">Seu Saldo</span>
+                      <span class="valor-sub-carteira">R$ 200</span>
+                    </div>
+                    <div class="add-fundos"><i class='bx bx-plus'></i>Add fundos</div>
+                  </div>
+                </div>
                 <div class="dropdown">
                   <button class="links-dropdown"><i class='bx bx-user-circle'></i></button>
                   <div class="dropdown-menu">
@@ -84,6 +94,32 @@
           <i class='bx bx-cart'></i>
         </div>
       </div>
+      <div class="atendimento-chat-container">
+        <div class="chat-subcontainer" id="modal-chat">
+          <div class="tela-chat">
+            <i class='bx bx-x close'></i>
+            <div id="titulo-chatonline">
+              <p>Alguma Dúvida?</p>
+            </div>
+            <div id="display-mensagem">
+              <!-- Mensagens do bot -->
+              <div class="chat bot-mensagens">Hello There, how can help you ?</div> 
+
+              <!-- Mensagens do usuario -->
+              <div class="mensagem-container">
+                <div class="chat user-mensagens">I need help to build a website</div>
+              </div>
+            </div>
+          </div>
+            <div id="Input-user">
+              <input type="text" nome="mensagens" id="mensagens" autocomplete="off" placeholder="Escreva a sua mensagem aqui" required>
+              <input type="submit" value="Enviar" id="enviar" name="enviar">
+            </div>
+        </div>
+        <div class="chat-online" id="btn-modall">
+          <i class='bx bxs-chat' ></i>
+        </div>
+      </div>
       <script>
         let inputbox = document.querySelector(".input-box");
         let searchBox = document.querySelector(".search-box .bx-search");
@@ -127,4 +163,5 @@
       }
       </script>
     </nav>
-    <script type="text/javascript" src="<?=URLROOT?>/public/js/carrinhomodal.js"></script>
+    <script type="text/javascript" src="<?=URLROOT?>/public/js/carrinhomodal.js"></script>^
+    <script type="text/javascript" src="<?=URLROOT?>/public/js/chatmodal.js"></script>

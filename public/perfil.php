@@ -121,8 +121,8 @@ require('includes/header.php');
 
               <div id="myModal" class="modal">
                 <div class="modal-content">
-                  <span class="titulodados" style="margin: 20px;">Alteração de dados</span>
-                  <span class="close"></span>
+                  <i class='bx bx-x close'></i>
+                  <span class="titulodados tituloalteracao">Alteração de dados</span>
                   <form action="POST">
                     <div class="alteracao-dados">
                       <div class="alteracao-dados-input">
@@ -379,10 +379,16 @@ require('includes/header.php');
 
         let modal_btn_dados = document.getElementById("modalbtn")
         let modal_dados = document.getElementById("myModal")
+        let close = document.getElementsByClassName("close")[2]
 
         modal_btn_dados.onclick = function(){
           modal_dados.style.display = "flex";
         }
+
+        close.onclick = function() {
+          modal_dados.style.display = "none";
+        }
+
 
         $("#preco").maskMoney({prefix:'R$ ', allowNegative: false, thousands:'.', decimal:',', affixesStay: true});
 
