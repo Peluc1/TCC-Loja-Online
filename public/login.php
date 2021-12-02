@@ -7,7 +7,7 @@ if (isset($_SESSION['iduser'])){
     header('Location: ../public/perfil.php');
     }
 
-  $page_title = 'Login';
+  $page_title = 'MyTeams / Login';
   $links = ['<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>',
           '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>',
           '<link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">',

@@ -2,7 +2,7 @@
 
 require('../app/db/conexao.php');
 
-$page_title = 'Termos de uso';
+$page_title = 'MyTeams / Termos de uso';
 
 $links = ['<link rel="stylesheet" type="text/css" href="public/css/projeto.css">
             <link rel="stylesheet" type="text/css" href="public/css/lightslider.css">

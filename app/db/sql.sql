@@ -71,6 +71,12 @@ CREATE TABLE loja.pedidos_produtos (
     FOREIGN KEY (id_produto) REFERENCES pedidos (id_pedido)
 );
 
+CREATE TABLE loja.chatbot(
+    id_bot SERIAL PRIMARY KEY,
+    mensagens VARCHAR(250) NOT NULL,
+    respostas VARCHAR(250) NOT NULL
+);
+
 /*
 CREATE TABLE ticket (
 

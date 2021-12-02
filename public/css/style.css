@@ -120,17 +120,16 @@ nav .navbar .nav-links .links li a{
 
 .dropdown .dropdown-menu{
     position: absolute;
-    background-color: #310e68;
-    background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
+    background-color:darkblue;
     width: fit-content;
     height: fit-content;
-    top: 60px;
+    top: 55px;
     padding: 0px 20px 0px 20px;
-    background-color: black;
     border-radius:  10px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0, .6);
     opacity: 0;
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    z-index: 1;
 }
 
 .dropdown .dropdown-menu .links-dropdown{
@@ -151,6 +150,11 @@ nav .navbar .nav-links .links li a{
 
 .nav-links .dropdown > .links-dropdown:focus + .dropdown-menu{
     opacity: 1;
+}
+
+.nav-links .dropdown > .links-dropdown:focus + .dropdown-menu,
+.nav-links .dropdown > .links-dropdown:focus + .dropdown-menu{
+    display: block;
 }
 
 .aa {
@@ -224,18 +228,18 @@ nav .navbar .nav-links .links li a{
     box-shadow: 5px 5px 5px black;
     height: 60px;
     width: 300px;
-    background-color: #004395;
+    background-color:darkblue;
     position: absolute;
     top: 65px;
     right: calc(100% - 45px);
     border-radius: 6px;
-    opacity: 0;
+    display: none;
     pointer-events: none;
     transition: all 0.2s ease;
 }
 
 .navbar  .input-box.showInput{
-    opacity: 1;
+    display: block;
     pointer-events: auto;
     top: 65px;
     z-index: 1000;
@@ -245,7 +249,7 @@ nav .navbar .nav-links .links li a{
     content: '';
     position: absolute;
     height: 20px;
-    background-color: #004395;
+    background-color:darkblue;
     width: 20px;
     right: 10px;
     top: -6px;
@@ -312,13 +316,12 @@ nav .navbar .nav-links .links li a{
     padding: 0;
     margin: 0;
     border-radius: 20px;
-    cursor: pointer;
+    cursor: pointer; 
 }
 
 .carteira-digital > .links-dropdown:focus + .carteira-digital-subcontainer{
     opacity: 1;
 }
-
 
 /* Aqui começa o submenu */
 
@@ -394,6 +397,7 @@ nav .navbar .nav-links .links li a{
     height: 370px;
     padding: 20px;
     font-size: 18px;
+    box-shadow: 10px 5px 80px black;
     font-weight: 600;
 }
 
@@ -471,17 +475,19 @@ nav .navbar .nav-links .links li a{
 }
 
 .atendimento-chat-container .chat-subcontainer{
-    background-color: white;
+    background-color: #4634A7;
     border-radius: 15px;
     padding: 20px 20px 30px 20px;
     width: 350px;
     height: 550px;
     margin: auto;
     display: none;
+    box-shadow: 10px 5px 80px black;
 }
 
 .atendimento-chat-container .chat-subcontainer .close{
-    width: fit-content;
+    position: absolute;
+    color: white;
 }
 
 .atendimento-chat-container .chat-subcontainer p{
@@ -489,7 +495,7 @@ nav .navbar .nav-links .links li a{
 }
 
 .atendimento-chat-container .chat-online{
-    background-color: rgba(255, 255, 255, 0.432);
+    background-color: rgba(145, 141, 141, 0.5);
     padding: 8px;
     border-radius: 15px;
     width: min-content;
@@ -500,17 +506,18 @@ nav .navbar .nav-links .links li a{
 .chat-subcontainer #titulo-chatonline{
     text-align: center;
     font-size: 24px;
+    color: white;
     font-weight: 600;
     margin: 0px 0px 15px 0px;
 }
 
 .chat-subcontainer #display-mensagem{
-    background-color: rgba(0, 0, 0, 0.151);
+    background-color: rgba(255, 248, 248, 0.151);
     border-radius: 20px;
     width: 350px;
-    height: 470px;
+    height: 435px;
     max-width: 350px;
-    max-height: 470px;
+    max-height: 435px;
     position: absolute;
     margin: 0px 20px 2000px 0px;
     padding-bottom: 20px;
@@ -527,7 +534,7 @@ nav .navbar .nav-links .links li a{
 }
 
 .chat-subcontainer  #display-mensagem .bot-mensagens{
-    background-color: yellow;
+    background-color: rgb(84, 0, 240);
     color: white;
     text-shadow: 1px 1px 2px black;
 }
@@ -540,15 +547,16 @@ nav .navbar .nav-links .links li a{
 }
 
 .chat-subcontainer  #display-mensagem .user-mensagens{
-    background-color: yellow;
+    background-color: rgb(49, 4, 133);
+    color: white;
 }
 
 .chat-subcontainer #Input-user{
     height: 50px;
-    width: 85%;
+    width: 90%;
     position: absolute;
-    left: 7%;
-    bottom: 16%;
+    left: 5.5%;
+    bottom: 14%;
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
@@ -564,6 +572,8 @@ nav .navbar .nav-links .links li a{
    outline: none;
    background: transparent;
    padding:0 15px ;
+   font-size: 18px;
+   font-weight: 600;
 }
 
 #Input-user #enviar{
@@ -574,7 +584,7 @@ nav .navbar .nav-links .links li a{
     border: none;
     display: grid;
     place-items: center;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 .chat-online i{
@@ -590,7 +600,7 @@ nav .navbar .nav-links .links li a{
     height: 5px;
     color: transparent;
     border: 10px solid black;
-    border-color: white transparent transparent;
+    border-color: #4634A7 transparent transparent;
     top: 600px;
     margin-left: 0px;
     right: 15px;

@@ -2,7 +2,7 @@
 
 require('../app/db/env.php');
 
-$page_title = 'About';
+$page_title = 'MyTeams / About';
 
 $links = ['<link rel="stylesheet" type="text/css" href="public/css/projeto.css">
             <link rel="stylesheet" type="text/css" href="public/css/lightslider.css">

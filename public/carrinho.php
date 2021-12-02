@@ -7,7 +7,7 @@ require('../app/db/conexao.php');
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-      <title>Carrinho</title>
+      <title>MyTeams / Carrinho</title>
       <meta charset="UTF-8">
       <link rel="sortcut icon" href="<?=URLROOT?>/public/imagens/icons/logo.jpeg" type="image/x-icon" />
       <link rel="stylesheet" type="text/css" href="<?=URLROOT?>/public/css/projeto.css">

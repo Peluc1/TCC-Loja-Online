@@ -36,7 +36,7 @@
                       <span class="saldo-carteira">Seu Saldo</span>
                       <span class="valor-sub-carteira">R$ 200</span>
                     </div>
-                    <div class="add-fundos"><i class='bx bx-plus'></i>Add fundos</div>
+                    <a href="<?=URLROOT?>/public/deposito.php"><div class="add-fundos"><i class='bx bx-plus'></i>Add fundos</div></a>
                   </div>
                 </div>
                 <div class="dropdown">
@@ -102,13 +102,7 @@
               <p>Alguma Dúvida?</p>
             </div>
             <div id="display-mensagem">
-              <!-- Mensagens do bot -->
-              <div class="chat bot-mensagens">Hello There, how can help you ?</div> 
-
-              <!-- Mensagens do usuario -->
-              <div class="mensagem-container">
-                <div class="chat user-mensagens">I need help to build a website</div>
-              </div>
+              <div id="mensagem-container"><div class="chat bot-mensagens">Oi, precisa de ajuda?</div></div>
             </div>
           </div>
             <div id="Input-user">
@@ -163,5 +157,40 @@
       }
       </script>
     </nav>
-    <script type="text/javascript" src="<?=URLROOT?>/public/js/carrinhomodal.js"></script>^
+    <script type="text/javascript" src="<?=URLROOT?>/public/js/carrinhomodal.js"></script>
     <script type="text/javascript" src="<?=URLROOT?>/public/js/chatmodal.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+            $("#mensagens").on("keyup",function(){
+
+                if($("#mensagens").val()){
+                    $("#enviar").css("display","block");
+                }else{
+                    $("#enviar").css("display","none");
+                }
+            });
+        });
+
+        $(document).ready(function(){
+          $("#enviar").on("click", function(){
+            $value = $("#mensagens").val();
+            $msg = '<div class="mensagem-container"><div class="chat user-mensagens">'+ $value +'</div></div>';
+            $("#display-mensagem").append($msg);
+            $("#mensagens").val('');
+
+        $.ajax({
+          url:"app/bot.php",
+          type: "POST",
+          data: "text="+$value,
+          success:function(result){
+            $replay = '<div class="chat bot-mensagens">'+result+'</div>';
+            $("#display-mensagem").append($replay);
+          }
+        }); 
+
+        $("#mensagens").val("");
+        $("#enviar").css("display","none");
+      });
+    });
+    </script>

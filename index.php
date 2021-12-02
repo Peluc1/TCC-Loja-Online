@@ -5,10 +5,7 @@
     $links = ['<link rel="stylesheet" type="text/css" href="public/css/projeto.css">
                 <link rel="stylesheet" type="text/css" href="public/css/slider-css.css">
                 <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@5.5.0/keen-slider.min.css"/>
-                <script type="text/javascript" src="public/js/JQuery3.3.1.js"></script>
-                <script type="text/javascript" src="public/js/lightslider.js"></script>
-                <script type="text/javascript" src="public/js/productslide.js"></script>'];
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@5.5.0/keen-slider.min.css"/>'];
 
     require('public/includes/header.php');
 ?>

@@ -13,7 +13,7 @@ $sql->bindParam('id_session', $_SESSION['iduser'], PDO::PARAM_INT);
 $result = $sql->execute();
 $user = $sql->fetch(PDO::FETCH_ASSOC);
 
-$page_title = 'MyTeams | Perfil';
+$page_title = 'MyTeams / Perfil';
 
 $links = ['<link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
