@@ -8,6 +8,15 @@
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@5.5.0/keen-slider.min.css"/>'];
 
     require('public/includes/header.php');
+
+    $sql = 'SELECT * FROM loja.produtos WHERE preco <= 150 LIMIT 6';
+    $query = $conexao->prepare($sql);
+    $query->execute();
+    $produtos = $query->fetchAll();
+
+
+
+
 ?>
 
         <nav class="bemvindo">
@@ -16,9 +25,12 @@
             <div class="text2">Encontre o que precisar para seu lazer digital</div>
         </nav>
         <!-- DESTAQUES -->
-        <nav class="destaquesprincipal">
-            <h1 class="destaquestitulo">Destaques</h1>
+            <nav class="destaquesprincipal">
+                <h1 class="destaquestitulo">Destaques</h1>
                 <div id="my-keen-slider" class="keen-slider">
+                <?php 
+                    foreach($produtos as $prod) {
+                ?>     
                     <div class="keen-slider__slide number-slide1 container-geral-destaques">
                         <div class="text-div-destaques">
                             <div class="img-destaque-produto">
@@ -31,88 +43,15 @@
                         </div>
                         <div class="preco-destaques">
                             <p>R$ 138.00</p>
-                            <i class='bx bx-cart'></i>
+                            <a id="add-carrinho" style="cursor:pointer"><i class='bx bx-cart'></i></a>
                         </div>
                     </div>
-                    <div class="keen-slider__slide number-slide2 container-geral-destaques">
-                        <div class="text-div-destaques">
-                            <div class="img-destaque-produto">
-                                <img src="public/imagens/upload/88addd36ff.jpg">
-                            </div>
-                            <div class="titulo-descricao-destaques">
-                                <p class="titulo-destaques">AK-47 | Piloto Neon FT</p>
-                                <p class="destaque-descricao">Float: 0,3405 Testada em Campo</p>
-                            </div>
-                        </div>
-                        <div class="preco-destaques">
-                            <p>R$ 138.00</p>
-                            <i class='bx bx-cart'></i>
-                        </div>
-                    </div>
-                    <div class="keen-slider__slide number-slide3 container-geral-destaques">
-                        <div class="text-div-destaques">
-                            <div class="img-destaque-produto">
-                                <img src="public/imagens/upload/88addd36ff.jpg">
-                            </div>
-                            <div class="titulo-descricao-destaques">
-                                <p class="titulo-destaques">AK-47 | Piloto Neon FT</p>
-                                <p class="destaque-descricao">Float: 0,3405 Testada em Campo</p>
-                            </div>
-                        </div>
-                        <div class="preco-destaques">
-                            <p>R$ 138.00</p>
-                            <i class='bx bx-cart'></i>
-                        </div>
-                    </div>
-                    <div class="keen-slider__slide number-slide4 container-geral-destaques">
-                        <div class="text-div-destaques">
-                            <div class="img-destaque-produto">
-                                <img src="public/imagens/upload/88addd36ff.jpg">
-                            </div>
-                            <div class="titulo-descricao-destaques">
-                                <p class="titulo-destaques">AK-47 | Piloto Neon FT</p>
-                                <p class="destaque-descricao">Float: 0,3405 Testada em Campo</p>
-                            </div>
-                        </div>
-                        <div class="preco-destaques">
-                            <p>R$ 138.00</p>
-                            <i class='bx bx-cart'></i>
-                        </div>
-                    </div>
-                    <div class="keen-slider__slide number-slide5 container-geral-destaques">
-                        <div class="text-div-destaques">
-                            <div class="img-destaque-produto">
-                                <img src="public/imagens/upload/88addd36ff.jpg">
-                            </div>
-                            <div class="titulo-descricao-destaques">
-                                <p class="titulo-destaques">AK-47 | Piloto Neon FT</p>
-                                <p class="destaque-descricao">Float: 0,3405 Testada em Campo</p>
-                            </div>
-                        </div>
-                        <div class="preco-destaques">
-                            <p>R$ 138.00</p>
-                            <i class='bx bx-cart'></i>
-                        </div>
-                    </div>
-                    <div class="keen-slider__slide number-slide6 container-geral-destaques">
-                        <div class="text-div-destaques">
-                            <div class="img-destaque-produto">
-                                <img src="public/imagens/upload/88addd36ff.jpg">
-                            </div>
-                            <div class="titulo-descricao-destaques">
-                                <p class="titulo-destaques">Glock-18 (Lembrança) | Farol Alto FALLEN FN - Nova de Fábrica 0,0068</p>
-                                <p class="destaque-descricao">Glock-18 (Lembrança) | Farol Alto FALLEN FN - Nova de Fábrica 0,0068</p>
-                            </div>
-                        </div>
-                        <div class="preco-destaques">
-                            <p>R$ 138.00</p>
-                            <i class='bx bx-cart'></i>
-                        </div>
-                    </div>
-            </div>
-        </nav>
+                    <?php 
+                        }
+                    ?>
+                </div>
+            </nav>
         <!-- Fim DESTAQUES -->
-
         <nav class="catalogoprincipal">
             <hr style="width: 90%">
             <p class="textcatalogotitulo noselect">NOSSO CATÁLOGO</p>
@@ -138,7 +77,7 @@
             var slider = new KeenSlider("#my-keen-slider", {
                 slidesPerView: 3,
                 spacing: 15,
-            })
+            }) 
         </script>
         <?php
             require('public/includes/footer.php');

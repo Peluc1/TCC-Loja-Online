@@ -17,7 +17,6 @@ if (isset($_SESSION['iduser'])){
 ?>
 
     <nav class="login">
-
       <div class="titulo">Login</div>
       <?php
           if(isset($_GET['error'])){
